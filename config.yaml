@@ -1,16 +1,16 @@
-baseURL: "https://www.example.com/"
+baseURL: "https://www.thedeveco.com"
 theme: "up-business-theme"
 languageCode: "en-us"
 
-title: "Up Business"
+title: "The Dev Eco"
 
 # googleAnalytics: ""
 
 summaryLength: 20
 
 params:
-  title: "Up Business"
-  description: "We specialize in providing services to desing websites, applications, build and maintain business for customers."
+  title: "The Developer Ecosystem"
+  description: "A realtime community built by developers for developers. Come join the awesome."
   images: 
     - "images/hero-image.png"
 
@@ -22,26 +22,26 @@ params:
     faviconColor: "#000000"
 
   social:
-    dribbble: "#"
-    instagram: "#"
-    facebook: "#"
-    twitter: "#"
+    linkedin: "#"
+    # instagram: "#"
+    youtube: "https://youtube.com/@TheDevEco"
+    twitter: "https://twitter.com/thedeveco"
 
-  location:
-    - "3891 Ranchview Dr. Richardson, California 62639"
-    - "4517 Washington Ave. Manchester, Kentucky 39495"
+  # location:
+  #   - "3891 Ranchview Dr. Richardson, California 62639"
+  #   - "4517 Washington Ave. Manchester, Kentucky 39495"
 
-  contact:
-    - "trungkienspktnd@gamail.com"
-    - "207.555.0119"
+  # contact:
+  #   - "trungkienspktnd@gamail.com"
+  #   - "207.555.0119"
 
-  copyright: "© 2022 Up Business All Rights Reserved"
+  copyright: " All Rights Reserved "
 
 menus:
   main:
-    - name: "Home"
-      url: "/#hero"
-      weight: 1
+    # - name: "Home"
+    #   url: "/#hero"
+    #   weight: 1
 
     - name: "How we work"
       url: "/#"
@@ -51,24 +51,24 @@ menus:
       url: "/#"
       weight: 3
 
-    - name: "Pricing"
-      url: "/#"
-      weight: 4
+    # - name: "Pricing"
+    #   url: "/#"
+    #   weight: 4
 
     - name: "Blog"
       url: "/blog"
       weight: 5
 
   buttons:
-    - name: "Book a call"
-      url: "/#"
+    - name: "Join Us!"
+      url: "/#sign-up"
       weight: 5
       pre: "btn btn-primary text-light"
 
   footer:
-    - name: "Home"
-      url: "/#hero"
-      weight: 1
+    # - name: "Home"
+    #   url: "/#hero"
+    #   weight: 1
 
     - name: "How we work"
       url: "/#"
@@ -78,9 +78,9 @@ menus:
       url: "/#"
       weight: 3
 
-    - name: "Pricing"
-      url: "/#"
-      weight: 4
+    # - name: "Pricing"
+    #   url: "/#"
+    #   weight: 4
 
     - name: "Blog"
       url: "/blog"

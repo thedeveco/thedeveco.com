@@ -44,7 +44,7 @@
     <div class="row">
       <div class="col-12">
         {{ with .Site.Params.copyright }}
-          <p class="small text-black-61 text-center">{{ . }}</p>
+          <p class="small text-black-61 text-center"> ©{{now.Year}} {{ . }}</p>
         {{ end }}
       </div>
     </div>
