@@ -1,3 +1,4 @@
+# Hugo
 /public/
 /resources/
 
@@ -5,6 +6,7 @@ hugo.exe
 hugo.linux
 hugo.darwin
 
+# general purpose
 .DS_Store
 node_modules
 dist
