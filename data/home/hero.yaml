@@ -7,7 +7,7 @@ content:
 
   buttonPrimary:
     label: "Join Us"
-    url: "#cta"
+    url: "#sign-up"
 
   # buttonSecondary:
   #   label: "Let's talk"
