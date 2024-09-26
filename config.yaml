@@ -14,12 +14,13 @@ params:
   images: 
     - "images/hero-image.png"
 
-  logo: "arrow-up.png"
+  logo: "logo.png"
 
   favicons:
     themeColor: "#FFFFFF"
     backgroundColor: "#FFFFFF"
     faviconColor: "#000000"
+
 
   social:
     linkedin: "#"
@@ -28,9 +29,9 @@ params:
     twitter: "https://twitter.com/thedeveco"
     discord: "https://discord.com/channels/620838168794497044/1278241168160718848"
 
-  # location:
-  #   - "3891 Ranchview Dr. Richardson, California 62639"
-  #   - "4517 Washington Ave. Manchester, Kentucky 39495"
+  location:
+    - "Everywhere"
+    - "No Where"
 
   # contact:
   #   - "trungkienspktnd@gamail.com"
@@ -44,12 +45,12 @@ menus:
     #   url: "/#hero"
     #   weight: 1
 
-    - name: "How we work"
+    - name: "Our Mission"
       url: "/#"
       weight: 2
 
-    - name: "Our team"
-      url: "/#"
+    - name: "The Team"
+      url: "/about"
       weight: 3
 
     # - name: "Pricing"
@@ -71,19 +72,19 @@ menus:
     #   url: "/#hero"
     #   weight: 1
 
-    - name: "How we work"
+    - name: "The Mission"
       url: "/#"
       weight: 2
 
-    - name: "Our team"
-      url: "/#"
+    - name: "The Team"
+      url: "/about"
       weight: 3
 
     # - name: "Pricing"
     #   url: "/#"
     #   weight: 4
 
-    - name: "Blog"
+    - name: "The Blog"
       url: "/blog"
       weight: 5
 
