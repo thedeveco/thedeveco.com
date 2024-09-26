@@ -2,8 +2,9 @@ enabled: true
 id: "cta"
 
 content:
-  title: "Start your business now!"
+  title: "Join Us Today!"
   image: "images/services-web-development.png"
+  # TODO: Add Contact Us form here
   button:
-    label: "Let's talk"
-    url: "#"
+    label: "Sign Up"
+    url: "#sign-up"

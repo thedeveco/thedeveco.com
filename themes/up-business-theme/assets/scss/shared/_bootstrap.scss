@@ -5,12 +5,19 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-$font-family-base: "Inter", sans-serif;
+$font-family-base: "roboto", sans-serif;
 
-$primary: #7C76BB;
-$secondary: #27A3FF29;
-$danger: #FF87B0;
-$light: #FFFFFF;
+/*
+ * $primary: #7C76BB;
+ * $secondary: #27A3FF29;
+ * $danger: #FF87B0;
+ * $light: #FFFFFF;
+*/
+
+$primary: #35414B;
+$secondary: #DFE3E4;
+$danger: #4ED1E5;
+$light: #DFE3E4;
 
 // scss-docs-start import-stack
 // Configuration
