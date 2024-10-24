@@ -2,7 +2,7 @@ baseURL: "https://www.thedeveco.com"
 theme: "up-business-theme"
 languageCode: "en-us"
 
-title: "The Dev Eco"
+title: "The devEco"
 
 # googleAnalytics: ""
 
@@ -48,11 +48,11 @@ menus:
     #   weight: 1
 
     - name: "Our Mission"
-      url: "/#"
+      url: "/about"
       weight: 2
 
     - name: "The Team"
-      url: "/about"
+      url: "/team"
       weight: 3
 
     # - name: "Pricing"
@@ -75,11 +75,11 @@ menus:
     #   weight: 1
 
     - name: "The Mission"
-      url: "/#"
+      url: "/about"
       weight: 2
 
     - name: "The Team"
-      url: "/about"
+      url: "/team"
       weight: 3
 
     # - name: "Pricing"
