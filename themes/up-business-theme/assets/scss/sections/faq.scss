@@ -1,0 +1,30 @@
+.faq-container {
+    width: 50%; /* Width of the FAQ section */
+    background-color: white; /* Background color for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the container */
+    box-sizing: border-box; /* Include padding in the width */
+}
+.faq-columns {
+            display: flex; /* Flexbox for two columns */
+            justify-content: space-between; /* Space between columns */
+}
+.faq-column {
+    width: 48%; /* Width of each FAQ column */
+}
+.faq {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Lighter background for FAQ items */
+}
+.faq-content {
+    display: none;
+    margin-top: 10px;
+    white-space: pre-line; /* Preserves line breaks in answers */
+}
+.faq h3:hover {
+    color: #ff4b6d;
+}

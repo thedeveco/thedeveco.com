@@ -9,6 +9,8 @@ import "../sections/portfolio";
 import "../sections/services";
 import "../sections/testimonials";
 import "../sections/cta";
+import "../sections/faq";
 
 import "../sections/blog-list";
 import "../sections/blog-single";
+

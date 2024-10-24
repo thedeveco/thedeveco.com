@@ -4,7 +4,7 @@ id: "faq"
 content:
   title: "devEco FAQs"
   text: "Haven’t found what you’re looking for? Join us on Discord!"
-  cards:
+  left:
     - question: "What is the Developer Ecosystem (devEco)?"
       answer: "devEco is a global network of interconnected technical communities built by developers, for developers. It offers a collaborative space for learning, building, and growing together, with access to events, resources, mentorship, and industry partnerships."
 
@@ -34,6 +34,7 @@ content:
     - question: "What kinds of events does devEco host?"
       answer: "We host bi-weekly virtual meetups, hackathons, technical workshops, and AMAs (Ask Me Anything) with industry leaders. Our events provide a great way to network, learn new skills, and showcase your work."
 
+  right:
     - question: "Can I collaborate with companies and partners through devEco?"
       answer: "Absolutely! devEco offers opportunities to work on projects with tech companies, industry partners, and other organizations looking for developer talent and collaboration."
 
