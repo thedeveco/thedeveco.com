@@ -1,8 +1,8 @@
 
 <section class="section faq py-5">
 <div class="container faq-container">
-    <h1>.content.title</h1>
-    <p>.content.text</p>
+    <h1>{{.content.title}}</h1>
+    <p>{{.content.text}}</p>
 
     <div class="faq-columns">
       <div class="faq-column">
@@ -12,7 +12,7 @@
                 <div class="faq-content">{{$e.answer}}</div>
             </div>
         {{end}}
-
+        </div>
         <div class="faq-column">
         {{ range $i, $e := .content.right }}
             <div class="faq">
@@ -22,8 +22,20 @@
         {{end}}
             
         </div>
-    </div>
+    
 
   </div>
 </div>
 </section>
+
+<script type="text/javascript">
+  function toggleContent1(element) {
+    const content = element.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function toggleContent2(element) {
+    const content = element.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
