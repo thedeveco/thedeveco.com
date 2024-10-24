@@ -6,6 +6,8 @@ title: "The Dev Eco"
 
 # googleAnalytics: ""
 
+enableEmoji: true
+
 summaryLength: 20
 
 params:
