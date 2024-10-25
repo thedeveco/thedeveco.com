@@ -1,0 +1,63 @@
+enabled: true
+id: "benefits"
+
+content:
+  title: "Benefits of the devEco"
+  text: ""
+  items:
+    - icon: "💎"
+      point: "Contribute to Something Bigger"
+      explanation: "Be part of an evolving movement where every contribution helps shape the future of technology beyond what any one developer can achieve alone."
+
+    - icon: "🌐"
+      point: "Access to an Ecosystem of Technical Communities"
+      explanation: "Engage with multiple technical communities under one roof, covering a wide range of technologies and special interest groups—expanding your knowledge and network."
+
+    - icon: "🤘"
+      point: "Collaborate with Esteemed Developers (Tech Rock Stars)"
+      explanation: "Work alongside influential developers, industry experts, and thought leaders from around the world—gaining insights and building connections with top talent."
+
+    - icon: "🤝"
+      point: "Opportunities to Work with Industry Partners"
+      explanation: "Collaborate on projects with tech companies, open-source foundations, and organizations looking to partner with our members on real-world challenges."
+
+    - icon: "📅"
+      point: "Exclusive Access to Events, Meetups, and Hackathons"
+      explanation: "Attend bi-weekly meetups, online events, and hackathons that offer unique networking opportunities, mentorship, and hands-on collaboration."
+
+    - icon: "🛠"
+      point: "Resources and Tools to Accelerate Your Growth"
+      explanation: "Get access to software licenses, hardware, educational credits, development tools, and other resources to enhance your skills and projects."
+
+    - icon: "🏫"
+      point: "Mentorship and Learning Opportunities"
+      explanation: "Find mentors or share your expertise with others—our mentorship programs create a cycle of continuous learning and growth for all members."
+
+    - icon: "🔓"
+      point: "Community-Led Initiatives and Open Governance"
+      explanation: "Play a key role in shaping community goals, events, and initiatives—our open governance model ensures every voice is heard."
+
+    - icon: "🧐"
+      point: "Opportunities for Thought Leadership"
+      explanation: "Host webinars, write blogs, or lead discussions—establish yourself as a leader within the ecosystem and beyond."
+
+    - icon: "🔓"
+      point: "Support for Open-Source Contributions"
+      explanation: "Get involved in open-source projects with access to support, contributors, and real-world problem-solving opportunities."
+
+    - icon: "🧾"
+      point: "A Developer-First Discord Hub for Networking and Collaboration"
+      explanation: "Access our active Discord server to engage in forums, participate in SIGs, and collaborate in real-time with developers across disciplines."
+
+    - icon: "🗺"
+      point: "Global Reach with Local Impact"
+      explanation: "Connect with a worldwide community, while also having opportunities to participate in regional meetups and localized events."
+
+    - icon: "📚"
+      point: "Endless Opportunities to Learn New Skills and Technologies"
+      explanation: "Engage with diverse technologies, from cloud and embedded systems to machine learning and hardware—broadening your technical horizons."
+
+    - icon: "📈"
+      point: "Give Back to the Community While Growing Your Career"
+      explanation: "As devEco reinvests all funds into events, tools, and perks for members, your involvement supports not only your growth but the growth of the entire community."
+
