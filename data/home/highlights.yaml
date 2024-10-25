@@ -1,0 +1,54 @@
+enabled: true
+id: "highlights"
+
+content:
+  title: "Key Features"
+  text: ""
+  items:
+    - point: "Collaborative Community"
+      explanation: "Join a global network of developers, engineers, and technologists eager to share ideas, solve problems, and innovate together."
+
+    - point: "Engaging Events & Challenges"
+      explanation: "Participate in meetups, hackathons, and technical partner challenges that inspire growth and connect you with like-minded professionals."
+
+    - point: "Resources & Perks"
+      explanation: "Access tools, training, software licenses, and educational credits (when available)—designed to help you sharpen your skills and build your projects."
+
+    - point: "Gamified Experience"
+      explanation: "Earn badges, unlock achievements, and engage with leaderboards, making your journey in devEco both fun and rewarding."
+
+    - point: "Inclusive & Developer-First Culture"
+      explanation: "Be yourself in an open, welcoming environment where everyone’s voice matters and innovation thrives through diversity and shared knowledge."
+
+    - point: "Network with Industry Experts"
+      explanation: "Connect with thought leaders, influencers, and experienced developers through meetups, AMAs, and special interest groups."
+
+    - point: "Cross-Technology Support"
+      explanation: "Explore and collaborate across a range of domains, from software to hardware, cloud to embedded systems, and beyond."
+
+    - point: "Community-Driven Initiatives"
+      explanation: "Shape the ecosystem with your input—members have partial ownership, contributing ideas, leading projects, and influencing events."
+
+    - point: "Mentorship & Learning Opportunities"
+      explanation: "Find mentors or become one—our ecosystem values growth through teaching, with structured mentorship programs and peer learning groups."
+
+    - point: "Global Reach, Local Impact"
+      explanation: "Engage with both global and local communities, from online meetups to regional events, fostering meaningful connections worldwide."
+
+    - point: "Open Source and Innovation-Focused"
+      explanation: "Build, contribute, and collaborate on open-source projects, staying on the cutting edge of technological trends and advancements."
+
+    - point: "Sustained by the Community, for the Community"
+      explanation: "Every dollar raised goes back into the ecosystem—supporting events, giveaways, tools, and opportunities that directly benefit members."
+
+    - point: "Flexible Engagement Levels"
+      explanation: "Whether you're looking for deep involvement or casual participation, devEco meets you where you are, with no pressure to overcommit."
+
+    - point: "Developer-Focused Discord Hub"
+      explanation: "Access an active Discord server with forums, SIGs, and gamified channels designed to make every interaction engaging and productive."
+
+    - point: "Inclusive Governance and Moderation"
+      explanation: "Enjoy a safe, inclusive space governed by clear rules and fair moderation, ensuring all members feel respected and supported."
+
+ 
+
