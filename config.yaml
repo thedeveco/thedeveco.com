@@ -35,9 +35,9 @@ params:
     - "Everywhere"
     - "No Where"
 
-  # contact:
-  #   - "trungkienspktnd@gamail.com"
-  #   - "207.555.0119"
+  contact:
+    - "info@thedeveco.com"
+    - "192.168.x.x"
 
   copyright: " All Rights Reserved "
 
