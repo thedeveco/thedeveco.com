@@ -1,6 +1,6 @@
 +++
 title = "The Team"
-description = "The Developer Ecosystem (devEco) | Built by developer, for developers"
+description = "The Developer Ecosystem (devEco) | Built by developer, for developers. Maintained by the devCore"
 date = "2024-09-01"
 aliases = ["team", "the-team", "members"]
 author = "devCore"
