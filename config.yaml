@@ -5,6 +5,7 @@ languageCode: "en-us"
 title: "The devEco"
 
 # googleAnalytics: ""
+gtm: 'GTM-TP99W7MN'
 
 enableEmoji: true
 
@@ -15,6 +16,7 @@ params:
   description: "A realtime community built by developers for developers. Come join the awesome."
   images: 
     - "images/hero-image.png"
+    - "images/logo.png"
 
   logo: "images/logo.png"
 

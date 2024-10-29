@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
   <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{end}}" />
 
+  <!-- Google Tag manager -->
+  {{ partial "head/_google_tag_manager.html" . }}
+
   <!-- Favicons and Manifest -->
   {{ partial "head/_link_preview.html" . }}
 

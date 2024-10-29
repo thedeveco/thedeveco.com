@@ -2,6 +2,7 @@
 <html lang="en">
   {{ partial "head/head.html" . }}
   <body>
+    {{- partial "shared/body-top.html" . -}}
     {{- partial "shared/header.html" . -}}
     {{- block "main" . -}}{{- end -}}
     {{- partial "shared/footer.html" . -}}
