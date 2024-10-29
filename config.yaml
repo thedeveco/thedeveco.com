@@ -30,6 +30,7 @@ params:
     youtube: "https://youtube.com/@TheDevEco"
     twitter: "https://twitter.com/thedeveco"
     discord: "https://discord.com/channels/620838168794497044/1278241168160718848"
+    github: "https://github.com/thedeveco"
 
   location:
     - "Everywhere"
