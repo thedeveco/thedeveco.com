@@ -1,12 +1,12 @@
-+++
-author = "devCore"
-title = "Welcome to the devEco!"
-date = "2024-10-01"
-description = "The start of the Developer Ecosystem blogs!"
-tags = [
-    "devEco",
-]
-+++
+---
+author: "devCore"
+title: "Welcome to the devEco!"
+date: "2024-10-01"
+description: "The start of the Developer Ecosystem blogs!"
+images: ["images/logo.png"]
+tags: 
+    - "devEco"
+---
 
 This is the innagural blog post of the Developer Ecosystem. 
 
