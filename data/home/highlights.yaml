@@ -2,7 +2,7 @@ enabled: true
 id: "highlights"
 
 content:
-  title: "Key Features"
+  title: "devEco Highlights"
   text: ""
   items:
     - point: "Collaborative Community"
@@ -13,9 +13,6 @@ content:
 
     - point: "Resources & Perks"
       explanation: "Access tools, training, software licenses, and educational credits (when available)—designed to help you sharpen your skills and build your projects."
-
-    - point: "Gamified Experience"
-      explanation: "Earn badges, unlock achievements, and engage with leaderboards, making your journey in devEco both fun and rewarding."
 
     - point: "Inclusive & Developer-First Culture"
       explanation: "Be yourself in an open, welcoming environment where everyone’s voice matters and innovation thrives through diversity and shared knowledge."
