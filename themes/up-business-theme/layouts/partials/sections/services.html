@@ -1,6 +1,7 @@
 {{if .enabled}}
 <section class="section services py-5">
   <div class="container">
+    {{if .content.title}}
     <div class="row justify-content-center pb-5">
       <div class="col-12 col-xl-6">
         {{ with .content.title }}
@@ -11,6 +12,7 @@
         {{ end }}
       </div>
     </div>
+    {{ end }}
     <div class="row g-5">
       {{ range .content.cards }}
         <div class="col-12 col-xl-4">
@@ -19,7 +21,9 @@
             <div class="card-body text-center">
               {{ with .title }}<h4 class="card-title text-center text-primary pb-4">{{ . }}</h4>{{ end }}
               {{ with .text }}<p class="card-text text-black-61 pb-4">{{ . }}</p>{{ end }}
+              {{if .button}}
               {{ with .button }}<a class="btn btn-outline-primary px-4" href="{{ .url }}">{{ .label }}</a>{{ end }}
+              {{ end }}
             </div>
           </div>
         </div>

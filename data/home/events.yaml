@@ -1,0 +1,36 @@
+enabled: true
+id: "events"
+
+content:
+  cards:
+    - title: "devEco LIVE"
+      text: "The Developer Ecosystem livestream."
+      image: "images/services-web-development.png"
+    - title: "Developers Anonymous (devAnon)"
+      text: "Chill hangout talking about awesome projects. The door is open, come join us for community, laughs, and general schenanigans."
+      image: "images/services-web-development.png"
+    - title: "devEco Open Hardware Initiative"
+      text: "A medium length description, about 2 sentences long."
+      image: "images/services-web-development.png"
+  future:
+    - date: "01-01-2025"
+      link: "https://youtube.com/@thedeveco"
+      title: "DevAnon"
+      text: "January Meetup"
+      image: ""
+  past:
+    - date: "10-1-2024"
+      link: "https://www.youtube.com/watch?v=KA175YnyBJ0"
+      title: "Dev Anon Meetup"
+      text: "we talked about awesome things"
+      image: ""
+    - date: "11-1-2024"
+      link: ""
+      title: "DevAnon Meetup"
+      text: "we talked about awesome things"
+      image: ""
+    - date: "09-1-2024"
+      link: "https://www.youtube.com/watch?v=ozXvvVH9-84"
+      title: "DevAnon Meetup"
+      text: "we talked about awesome things"
+      image: ""

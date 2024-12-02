@@ -1,0 +1,17 @@
+
+<table>
+{{if eq (.Get "type") "future"}}
+	{{ range $key, $value := .Site.Data.home.events.content.future }}
+        <tr><td><a href={{.link}}>{{.date}}</a></td><td>{{.title}}, {{.text}}</td></tr>
+    {{ end }}
+
+
+{{ else if eq (.Get "type") "past"}}
+	{{with .Site.Data.home.events.content.past}}
+	{{ range $key, $value := . }}
+        <tr><td><a href={{.link}}>{{.date}}</a></td><td>{{.title}}, {{.text}}</td></tr>
+    {{ end }}
+    {{end}}
+
+{{end}}
+</table>
