@@ -8,7 +8,7 @@
 
 {{ else if eq (.Get "type") "past"}}
 	{{with .Site.Data.home.events.content.past}}
-	{{ range $key, $value := . }}
+	{{ range  sort . "date" "desc"}}
         <tr><td><a href={{.link}}>{{.date}}</a></td><td>{{.title}}, {{.text}}</td></tr>
     {{ end }}
     {{end}}
