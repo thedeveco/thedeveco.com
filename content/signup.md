@@ -1,12 +1,14 @@
 ---
-title : "Signup"
-description : "Sign Up and join the devEco Today!"
+title : "devEco Collective Signup"
+description : "Together, ideas are shaped, shared, and brought to life."
 aliases : ["register", "join", "joinus"]
 ---
 
 # Big News for Developers!
 
 **The devEco is celebrating a month of Windows on Arm! As such, we will be kickstarting December with a brand new event and experience for Arm developers around the world!**
+
+---
 
 ## devEco LIVE
 
@@ -18,6 +20,8 @@ Joined by featured guest from [Avnet](https://www.avnet.com/) and [Hacksterio](h
 
 **and that's not all...**
 
+---
+
 ## Developers Anonymous Virtual Meetup
 
 We’re also thrilled to announce that [Advantech](https://www.advantech.com/en/form/becf747b-b5f9-4327-87b5-e2341b52ef11?callback=39590dd5-960d-4518-8f4a-1b4bdd19eeae&utm_campaign=Robert&utm_medium=Deveco&utm_source=Developer) will be joining us for an exclusive Developers Anonymous (devAnon) meetup, hosted by the incredible devEco community! 🌟
@@ -25,6 +29,8 @@ We’re also thrilled to announce that [Advantech](https://www.advantech.com/en/
 Hosted by developers, for developers, and joined by the experts from Advantech, this will surely be a fun hour of discussions and networking.
 
 Join us and share in the December festivities, while we celebrate some amazing successes, share in constructive conversations on how you as developers can get involved, and plan for what's next during these exciting times.
+
+---
 
 # How to Prepare
 
