@@ -4,7 +4,9 @@ id: "events"
 content:
   cards:
     - title: "devEco LIVE"
-      text: "Official Developer Ecosystem Livestream"
+      text: >
+      "Official Developer Ecosystem 
+    Livestream"
       image: "images/services-web-development.png"
     - title: "Developers Anonymous (devAnon)"
       text: "Official Developer Ecosystem Meetup"
