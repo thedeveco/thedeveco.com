@@ -73,7 +73,7 @@ menus:
 
   buttons:
     - name: "Join Us!"
-      url: "/#sign-up"
+      url: "/signup"
       weight: 5
       pre: "btn btn-primary text-light"
 
