@@ -5,8 +5,6 @@ aliases : ["register", "join", "joinus"]
 
 ---
 
-## Event Description
-
 {{<card >}}
 
 ## Upcoming Events
