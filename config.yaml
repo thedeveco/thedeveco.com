@@ -9,6 +9,11 @@ gtm: 'GTM-TP99W7MN'
 
 enableEmoji: true
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 summaryLength: 20
 
 params:
@@ -85,9 +90,9 @@ menus:
       url: "/team"
       weight: 3
 
-    # - name: "Pricing"
-    #   url: "/#"
-    #   weight: 4
+    - name: "The Events"
+      url: "/events"
+      weight: 4
 
     - name: "The Blog"
       url: "/blog"
