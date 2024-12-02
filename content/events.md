@@ -1,6 +1,6 @@
 ---
 title : "Events"
-description : "The DevEco has several events on an ongoing basis. Some are scheduled, some are adhoc. Join us for upcoming events, or check out our past event recordings!"
+description : "The devEco community host several events throughout the year, and we try to capture them all here! Schedule for an upcoming event, or watch past events on demand"
 aliases : ["register", "join", "joinus"]
 
 ---
