@@ -5,11 +5,14 @@ content:
   cards:
     - title: "devEco LIVE"
       text: >
-      "Official Developer Ecosystem 
-    Livestream"
+      Official Developer Ecosystem 
+    Livestream
       image: "images/services-web-development.png"
     - title: "Developers Anonymous (devAnon)"
-      text: "Official Developer Ecosystem Meetup"
+      text: >
+      Official Developer
+    Ecosystem
+    Meetup
       image: "images/services-web-development.png"
     - title: "Official devEco Open Hardware Initiative"
       text: "A medium length description, about 2 sentences long."
