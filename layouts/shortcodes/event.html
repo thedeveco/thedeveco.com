@@ -1,9 +1,11 @@
 
 <table>
 {{if eq (.Get "type") "future"}}
-	{{ range $key, $value := .Site.Data.home.events.content.future }}
+	{{ with .Site.Data.home.events.content.future }}
+    {{ range  sort . "date" "asc"}}
         <tr><td><a href={{.link}}>{{.date}}</a></td><td>{{.title}}, {{.text}}</td></tr>
     {{ end }}
+    {{ end}}
 
 
 {{ else if eq (.Get "type") "past"}}
