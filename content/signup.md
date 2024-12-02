@@ -1,35 +1,33 @@
 ---
 title : "Signup"
-description : "Sign Up for the developer Ecosystem. Join the team and we'll email you all the relevant links for access."
+description : "Sign Up and join the devEco Today!"
 aliases : ["register", "join", "joinus"]
 ---
 
-## Welcome to the devEco!
+# Big News for Developers!
 
-Are you ready to join a thriving ecosystem of developers, technologists, and creators? The devEco is your gateway to collaboration, innovation, and growth. By signing up, you’re taking the first step into a world of exciting opportunities to learn, build, and connect with a global network of like-minded individuals.
+**The devEco is celebrating a month of Windows on Arm! As such, we will be kickstarting December with a brand new event and experience for Arm developers around the world!**
 
-# How to Get Started
+## devEco LIVE
 
-**Fill out the form below to join the devEco community. Once you’ve signed up, you’ll receive an automated email with everything you need to know, including:**
+**Start the last month of 2024 off with your new favorite livestream.**
 
-- How to join our Discord server.
-- Details about upcoming **devEco LIVE** streams and **devAnon meetups**.
-- Links to our online resources, including our website, YouTube channel, GitHub, and more.
+Hosted by [Robert Wolff](https://www.linkedin.com/in/fixxxxxxer/) (Hackster PRO, Arm Ambassador and Core member of the devEco) and [Tory Moghadam](https://www.linkedin.com/in/tory-moghadam-88037424/) (Founder of Open Muscle).
+
+Joined by featured guest from [Avnet](https://www.avnet.com/) and [Hacksterio](https://www.hackster.io/), we will dive into deep discussions shining light on the positive impact Windows on Arm is having on our fast moving tech landscape. From performance and efficiency to customization and integration, Windows on Arm is no longer an experiment; it's a viable option for daily users and businesses. 
+
+**and that's not all...**
+
+## Developers Anonymous Virtual Meetup
+
+We’re also thrilled to announce that [Advantech](https://www.advantech.com/en/form/becf747b-b5f9-4327-87b5-e2341b52ef11?callback=39590dd5-960d-4518-8f4a-1b4bdd19eeae&utm_campaign=Robert&utm_medium=Deveco&utm_source=Developer) will be joining us for an exclusive Developers Anonymous (devAnon) meetup, hosted by the incredible devEco community! 🌟
+
+Hosted by developers, for developers, and joined by the experts from Advantech, this will surely be a fun hour of discussions and networking.
+
+Join us and share in the December festivities, while we celebrate some amazing successes, share in constructive conversations on how you as developers can get involved, and plan for what's next during these exciting times.
+
+# How to Prepare
+
+**Fill out the form below to join the devEco community. Once you’ve signed up, you’ll receive an automated email with everything you need to know about the community, and how you can prepare for these two upcoming events.**
 
 {{< googleform id="1FAIpQLSfMzjQ27D89DxqU_WME_CPq4__p19LfmfqwpQFtEuTBbaz6_g" >}}
-
-# devEco LIVE: Where Inspiration Meets Innovation
-
-**Join us for devEco LIVE, our monthly livestream sponsored by Avnet and Hackster.io. Happening during the first week of every month on YouTube, devEco LIVE features:**
-
-- Inspiring talks by industry leaders.
-- Hands-on demonstrations of cutting-edge technologies.
-- Live Q&A sessions where your voice is heard.
-
-# Developers Anonymous: Build, Share, Connect
-
-**Looking for a casual yet impactful meetup? Developers Anonymous (devAnon) is our monthly gathering of developers from around the world. Hosted in our Discord server, devAnon is a safe space to:**
-
-- Share your experiences.
-- Discuss challenges and solutions.
-- Build connections with a supportive community.
