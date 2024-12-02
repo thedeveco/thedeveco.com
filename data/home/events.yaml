@@ -4,12 +4,12 @@ id: "events"
 content:
   cards:
     - title: "devEco LIVE"
-      text: "The Developer Ecosystem livestream."
+      text: "Official Developer Ecosystem Livestream"
       image: "images/services-web-development.png"
     - title: "Developers Anonymous (devAnon)"
-      text: "Chill hangout talking about awesome projects. The door is open, come join us for community, laughs, and general schenanigans."
+      text: "Official Developer Ecosystem Meetup"
       image: "images/services-web-development.png"
-    - title: "devEco Open Hardware Initiative"
+    - title: "Official devEco Open Hardware Initiative"
       text: "A medium length description, about 2 sentences long."
       image: "images/services-web-development.png"
   future:
