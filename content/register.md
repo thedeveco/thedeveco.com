@@ -1,7 +1,7 @@
 ---
-title : "devEco Signup"
+title : "Register for Event"
 description : "Together, ideas are shaped, shared, and brought to life."
-aliases : ["register", "join", "joinus"]
+aliases : ["register"]
 ---
 
 # Big News for Developers!
@@ -40,4 +40,4 @@ Join [Advantech](https://www.advantech.com/en/form/becf747b-b5f9-4327-87b5-e2341
 
 **Fill out the form below for event details and preparation tips. We look forward to welcoming you to the devEco**  
 
-{{< googleform id="1FAIpQLSfMzjQ27D89DxqU_WME_CPq4__p19LfmfqwpQFtEuTBbaz6_g" height="2280" >}}
+{{< googleform id="1FAIpQLSf76Cq6W-hnzsn6RXE-QGgMNkzVG3i6bcRrZ9cAtSRgTP8txQ" height="2330" >}}
