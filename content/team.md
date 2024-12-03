@@ -6,13 +6,7 @@ aliases = ["team", "the-team", "members"]
 author = "devCore"
 +++
 
-<details>
-
-<summary><strong>Who are the devCore?</strong></summary>
-
 The devCore is a group of highly engaged members within the Developer Ecosystem (devEco). These individuals take on leadership roles to drive community initiatives, mentor others, and shape the future of devEco. As partial owners of the community, devCore members play an essential role in making strategic decisions, organizing events, and contributing to the ecosystem’s growth.
-
-</details>
 
 <details>
 
