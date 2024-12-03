@@ -12,4 +12,4 @@ Join the ecosystem by signing up below. We will send an email to you with all th
 </br>
 
 ## Signup Form
-{{< googleform id="1FAIpQLSfMzjQ27D89DxqU_WME_CPq4__p19LfmfqwpQFtEuTBbaz6_g" height="2280" >}}
+{{< googleform id="1FAIpQLSfMzjQ27D89DxqU_WME_CPq4__p19LfmfqwpQFtEuTBbaz6_g" height="1650" >}}
