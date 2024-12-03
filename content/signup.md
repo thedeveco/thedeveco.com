@@ -40,4 +40,4 @@ Join [Advantech](https://www.advantech.com/en/form/becf747b-b5f9-4327-87b5-e2341
 
 **Fill out the form below for event details and preparation tips. We look forward to welcoming you to the devEco**  
 
-{{< googleform id="1FAIpQLSfMzjQ27D89DxqU_WME_CPq4__p19LfmfqwpQFtEuTBbaz6_g" >}}
+{{< googleform id="1FAIpQLSfMzjQ27D89DxqU_WME_CPq4__p19LfmfqwpQFtEuTBbaz6_g" height="2280" >}}

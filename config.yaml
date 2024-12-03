@@ -63,9 +63,9 @@ menus:
       url: "/team"
       weight: 3
 
-    # - name: "Pricing"
-    #   url: "/#"
-    #   weight: 4
+    - name: "Events"
+      url: "/events"
+      weight: 4
 
     - name: "Blog"
       url: "/blog"
