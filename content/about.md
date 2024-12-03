@@ -11,7 +11,13 @@ We are a vibrant network of technical communities where developers, engineers, a
 
 ### What is the Developer Ecosystem (devEco)?
 
+<details>
+
+<summary><strong>devEco is a global network of interconnected technical communities built by developers, for developers</strong></summary>
+
 devEco is a global network of interconnected technical communities built by developers, for developers. It offers a collaborative space for learning, building, and growing together, with access to events, resources, mentorship, and industry partnerships.
+
+</details>
 
 ### Who can join devEco?
 
