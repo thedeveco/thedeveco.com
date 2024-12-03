@@ -6,26 +6,49 @@ aliases = ["team", "the-team", "members"]
 author = "devCore"
 +++
 
-# Who are the devCore?
+<details>
+
+<summary><strong>Who are the devCore?</strong></summary>
+
 The devCore is a group of highly engaged members within the Developer Ecosystem (devEco). These individuals take on leadership roles to drive community initiatives, mentor others, and shape the future of devEco. As partial owners of the community, devCore members play an essential role in making strategic decisions, organizing events, and contributing to the ecosystem’s growth.
 
-# What Does devCore Do?
+</details>
+
+<details>
+
+<summary><strong>What Does devCore Do?</strong></summary>
+
 - Lead Projects and Initiatives: Spearhead community projects and contribute to open-source efforts.
 - Organize Events and Meetups: Plan and host technical workshops, hackathons, and virtual meetups.
 - Mentor and Guide Members: Provide mentorship, answer questions, and help onboard new members.
 - Shape the Ecosystem’s Future: Participate in open governance, offering feedback, and voting on key community decisions.
 
-# What Are the Benefits of Joining devCore?
+</details>
+
+<details>
+
+<summary><strong>What Are the Benefits of Joining devCore?</strong></summary>
+
 - Influence Community Direction: Help set the priorities and direction of devEco initiatives.
 - Exclusive Opportunities: Collaborate with industry partners and engage in high-impact projects.
 - Recognition and Badging: Earn special badges and achievements only available to devCore members.
 - Networking with Experts: Work alongside esteemed developers, thought leaders, and partners from around the globe.
 - Personal Growth and Development: Hone leadership skills, gain mentorship experience, and grow your professional network.
 
-# How Do I Become a devCore Member?
+</details>
+
+<details>
+
+<summary><strong>How Do I Become a devCore Member?</strong></summary>
+
 devCore membership is optional but requires commitment. To join, members must express interest by filling out a form and agreeing to contribute time and effort towards community initiatives. Membership is open to anyone who is passionate about building and growing the devEco community. Please reach out to a devCore member for more information on how to apply.
 
-# Why Join devCore?
+</details>
+
+<details>
+
+<summary><strong>Why Join devCore?</strong></summary>
+
 By becoming part of devCore, you not only gain access to exclusive opportunities but also become a key driver of change within the ecosystem. It’s a chance to leave your mark, help others succeed, and contribute to something greater than yourself.
 
-
+</details>
