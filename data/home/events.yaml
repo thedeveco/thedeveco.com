@@ -3,15 +3,15 @@ id: "events"
 
 content:
   cards:
-    - title: "The devEco LIVE"
+    - title: "PROCEPTION"
       text: "Livestream"
-      image: "images/services-web-development.png"
+      image: "images/devEco-logo-only-transparent.png"
     - title: "Developers Anonymous"
       text: "Meetup"
-      image: "images/services-web-development.png"
+      image: "images/devAnonBlack.png"
     - title: "devOSH Collective"
       text: "Initiative"
-      image: "images/services-web-development.png"
+      image: "images/devEco-logo-only-transparent.png"
   future:
     - date: "12-05-2024"
       link: "https://www.youtube.com/live/fiYayf4x9BQ?si=FmdH98Zru9Wa4AWq"
