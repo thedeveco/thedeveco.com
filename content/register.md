@@ -6,7 +6,7 @@ aliases : ["register"]
 
 # Big News for Developers!
 
-**Join the devEco as we kick off December with a celebration of Windows on Arm and exciting events for developers worldwide!**
+**Join the devEco for some of our exciting monthly developer events!**
 
 ---
 
