@@ -11,42 +11,52 @@ content:
     title: devOSH Collective
   future:
   - date: February 07, 2025
+    hidden_date: 02-07-2025
     link: https://www.meetup.com/cpp-bay-area/events/305681772/
     title: '[TikTok] Creating Declarative Programming Paradigms'
   - date: February 19, 2025
+    hidden_date: 02-19-2025
     link: ''
     title: '[VIRTUAL MEETUP] Developers Anonymous'
   - date: February 25, 2025
+    hidden_date: 02-25-2025
     link: https://www.edgeaifoundation.org/events/austin-2024
     title: devEco goes to EDGE AI FOUNDATION, Austin TX
   - date: March 11, 2025
+    hidden_date: 03-11-2025
     link: https://www.embedded-world.de/
     title: devEco goes to Embedded World, Nuremberg!
   - date: July 19, 2025
+    hidden_date: 06-19-2025
     link: In Person at Open Sauce!
     title: '[In-Person Meetup] devAnon at Open Sauce!'
   past:
   - date: November 2024
+    hidden_date: 11-01-2024
     image: ''
     link: https://youtu.be/x3fkxXhMN8k
     text: ''
     title: ' | devAnon November Meetup'
   - date: October 2024
+    hidden_date: 10-01-2024
     image: ''
     link: https://youtu.be/KA175YnyBJ0
     text: ''
     title: ' | devAnon October Meetup'
   - date: September 2024
+    hidden_date: 09-01-2024
     image: ''
     link: https://youtu.be/ozXvvVH9-84
     text: ''
     title: ' | devAnon September Meetup'
-  - date: December 5, 2024
+  - date: December, 2024
+    hidden_date: 12-01-2024
     image: ''
     link: https://www.youtube.com/live/fiYayf4x9BQ?si=FmdH98Zru9Wa4AWq
     text: ''
     title: ' | devEco LIVE - Windows on Arm Myth Buster With Trevor Cain of Avnet'
-  - date: December 18, 2024
+  - date: December, 2024
+    hidden_date: 12-01-2024
     image: ''
     link: https://www.thedeveco.com/signup/
     text: Featuring Windows on Arm with Advantech
