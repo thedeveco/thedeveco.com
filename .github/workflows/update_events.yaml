@@ -1,0 +1,24 @@
+name: Update Events Modal
+on: 
+  schedule:
+    - cron: '0 0 * * 0'
+jobs:
+    resources:
+        name: Discord
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-python@v4
+              with:
+                python-version: '3.x' 
+
+            - name: Run Python Script
+              run: ./.github/scripts/update_events.py
+
+            - name: Update resources
+              uses: test-room-7/action-update-file@v1
+              with:
+                  file-path: ./data/home/events.yaml
+                  commit-msg: Update Events
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
