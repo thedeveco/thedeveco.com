@@ -2,15 +2,15 @@
 <table>
 {{if eq (.Get "type") "future"}}
 	{{ with .Site.Data.home.events.content.future }}
-    {{ range  sort . "date" "asc"}}
-        <tr><td><a href={{.link}}>{{.date}}</a></td><td>{{.title}}, {{.text}}</td></tr>
+    {{ range  sort . "hidden_date" "asc"}}
+        <tr><td><a href={{.link}}>{{.date}}</a></td><td> | {{.title}}, {{.text}}</td></tr>
     {{ end }}
     {{ end}}
 
 
 {{ else if eq (.Get "type") "past"}}
 	{{with .Site.Data.home.events.content.past}}
-	{{ range  sort . "date" "desc"}}
+	{{ range  sort . "hidden_date" "desc"}}
         <tr><td><a href={{.link}}>{{.date}}</a></td><td>{{.title}}, {{.text}}</td></tr>
     {{ end }}
     {{end}}
