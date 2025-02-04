@@ -24,6 +24,7 @@ for e in r.json():
 		"title":name,
 		"date":time,
 		"link":link,
+		"hidden_date": datetime.datetime.fromisoformat(time).strftime("%m-%d-%Y")
 		# "description":description,
 		}
 	)
