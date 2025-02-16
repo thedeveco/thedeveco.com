@@ -15,7 +15,6 @@ jobs:
                 python-version: '3.x' 
             - name: Install Packages
               run: |
-                pip install os
                 pip install requests
                 pip install yaml
                 pip install datetime
