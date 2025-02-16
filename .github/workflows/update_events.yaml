@@ -19,7 +19,7 @@ jobs:
                 pip install datetime
 
             - name: Run Python Script
-              run: ${GITHUB_WORKSPACE}/.github/scripts/update_events.py
+              run: python ${GITHUB_WORKSPACE}/.github/scripts/update_events.py
 
             - name: Update resources
               uses: test-room-7/action-update-file@v1
