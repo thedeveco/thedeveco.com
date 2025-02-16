@@ -16,7 +16,6 @@ jobs:
             - name: Install Packages
               run: |
                 pip install requests
-                pip install yaml
                 pip install datetime
 
             - name: Run Python Script
