@@ -14,7 +14,7 @@ jobs:
                 python-version: '3.x' 
 
             - name: Run Python Script
-              run: ./.github/scripts/update_events.py
+              run: ${GITHUB_WORKSPACE}/.github/scripts/update_events.py
 
             - name: Update resources
               uses: test-room-7/action-update-file@v1
