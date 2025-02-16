@@ -27,6 +27,6 @@ jobs:
             - name: Update resources
               uses: test-room-7/action-update-file@v1
               with:
-                  file-path: ${GITHUB_WORKSPACE}/data/home/events.yaml
+                  file-path: ${{ github.workspace }}/data/home/events.yaml
                   commit-msg: Update Events
                   github-token: ${{ secrets.GITHUB_TOKEN }}
