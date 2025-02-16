@@ -1,6 +1,9 @@
 import requests
 import yaml
 import datetime
+import os
+
+file = os.getenv('GITHUB_WORKSPACE')+"data/home/events.yaml"
 
 r = requests.get('https://discord.com/api/v10/guilds/620838168794497044/scheduled-events',
 		headers={
@@ -37,7 +40,7 @@ for item in events:
 	item['date'] = datetime.datetime.fromisoformat(item['date']).strftime("%B %d, %Y")
 
 # Load data from yaml file
-with open('data/home/events.yaml','r') as stream:
+with open(file,'r') as stream:
 	data = yaml.safe_load(stream)
 
 # Move old events from fruture to past
@@ -57,5 +60,5 @@ data['content']['future'] = f
 data['content']['past'] = p
 
 # Write data to file
-with open('data/home/events.yaml','w') as outfile:
+with open(file,'w') as outfile:
 	yaml.dump(data, outfile, default_flow_style=False)
