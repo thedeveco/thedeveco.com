@@ -4,7 +4,7 @@ import datetime
 import os
 
 file = os.getenv('GITHUB_WORKSPACE')
-file = file+"data/home/events.yaml"
+file = file+"/data/home/events.yaml"
 
 discord_api_key = os.getenv('DISCORD_TOKEN')
 
