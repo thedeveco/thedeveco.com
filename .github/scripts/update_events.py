@@ -3,12 +3,15 @@ import yaml
 import datetime
 import os
 
-file = os.getenv('GITHUB_WORKSPACE')+"data/home/events.yaml"
+file = os.getenv('GITHUB_WORKSPACE')
+file = file+"data/home/events.yaml"
+
+discord_api_key = os.getenv('DISCORD_TOKEN')
 
 r = requests.get('https://discord.com/api/v10/guilds/620838168794497044/scheduled-events',
 		headers={
 			"Accept":"application/json",
-			"Authorization":"Bot ${{ secrets.DISCORD_BOT_APIKEY }}"			
+			"Authorization":"Bot "+discord_api_key			
 		}
 	)
 
