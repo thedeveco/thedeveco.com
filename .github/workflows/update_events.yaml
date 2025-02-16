@@ -13,6 +13,12 @@ jobs:
             - uses: actions/setup-python@v4
               with:
                 python-version: '3.x' 
+            - name: Install Packages
+              run: |
+                pip install os
+                pip install requests
+                pip install yaml
+                pip install datetime
 
             - name: Run Python Script
               run: ${GITHUB_WORKSPACE}/.github/scripts/update_events.py
