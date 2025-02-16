@@ -10,10 +10,6 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: February 07, 2025
-    hidden_date: 02-07-2025
-    link: https://www.meetup.com/cpp-bay-area/events/305681772/
-    title: '[TikTok] Creating Declarative Programming Paradigms'
   - date: February 19, 2025
     hidden_date: 02-19-2025
     link: ''
@@ -27,7 +23,7 @@ content:
     link: https://www.embedded-world.de/
     title: devEco goes to Embedded World, Nuremberg!
   - date: July 19, 2025
-    hidden_date: 06-19-2025
+    hidden_date: 07-19-2025
     link: In Person at Open Sauce!
     title: '[In-Person Meetup] devAnon at Open Sauce!'
   past:
@@ -61,5 +57,9 @@ content:
     link: https://www.thedeveco.com/signup/
     text: Featuring Windows on Arm with Advantech
     title: ' | devAnon December Meetup'
+  - date: February 07, 2025
+    hidden_date: 02-07-2025
+    link: https://www.meetup.com/cpp-bay-area/events/305681772/
+    title: '[TikTok] Creating Declarative Programming Paradigms'
 enabled: true
 id: events
