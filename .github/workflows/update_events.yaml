@@ -17,6 +17,7 @@ jobs:
               run: |
                 pip install requests
                 pip install datetime
+                pip install pyyaml
 
             - name: Run Python Script
               run: python ${GITHUB_WORKSPACE}/.github/scripts/update_events.py
