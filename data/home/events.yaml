@@ -10,10 +10,6 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: March 11, 2025
-    hidden_date: 03-11-2025
-    link: https://www.embedded-world.de/
-    title: devEco goes to Embedded World, Nuremberg!
   - date: March 19, 2025
     hidden_date: 03-19-2025
     link: ''
@@ -65,5 +61,9 @@ content:
     hidden_date: 02-25-2025
     link: https://www.edgeaifoundation.org/events/austin-2024
     title: devEco goes to EDGE AI FOUNDATION, Austin TX
+  - date: March 11, 2025
+    hidden_date: 03-11-2025
+    link: https://www.embedded-world.de/
+    title: devEco goes to Embedded World, Nuremberg!
 enabled: true
 id: events
