@@ -10,8 +10,12 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: March 19, 2025
-    hidden_date: 03-19-2025
+  - date: March 27, 2025
+    hidden_date: 03-27-2025
+    link: https://discord.com/invite/qualcommdevelopernetwork
+    title: 'Qualcomm Developer live stream: MIT Reality Hack x RB3 Gen2'
+  - date: April 16, 2025
+    hidden_date: 04-16-2025
     link: ''
     title: '[VIRTUAL MEETUP] Developers Anonymous'
   - date: July 19, 2025
@@ -65,5 +69,9 @@ content:
     hidden_date: 03-11-2025
     link: https://www.embedded-world.de/
     title: devEco goes to Embedded World, Nuremberg!
+  - date: March 19, 2025
+    hidden_date: 03-19-2025
+    link: ''
+    title: '[VIRTUAL MEETUP] Developers Anonymous'
 enabled: true
 id: events
