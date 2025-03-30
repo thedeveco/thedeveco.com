@@ -10,14 +10,14 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: March 27, 2025
-    hidden_date: 03-27-2025
-    link: https://discord.com/invite/qualcommdevelopernetwork
-    title: 'Qualcomm Developer live stream: MIT Reality Hack x RB3 Gen2'
   - date: April 16, 2025
     hidden_date: 04-16-2025
     link: ''
     title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: July 18, 2025
+    hidden_date: 07-18-2025
+    link: https://opensauce.com/
+    title: Open Sauce | In Person Event!
   - date: July 19, 2025
     hidden_date: 07-19-2025
     link: In Person at Open Sauce!
@@ -73,5 +73,9 @@ content:
     hidden_date: 03-19-2025
     link: ''
     title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: March 27, 2025
+    hidden_date: 03-27-2025
+    link: https://discord.com/invite/qualcommdevelopernetwork
+    title: 'Qualcomm Developer live stream: MIT Reality Hack x RB3 Gen2'
 enabled: true
 id: events
