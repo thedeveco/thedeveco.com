@@ -10,10 +10,18 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
+  - date: April 14, 2025
+    hidden_date: 04-14-2025
+    link: ''
+    title: '[PUBLIC FORUM] devEco Quarterly'
   - date: April 16, 2025
     hidden_date: 04-16-2025
     link: ''
     title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: May 06, 2025
+    hidden_date: 05-06-2025
+    link: ''
+    title: devOSH LIVE Monthly
   - date: July 18, 2025
     hidden_date: 07-18-2025
     link: https://opensauce.com/
