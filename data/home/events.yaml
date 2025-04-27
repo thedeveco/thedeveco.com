@@ -10,8 +10,8 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: April 23, 2025
-    hidden_date: 04-23-2025
+  - date: May 01, 2025
+    hidden_date: 05-01-2025
     link: https://discord.gg/hacksterio
     title: "[Virtual] The Hackster.io Discord Disco Party\U0001F57A!"
   - date: May 06, 2025
@@ -93,5 +93,9 @@ content:
     hidden_date: 04-16-2025
     link: ''
     title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: April 23, 2025
+    hidden_date: 04-23-2025
+    link: https://discord.gg/hacksterio
+    title: "[Virtual] The Hackster.io Discord Disco Party\U0001F57A!"
 enabled: true
 id: events
