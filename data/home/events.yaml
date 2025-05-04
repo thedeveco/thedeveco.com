@@ -10,14 +10,14 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: May 01, 2025
-    hidden_date: 05-01-2025
-    link: https://discord.gg/hacksterio
-    title: "[Virtual] The Hackster.io Discord Disco Party\U0001F57A!"
   - date: May 06, 2025
     hidden_date: 05-06-2025
     link: ''
     title: devOSH LIVE Monthly
+  - date: May 13, 2025
+    hidden_date: 05-13-2025
+    link: https://www.youtube.com/live/td_Go1VlOSY?si=liXc5eqYSpYNCBge
+    title: '[LIVESTREAM] Beyond The Wafer with Thistle CRO, Raul Vergara'
   - date: May 21, 2025
     hidden_date: 05-21-2025
     link: ''
@@ -95,6 +95,10 @@ content:
     title: '[VIRTUAL MEETUP] Developers Anonymous'
   - date: April 23, 2025
     hidden_date: 04-23-2025
+    link: https://discord.gg/hacksterio
+    title: "[Virtual] The Hackster.io Discord Disco Party\U0001F57A!"
+  - date: May 01, 2025
+    hidden_date: 05-01-2025
     link: https://discord.gg/hacksterio
     title: "[Virtual] The Hackster.io Discord Disco Party\U0001F57A!"
 enabled: true
