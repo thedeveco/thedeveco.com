@@ -10,18 +10,30 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: May 06, 2025
-    hidden_date: 05-06-2025
-    link: ''
-    title: devOSH LIVE Monthly
   - date: May 13, 2025
     hidden_date: 05-13-2025
-    link: https://www.youtube.com/live/td_Go1VlOSY?si=liXc5eqYSpYNCBge
+    link: https://www.youtube.com/live/IrPnanN9xpk?si=B-WdfpEaKEpDn1bJ
     title: '[LIVESTREAM] Beyond The Wafer with Thistle CRO, Raul Vergara'
+  - date: May 15, 2025
+    hidden_date: 05-15-2025
+    link: https://discord.gg/hacksterio
+    title: Hacksterio Office Hour
+  - date: May 17, 2025
+    hidden_date: 05-17-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: May 21, 2025
+    hidden_date: 05-21-2025
+    link: https://web.cvent.com/event/e4774cb8-c4bd-41d2-a667-aac3519eacdb/websitePage:380cb5a2-4637-49a1-bee3
+    title: Microsoft Build 2025 Networking Reception
   - date: May 21, 2025
     hidden_date: 05-21-2025
     link: ''
     title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: June 17, 2025
+    hidden_date: 06-17-2025
+    link: ''
+    title: devOSH LIVE Monthly
   - date: July 18, 2025
     hidden_date: 07-18-2025
     link: https://opensauce.com/
@@ -101,5 +113,9 @@ content:
     hidden_date: 05-01-2025
     link: https://discord.gg/hacksterio
     title: "[Virtual] The Hackster.io Discord Disco Party\U0001F57A!"
+  - date: May 06, 2025
+    hidden_date: 05-06-2025
+    link: ''
+    title: devOSH LIVE Monthly
 enabled: true
 id: events
