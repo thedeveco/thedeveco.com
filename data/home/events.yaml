@@ -10,27 +10,26 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: May 21, 2025
-    hidden_date: 05-21-2025
-    link: https://web.cvent.com/event/e4774cb8-c4bd-41d2-a667-aac3519eacdb/websitePage:380cb5a2-4637-49a1-bee3
-    title: Microsoft Build 2025 Networking Reception
-  - date: May 21, 2025
-    hidden_date: 05-21-2025
-    link: ''
-    title: '[VIRTUAL MEETUP] Developers Anonymous'
-  - date: May 22, 2025
-    hidden_date: 05-22-2025
-    link: https://www.youtube.com/live/-vlZqNuWFWc?si=ubijyoA9Q-3gihss
-    title: PROCEPTION Livestream | Exploring Autodesk Fusion and the Avnet App with
-      Michael Welling
-  - date: May 24, 2025
-    hidden_date: 05-24-2025
+  - date: May 31, 2025
+    hidden_date: 05-31-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
+  - date: June 05, 2025
+    hidden_date: 06-05-2025
+    link: https://discord.com/invite/qualcommdevelopernetwork
+    title: Livestream with Qualcomm Academy
+  - date: June 14, 2025
+    hidden_date: 06-14-2025
+    link: https://discord.com/invite/qualcommdevelopernetwork
+    title: Edge AI developer hack - Bengaluru, India
   - date: June 17, 2025
     hidden_date: 06-17-2025
     link: ''
     title: devOSH LIVE Monthly
+  - date: June 18, 2025
+    hidden_date: 06-18-2025
+    link: ''
+    title: '[VIRTUAL MEETUP] Developers Anonymous'
   - date: June 19, 2025
     hidden_date: 06-19-2025
     link: https://discord.gg/hacksterio
@@ -128,6 +127,23 @@ content:
     title: Hacksterio Office Hour
   - date: May 17, 2025
     hidden_date: 05-17-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: May 21, 2025
+    hidden_date: 05-21-2025
+    link: https://web.cvent.com/event/e4774cb8-c4bd-41d2-a667-aac3519eacdb/websitePage:380cb5a2-4637-49a1-bee3
+    title: Microsoft Build 2025 Networking Reception
+  - date: May 21, 2025
+    hidden_date: 05-21-2025
+    link: ''
+    title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: May 22, 2025
+    hidden_date: 05-22-2025
+    link: https://www.youtube.com/live/-vlZqNuWFWc?si=ubijyoA9Q-3gihss
+    title: PROCEPTION Livestream | Exploring Autodesk Fusion and the Avnet App with
+      Michael Welling
+  - date: May 24, 2025
+    hidden_date: 05-24-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
 enabled: true
