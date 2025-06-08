@@ -10,18 +10,14 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: June 05, 2025
-    hidden_date: 06-05-2025
-    link: https://discord.com/invite/qualcommdevelopernetwork
-    title: Livestream with Qualcomm Academy
-  - date: June 07, 2025
-    hidden_date: 06-07-2025
-    link: https://discord.gg/hackpack
-    title: HACK PACK LIVE Build with .fixer
   - date: June 14, 2025
     hidden_date: 06-14-2025
     link: https://discord.com/invite/qualcommdevelopernetwork
     title: Edge AI developer hack - Bengaluru, India
+  - date: June 14, 2025
+    hidden_date: 06-14-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
   - date: June 17, 2025
     hidden_date: 06-17-2025
     link: ''
@@ -34,14 +30,6 @@ content:
     hidden_date: 06-19-2025
     link: https://discord.gg/hacksterio
     title: Hacksterio Office Hour
-  - date: July 18, 2025
-    hidden_date: 07-18-2025
-    link: https://opensauce.com/
-    title: Open Sauce | In Person Event!
-  - date: July 19, 2025
-    hidden_date: 07-19-2025
-    link: In Person at Open Sauce!
-    title: '[In-Person Meetup] devAnon at Open Sauce!'
   past:
   - date: November 2024
     hidden_date: 11-01-2024
@@ -148,6 +136,14 @@ content:
     title: HACK PACK LIVE Build with .fixer
   - date: May 31, 2025
     hidden_date: 05-31-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: June 05, 2025
+    hidden_date: 06-05-2025
+    link: https://discord.com/invite/qualcommdevelopernetwork
+    title: Livestream with Qualcomm Academy
+  - date: June 07, 2025
+    hidden_date: 06-07-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
 enabled: true
