@@ -14,10 +14,6 @@ content:
     hidden_date: 06-14-2025
     link: https://discord.com/invite/qualcommdevelopernetwork
     title: Edge AI developer hack - Bengaluru, India
-  - date: June 14, 2025
-    hidden_date: 06-14-2025
-    link: https://discord.gg/hackpack
-    title: HACK PACK LIVE Build with .fixer
   - date: June 17, 2025
     hidden_date: 06-17-2025
     link: ''
@@ -30,6 +26,14 @@ content:
     hidden_date: 06-19-2025
     link: https://discord.gg/hacksterio
     title: Hacksterio Office Hour
+  - date: June 19, 2025
+    hidden_date: 06-19-2025
+    link: https://discord.gg/9vPJVQHJ?event=1379897406317007030
+    title: 'Discord Live Build-Along: DeepSeek on Snapdragon X Elite'
+  - date: June 21, 2025
+    hidden_date: 06-21-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
   past:
   - date: November 2024
     hidden_date: 11-01-2024
@@ -144,6 +148,14 @@ content:
     title: Livestream with Qualcomm Academy
   - date: June 07, 2025
     hidden_date: 06-07-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: June 14, 2025
+    hidden_date: 06-14-2025
+    link: https://discord.com/invite/qualcommdevelopernetwork
+    title: Edge AI developer hack - Bengaluru, India
+  - date: June 14, 2025
+    hidden_date: 06-14-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
 enabled: true
