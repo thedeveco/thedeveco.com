@@ -10,16 +10,8 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: June 26, 2025
-    hidden_date: 06-26-2025
-    link: https://www.youtube.com/live/qJehnl4Iu9k?si=NCPsCtkJ-bjhRHG_
-    title: PROCEPTION Live | Unscripted with Techiesms & Robert Wolff
-  - date: June 28, 2025
-    hidden_date: 06-28-2025
-    link: ''
-    title: It's back! devSpirits, our end of month virtual happy hour!
-  - date: June 28, 2025
-    hidden_date: 06-28-2025
+  - date: July 05, 2025
+    hidden_date: 07-05-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
   - date: July 15, 2025
@@ -180,6 +172,18 @@ content:
     title: 'Discord Live Build-Along: DeepSeek on Snapdragon X Elite'
   - date: June 21, 2025
     hidden_date: 06-21-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: June 26, 2025
+    hidden_date: 06-26-2025
+    link: https://www.youtube.com/live/qJehnl4Iu9k?si=NCPsCtkJ-bjhRHG_
+    title: PROCEPTION Live | Unscripted with Techiesms & Robert Wolff
+  - date: June 28, 2025
+    hidden_date: 06-28-2025
+    link: ''
+    title: It's back! devSpirits, our end of month virtual happy hour!
+  - date: June 28, 2025
+    hidden_date: 06-28-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
 enabled: true
