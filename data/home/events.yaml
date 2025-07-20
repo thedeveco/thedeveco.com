@@ -10,22 +10,22 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: July 15, 2025
-    hidden_date: 07-15-2025
-    link: ''
-    title: devOSH LIVE Monthly
-  - date: July 16, 2025
-    hidden_date: 07-16-2025
-    link: ''
-    title: '[VIRTUAL MEETUP] Developers Anonymous'
-  - date: July 17, 2025
-    hidden_date: 07-17-2025
-    link: https://discord.gg/hacksterio
-    title: Hacksterio Office Hour
-  - date: July 19, 2025
-    hidden_date: 07-19-2025
+  - date: July 26, 2025
+    hidden_date: 07-26-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
+  - date: August 19, 2025
+    hidden_date: 08-19-2025
+    link: ''
+    title: devOSH LIVE Monthly
+  - date: August 20, 2025
+    hidden_date: 08-20-2025
+    link: ''
+    title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: August 21, 2025
+    hidden_date: 08-21-2025
+    link: https://discord.gg/hacksterio
+    title: Hacksterio Office Hour
   past:
   - date: November 2024
     hidden_date: 11-01-2024
@@ -192,6 +192,22 @@ content:
     title: HACK PACK LIVE Build with .fixer
   - date: July 12, 2025
     hidden_date: 07-12-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: July 15, 2025
+    hidden_date: 07-15-2025
+    link: ''
+    title: devOSH LIVE Monthly
+  - date: July 16, 2025
+    hidden_date: 07-16-2025
+    link: ''
+    title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: July 17, 2025
+    hidden_date: 07-17-2025
+    link: https://discord.gg/hacksterio
+    title: Hacksterio Office Hour
+  - date: July 19, 2025
+    hidden_date: 07-19-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
 enabled: true
