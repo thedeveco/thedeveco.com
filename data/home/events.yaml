@@ -10,8 +10,8 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: August 02, 2025
-    hidden_date: 08-02-2025
+  - date: August 09, 2025
+    hidden_date: 08-09-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
   - date: August 19, 2025
@@ -212,6 +212,10 @@ content:
     title: HACK PACK LIVE Build with .fixer
   - date: July 26, 2025
     hidden_date: 07-26-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: August 02, 2025
+    hidden_date: 08-02-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
 enabled: true
