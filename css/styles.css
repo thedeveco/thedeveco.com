@@ -1,5 +1,6 @@
 * {
     margin: 0;
+<<<<<<< HEAD
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -44,10 +45,71 @@ a:hover {
 
 .solid-button {
     display: inline-block;
+=======
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.header-left * {
+    margin-left: 20px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding-right: 40px;
+}
+
+.header-right * {
+    margin: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: #2d3740;
+}
+
+header a:visited {
+    color: #2d3740;
+}
+
+#header-title {
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+
+.solid-button {
+>>>>>>> 6f21c0c (Add starting CSS)
     background-color: #2d3740;
     color: aliceblue !important;
     border: 10px solid #2d3740;
     border-radius: 10px;
+<<<<<<< HEAD
     transition: all 0.05s ease;
 }
 
@@ -57,6 +119,36 @@ a:hover {
 
 .blue {
     color: #2393a1;
+=======
+    text-decoration: none;
+}
+
+#main {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#main-container {
+    width: fit-content;
+    max-width: 600px;
+    margin-right: 180px;
+}
+
+
+
+h1 {
+   font-size: 4.5rem !important;
+}
+
+#subtitle {
+    margin: 20px 5px;
+    margin-bottom: 40px;;
+}
+
+.blue {
+    color: #4ed1e5;
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 .gray {
@@ -67,6 +159,7 @@ a:hover {
     text-align: center;
 }
 
+<<<<<<< HEAD
 
 
 /* HEADER */
@@ -167,34 +260,55 @@ h1 {
     padding-top: 25px;
     line-height: 1.6rem;
     grid-column: var(--main-size);
+=======
+#join-today-btn {
+    text-align: center;
+    width: 40px;
+    color: blue !important;
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 #highlights-title {
     margin: 20px;
+<<<<<<< HEAD
     font-size: 2.7rem;
 
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 #highlights-list {
     display: flex;
     justify-content: space-evenly;
+<<<<<<< HEAD
     margin: 10px 10vw;
+=======
+    list-style: none;
+    margin: 10px 15vw;
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 .highlights-header {
     font-weight: bold;
     display: block;
+<<<<<<< HEAD
     font-size: 1.2rem;
     margin-bottom: 2px;
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 #highlights-right li {
     margin: 15px;
+<<<<<<< HEAD
     list-style: none;
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 #highlights-left li {
     margin: 15px;
+<<<<<<< HEAD
     list-style: none;
 }
 
@@ -220,10 +334,19 @@ h1 {
 #benefits-list {
     display: flex;
     margin: 10px 10vw;
+=======
+}
+
+#benefits-list {
+    list-style: none;
+    display: flex;
+    margin: 10px 15vw;
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 .benefits-header {
     font-weight: bold;
+<<<<<<< HEAD
     display: block;
     font-size: 1.2rem;
     margin-bottom: 2px;
@@ -351,11 +474,28 @@ h1 {
 /* FOOTER */
 
 
+=======
+}
+
+#benefits-left li {
+    margin: 15px;
+}
+
+#benefits-right li {
+    margin: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+>>>>>>> 6f21c0c (Add starting CSS)
 footer {
     background-color: aliceblue;
     padding: 10px 10%;
 }
 
+<<<<<<< HEAD
 #footer-title {
     font-family: "Oxanium", Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
@@ -366,6 +506,8 @@ footer a {
     color: #2d3740 !important;
 }
 
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 footer ul {
     list-style: none; 
     padding: 0px;
@@ -373,7 +515,10 @@ footer ul {
 
 #footer-container {
     display: flex;
+<<<<<<< HEAD
     justify-content: center;
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
     padding: 20px;
 }
 
@@ -382,15 +527,21 @@ footer ul {
     text-align: left;
 }
 
+<<<<<<< HEAD
 #footer-subtitle {
     margin: 10px 0;
 }
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 
 #socials-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+<<<<<<< HEAD
     flex-wrap: wrap;
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
     padding: 15px 5px;
 }
 
@@ -406,6 +557,7 @@ footer ul {
     background-color: lightblue;
     border: 8px solid lightblue;
     border-radius: 20px;
+<<<<<<< HEAD
     transition: all 0.3s ease;
 }
 
@@ -417,6 +569,8 @@ footer ul {
     background-color: rgb(138, 190, 207);
     border: 10px solid rgb(138, 190, 207);
     border-radius: 20px;
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 #deveco-footer {
@@ -427,7 +581,10 @@ footer ul {
     display: block;
     width: 100%;
     text-align: center;
+<<<<<<< HEAD
     font-size: .85rem;
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 }
 
 .location-icon * {
@@ -442,17 +599,21 @@ footer ul {
     min-width: 120px;
 }
 
+<<<<<<< HEAD
 .location {
     display: block;
     margin: 5px 0;
 }
 
+=======
+>>>>>>> 6f21c0c (Add starting CSS)
 #footer-about {
     min-width: 120px;
 }
 
 #footer-about * {
     display: block;
+<<<<<<< HEAD
     margin: 5px 0;
 }
 
@@ -472,3 +633,6 @@ footer ul {
     }
 
 } */
+=======
+}
+>>>>>>> 6f21c0c (Add starting CSS)
