@@ -10,10 +10,10 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: August 09, 2025
-    hidden_date: 08-09-2025
-    link: https://discord.gg/hackpack
-    title: HACK PACK LIVE Build with .fixer
+  - date: August 13, 2025
+    hidden_date: 08-13-2025
+    link: Your Happy Place
+    title: devWalks Weekly
   - date: August 19, 2025
     hidden_date: 08-19-2025
     link: ''
@@ -26,6 +26,10 @@ content:
     hidden_date: 08-21-2025
     link: https://discord.gg/hacksterio
     title: Hacksterio Office Hour
+  - date: August 29, 2025
+    hidden_date: 08-29-2025
+    link: ''
+    title: devSpirits Monthly
   past:
   - date: November 2024
     hidden_date: 11-01-2024
@@ -216,6 +220,10 @@ content:
     title: HACK PACK LIVE Build with .fixer
   - date: August 02, 2025
     hidden_date: 08-02-2025
+    link: https://discord.gg/hackpack
+    title: HACK PACK LIVE Build with .fixer
+  - date: August 09, 2025
+    hidden_date: 08-09-2025
     link: https://discord.gg/hackpack
     title: HACK PACK LIVE Build with .fixer
 enabled: true
