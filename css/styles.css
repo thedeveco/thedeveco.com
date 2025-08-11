@@ -101,9 +101,17 @@ h1 {
 }
 
 #join-today-btn {
-    text-align: center;
-    width: 40px;
-    color: blue !important;
+    display: block;
+    margin: 30px auto;
+    font-size: 2.8rem;
+    width: fit-content;
+    border: 30px solid #2d3740;
+    border-radius: 20px;
+}
+
+#join-today-btn:hover {
+    border-color: #596772;
+    background-color: #596772;
 }
 
 #highlights-title {
