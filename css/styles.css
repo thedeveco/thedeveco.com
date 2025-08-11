@@ -4,7 +4,6 @@
     text-decoration: none;
 }
 
-
 header {
     width: 100%;
     height: 100px;
@@ -114,8 +113,16 @@ h1 {
     background-color: #596772;
 }
 
+#highlights {
+    padding: 15px;
+    padding-top: 25px;
+    line-height: 1.6rem;
+}
+
 #highlights-title {
     margin: 20px;
+    font-size: 2.7rem;
+
 }
 
 #highlights-list {
@@ -128,6 +135,8 @@ h1 {
 .highlights-header {
     font-weight: bold;
     display: block;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
 }
 
 #highlights-right li {
@@ -138,6 +147,16 @@ h1 {
     margin: 15px;
 }
 
+#benefits {
+    padding: 15px;
+    padding-top: 25px;
+    line-height: 1.6rem;
+}
+
+#benefits-title {
+    font-size: 2.7rem;
+}
+
 #benefits-list {
     list-style: none;
     display: flex;
@@ -146,15 +165,81 @@ h1 {
 
 .benefits-header {
     font-weight: bold;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
 }
 
 #benefits-left li {
-    margin: 15px;
+    margin: 35px;
 }
 
 #benefits-right li {
-    margin: 15px;
+    margin: 35px;
 }
+
+#faqs {
+    box-shadow: 0 0 15px #b1bfc9;
+    width: 60vw;
+    margin: 20px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+#faqs-title {
+    width: 100%;
+    text-align: center;
+    margin: 15px;
+    font-size: 2.5rem;
+}
+
+#faqs-subtitle {
+    width: 100%;
+    text-align: center;
+    margin: 15px;
+    color: rgb(79, 79, 85);
+}
+
+#faqs summary {
+    list-style: none;
+
+}
+
+#faqs summary:hover {
+    color: #ff4b6d;
+}
+
+.answer {
+    margin: 5px;
+    margin-top: 10px;
+}
+
+#faqs details {
+    font-size: 1.1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    width: 85%;
+    margin: 10px auto;
+}
+
+#faqs-container {
+    display: flex;
+    justify-content: center;
+}
+
+#faqs-left {
+    margin-right: 1%;
+    width: 48%;
+}
+
+#faqs-right {
+    margin-left: 1%;
+    width: 48%;
+}
+
 
 main {
     padding: 20px;
@@ -165,6 +250,10 @@ footer {
     padding: 10px 10%;
 }
 
+footer a {
+    color: #2d3740 !important;
+}
+
 footer ul {
     list-style: none; 
     padding: 0px;
@@ -172,6 +261,7 @@ footer ul {
 
 #footer-container {
     display: flex;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -180,11 +270,15 @@ footer ul {
     text-align: left;
 }
 
+#footer-subtitle {
+    margin: 10px 0;
+}
 
 #socials-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 15px 5px;
 }
 
@@ -224,10 +318,20 @@ footer ul {
     min-width: 120px;
 }
 
+.location {
+    display: block;
+    margin: 5px 0;
+}
+
 #footer-about {
     min-width: 120px;
 }
 
 #footer-about * {
     display: block;
+    margin: 5px 0;
+}
+
+#footer-contact * {
+    margin: 5px 0;
 }
