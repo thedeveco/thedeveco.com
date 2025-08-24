@@ -1,16 +1,67 @@
 * {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+    --main-size: 2 / 12;
+}
+
+
+
+
+/* GENERAL */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    padding: 20px;
+}
+
+hr {
+    grid-column: var(--main-size);
+    margin: 40px 20px;
+}
+
+.solid-button {
+    background-color: #2d3740;
+    color: aliceblue !important;
+    border: 10px solid #2d3740;
+    border-radius: 10px;
     text-decoration: none;
 }
 
+.blue {
+    color: #2393a1;
+}
+
+.gray {
+    color: #35414b;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+/* HEADER */
+
 header {
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 100px;
-    background-color: lightblue;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: lightblue;
 }
 
 header a {
@@ -22,7 +73,7 @@ header a {
 .header-left {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 14%;
 }
 
 .header-left * {
@@ -33,7 +84,7 @@ header a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 14%;
     padding-right: 40px;
 }
 
@@ -51,23 +102,24 @@ header a:visited {
 }
 
 #header-title {
+    font-family: "Oxanium", Arial, Helvetica, sans-serif;
     font-size: 2.2rem;
     font-weight: bolder;
 }
 
 
-.solid-button {
-    background-color: #2d3740;
-    color: aliceblue !important;
-    border: 10px solid #2d3740;
-    border-radius: 10px;
-    text-decoration: none;
-}
+
+
+
+
+/* MAIN */
+
 
 #main {
-    margin-top: 15px;
     display: flex;
     justify-content: center;
+    grid-column: var(--main-size);
+    margin: 80px 5px;
 }
 
 #main-container {
@@ -76,47 +128,28 @@ header a:visited {
     margin-right: 180px;
 }
 
-
-
 h1 {
    font-size: 4.5rem !important;
 }
 
 #subtitle {
     margin: 20px 5px;
-    margin-bottom: 40px;;
+    margin-bottom: 40px;
 }
 
-.blue {
-    color: #4ed1e5;
-}
 
-.gray {
-    color: #35414b;
-}
 
-.center {
-    text-align: center;
-}
 
-#join-today-btn {
-    display: block;
-    margin: 30px auto;
-    font-size: 2.8rem;
-    width: fit-content;
-    border: 30px solid #2d3740;
-    border-radius: 20px;
-}
 
-#join-today-btn:hover {
-    border-color: #596772;
-    background-color: #596772;
-}
+
+/* HIGHLIGHTS */
+
 
 #highlights {
     padding: 15px;
     padding-top: 25px;
     line-height: 1.6rem;
+    grid-column: var(--main-size);
 }
 
 #highlights-title {
@@ -147,10 +180,19 @@ h1 {
     margin: 15px;
 }
 
+
+
+
+
+
+/* BENEFITS */
+
+
 #benefits {
     padding: 15px;
     padding-top: 25px;
     line-height: 1.6rem;
+    grid-column: var(--main-size);
 }
 
 #benefits-title {
@@ -178,13 +220,21 @@ h1 {
     margin: 35px;
 }
 
+
+
+
+
+/* FAQS */
+
+
 #faqs {
     box-shadow: 0 0 15px #b1bfc9;
     width: 60vw;
-    margin: 20px auto;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 5px;
+    grid-column: var(--main-size);
+    margin: auto;
 }
 
 #faqs-title {
@@ -225,6 +275,11 @@ h1 {
     margin: 10px auto;
 }
 
+#faqs ul {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
 #faqs-container {
     display: flex;
     justify-content: center;
@@ -241,9 +296,40 @@ h1 {
 }
 
 
-main {
-    padding: 20px;
+
+
+/* JOIN */
+
+#join {
+    grid-column: var(--main-size);
 }
+
+#join-today-btn {
+
+    display: block;
+    margin: 30px auto;
+    font-size: 2.8rem;
+    width: fit-content;
+    border: 30px solid #2d3740;
+    border-radius: 20px;
+}
+
+#join-today-btn:hover {
+    border-color: #596772;
+    background-color: #596772;
+}
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
 
 footer {
     background-color: aliceblue;
@@ -296,6 +382,16 @@ footer ul {
     border-radius: 20px;
 }
 
+.socials-icon:hover > * {
+    transform: scale(1.25);
+}
+
+.socials-icon:hover {
+    background-color: rgb(138, 190, 207);
+    border: 10px solid rgb(138, 190, 207);
+    border-radius: 20px;
+}
+
 #deveco-footer {
     text-align: center;
 }
@@ -335,3 +431,16 @@ footer ul {
 #footer-contact * {
     margin: 5px 0;
 }
+
+
+
+
+/* RESPONSIVENESS THINGS */
+
+
+/* @media screen and (min-width: 0) and (max-width: 599px) {
+    .margin {
+        margin: 16px;
+    }
+
+} */
