@@ -33,12 +33,26 @@ hr {
     margin: 40px 20px;
 }
 
+a {
+    text-decoration: none;
+    transition: all 0.05s ease;
+}
+
+a:hover {
+    transform: scale(103%);
+}
+
 .solid-button {
+    display: inline-block;
     background-color: #2d3740;
     color: aliceblue !important;
     border: 10px solid #2d3740;
     border-radius: 10px;
-    text-decoration: none;
+    transition: all 0.05s ease;
+}
+
+.solid-button:hover {
+    transform: scale(1.03);
 }
 
 .blue {
@@ -103,6 +117,7 @@ header a {
     text-decoration: none;
     color: #2d3740;
     text-wrap: nowrap;
+
 }
 
 header a:visited {
