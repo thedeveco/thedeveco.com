@@ -4,7 +4,11 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 
-    --main-size: 2 / 12;
+
+    --size-left: 2;
+    --size-right: 12;
+    --main-size: var(--size-left) / var(--size-right);
+    --gap-size: 24px;
 }
 
 
@@ -20,7 +24,7 @@ body {
 main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
+    gap: var(--gap-size);
     padding: 20px;
 }
 
@@ -54,57 +58,55 @@ hr {
 /* HEADER */
 
 header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap-size);
+
     position: sticky;
     top: 0;
     width: 100%;
     height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: lightblue;
-}
 
-header a {
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+
+    background-color: lightblue;
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    margin: 14%;
-}
-
-.header-left * {
-    margin-left: 20px;
+    grid-column: var(--size-left) / span 2;
 }
 
 .header-right {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 14%;
-    padding-right: 40px;
+
+    grid-column: calc(var(--size-right) - 3) / var(--size-right);
 }
 
-.header-right * {
-    margin: 10px;
+
+#header-title {
+    margin-left: 15px;
+    margin-top: 5px; 
+    font-family: "Oxanium", Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    font-weight: bolder;
 }
+
 
 header a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     text-decoration: none;
     color: #2d3740;
+    text-wrap: nowrap;
 }
 
 header a:visited {
     color: #2d3740;
-}
-
-#header-title {
-    font-family: "Oxanium", Arial, Helvetica, sans-serif;
-    font-size: 2.2rem;
-    font-weight: bolder;
 }
 
 
@@ -161,7 +163,6 @@ h1 {
 #highlights-list {
     display: flex;
     justify-content: space-evenly;
-    list-style: none;
     margin: 10px 15vw;
 }
 
@@ -174,10 +175,12 @@ h1 {
 
 #highlights-right li {
     margin: 15px;
+    list-style: none;
 }
 
 #highlights-left li {
     margin: 15px;
+    list-style: none;
 }
 
 
@@ -200,7 +203,6 @@ h1 {
 }
 
 #benefits-list {
-    list-style: none;
     display: flex;
     margin: 10px 15vw;
 }
@@ -214,10 +216,12 @@ h1 {
 
 #benefits-left li {
     margin: 35px;
+    list-style: none;
 }
 
 #benefits-right li {
     margin: 35px;
+    list-style: none;
 }
 
 
@@ -308,15 +312,16 @@ h1 {
 
     display: block;
     margin: 30px auto;
+    padding: 30px;
     font-size: 2.8rem;
     width: fit-content;
-    border: 30px solid #2d3740;
     border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
 #join-today-btn:hover {
-    border-color: #596772;
     background-color: #596772;
+    border-color: #596772;
 }
 
 
@@ -334,6 +339,12 @@ h1 {
 footer {
     background-color: aliceblue;
     padding: 10px 10%;
+}
+
+#footer-title {
+    font-family: "Oxanium", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bolder;
 }
 
 footer a {
@@ -380,6 +391,7 @@ footer ul {
     background-color: lightblue;
     border: 8px solid lightblue;
     border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
 .socials-icon:hover > * {
@@ -400,6 +412,7 @@ footer ul {
     display: block;
     width: 100%;
     text-align: center;
+    font-size: .85rem;
 }
 
 .location-icon * {
