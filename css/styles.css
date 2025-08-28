@@ -163,7 +163,7 @@ h1 {
 #highlights-list {
     display: flex;
     justify-content: space-evenly;
-    margin: 10px 15vw;
+    margin: 10px 10vw;
 }
 
 .highlights-header {
@@ -204,7 +204,7 @@ h1 {
 
 #benefits-list {
     display: flex;
-    margin: 10px 15vw;
+    margin: 10px 10vw;
 }
 
 .benefits-header {
