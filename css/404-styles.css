@@ -1,4 +1,35 @@
 * {
     background-color: black;
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+    color: aliceblue;
+    display: block;
+    margin: 150px auto;
+    margin-bottom: 50px;
+    font-size: 5rem;
+    width: fit-content;
+}
+
+a {
+    display: block;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    width: fit-content;
+    text-decoration: none;
+    color: black;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all .2s ease;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    background-color: lightblue;
+}   
