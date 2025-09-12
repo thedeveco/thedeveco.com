@@ -1,0 +1,17 @@
+name: Basic Workflow
+
+on:
+    workflow_dispatch:
+
+
+jobs:
+    greet:
+        name: "Greetings and permutations."
+
+        runs-on:
+          - ubuntu-latest
+
+        steps:
+          - name: Send greeting
+            run: |
+                echo "Greetings and permutations"

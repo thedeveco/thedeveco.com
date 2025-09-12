@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+
+    --size-left: 2;
+    --size-right: 12;
+    --main-size: var(--size-left) / var(--size-right);
+    --gap-size: 24px;
+}
+
+
+
+
+/* GENERAL */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap-size);
+    padding: 20px;
+}
+
+hr {
+    grid-column: var(--main-size);
+    margin: 40px 20px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.05s ease;
+}
+
+a:hover {
+    transform: scale(103%);
+}
+
+.solid-button {
+    display: inline-block;
+    background-color: #2d3740;
+    color: aliceblue !important;
+    border: 10px solid #2d3740;
+    border-radius: 10px;
+    transition: all 0.05s ease;
+}
+
+.solid-button:hover {
+    transform: scale(1.03);
+}
+
+.blue {
+    color: #2393a1;
+}
+
+.gray {
+    color: #35414b;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+/* HEADER */
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap-size);
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100px;
+
+    align-items: center;
+
+    background-color: lightblue;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    grid-column: var(--size-left) / span 2;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    grid-column: calc(var(--size-right) - 3) / var(--size-right);
+}
+
+
+#header-title {
+    margin-left: 15px;
+    margin-top: 5px; 
+    font-family: "Oxanium", Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: #2d3740;
+    text-wrap: nowrap;
+
+}
+
+header a:visited {
+    color: #2d3740;
+}
+
+
+
+
+
+
+/* MAIN */
+
+
+#main {
+    display: flex;
+    justify-content: center;
+    grid-column: var(--main-size);
+    margin: 80px 5px;
+}
+
+#main-container {
+    width: fit-content;
+    max-width: 600px;
+    margin-right: 180px;
+}
+
+h1 {
+   font-size: 4.5rem !important;
+}
+
+#subtitle {
+    margin: 20px 5px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+/* HIGHLIGHTS */
+
+
+#highlights {
+    padding: 15px;
+    padding-top: 25px;
+    line-height: 1.6rem;
+    grid-column: var(--main-size);
+}
+
+#highlights-title {
+    margin: 20px;
+    font-size: 2.7rem;
+
+}
+
+#highlights-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 10vw;
+}
+
+.highlights-header {
+    font-weight: bold;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+#highlights-right li {
+    margin: 15px;
+    list-style: none;
+}
+
+#highlights-left li {
+    margin: 15px;
+    list-style: none;
+}
+
+
+
+
+
+
+/* BENEFITS */
+
+
+#benefits {
+    padding: 15px;
+    padding-top: 25px;
+    line-height: 1.6rem;
+    grid-column: var(--main-size);
+}
+
+#benefits-title {
+    font-size: 2.7rem;
+}
+
+#benefits-list {
+    display: flex;
+    margin: 10px 10vw;
+}
+
+.benefits-header {
+    font-weight: bold;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+#benefits-left li {
+    margin: 35px;
+    list-style: none;
+}
+
+#benefits-right li {
+    margin: 35px;
+    list-style: none;
+}
+
+
+
+
+
+/* FAQS */
+
+
+#faqs {
+    box-shadow: 0 0 15px #b1bfc9;
+    width: 60vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    grid-column: var(--main-size);
+    margin: auto;
+}
+
+#faqs-title {
+    width: 100%;
+    text-align: center;
+    margin: 15px;
+    font-size: 2.5rem;
+}
+
+#faqs-subtitle {
+    width: 100%;
+    text-align: center;
+    margin: 15px;
+    color: rgb(79, 79, 85);
+}
+
+#faqs summary {
+    list-style: none;
+
+}
+
+#faqs summary:hover {
+    color: #ff4b6d;
+}
+
+.answer {
+    margin: 5px;
+    margin-top: 10px;
+}
+
+#faqs details {
+    font-size: 1.1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    width: 85%;
+    margin: 10px auto;
+}
+
+#faqs ul {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#faqs-container {
+    display: flex;
+    justify-content: center;
+}
+
+#faqs-left {
+    margin-right: 1%;
+    width: 48%;
+}
+
+#faqs-right {
+    margin-left: 1%;
+    width: 48%;
+}
+
+
+
+
+/* JOIN */
+
+#join {
+    grid-column: var(--main-size);
+}
+
+#join-today-btn {
+
+    display: block;
+    margin: 30px auto;
+    padding: 30px;
+    font-size: 2.8rem;
+    width: fit-content;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+#join-today-btn:hover {
+    background-color: #596772;
+    border-color: #596772;
+}
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+footer {
+    background-color: aliceblue;
+    padding: 10px 10%;
+}
+
+#footer-title {
+    font-family: "Oxanium", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+footer a {
+    color: #2d3740 !important;
+}
+
+footer ul {
+    list-style: none; 
+    padding: 0px;
+}
+
+#footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-section {
+    margin: 20px;
+    text-align: left;
+}
+
+#footer-subtitle {
+    margin: 10px 0;
+}
+
+#socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 5px;
+}
+
+#socials-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socials-icon {
+    margin: 0px 10px;
+    color: black;
+    background-color: lightblue;
+    border: 8px solid lightblue;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.socials-icon:hover > * {
+    transform: scale(1.25);
+}
+
+.socials-icon:hover {
+    background-color: rgb(138, 190, 207);
+    border: 10px solid rgb(138, 190, 207);
+    border-radius: 20px;
+}
+
+#deveco-footer {
+    text-align: center;
+}
+
+#footer-copywrite {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: .85rem;
+}
+
+.location-icon * {
+    display: inline-block;
+}
+
+#footer-location-container * {
+    display: inline-block;
+}
+
+#footer-location-container {
+    min-width: 120px;
+}
+
+.location {
+    display: block;
+    margin: 5px 0;
+}
+
+#footer-about {
+    min-width: 120px;
+}
+
+#footer-about * {
+    display: block;
+    margin: 5px 0;
+}
+
+#footer-contact * {
+    margin: 5px 0;
+}
+
+
+
+
+/* RESPONSIVENESS THINGS */
+
+
+/* @media screen and (min-width: 0) and (max-width: 599px) {
+    .margin {
+        margin: 16px;
+    }
+
+} */
