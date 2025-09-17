@@ -17,23 +17,28 @@
 
     <body>
         <header>
-            <div class="header-left">
-                <a href="index.html">
-                    <img id="header-logo" src="images/logo.png" width="50" height="50" alt="devEco logo">
-                    <span id="header-title">the devEco</span>
-                </a>
+            <div id="header-container">
+                <div id="header-left">
+                    <a href="index.html">
+                        <img id="header-logo" src="images/logo.png" width="50" height="50" alt="devEco logo">
+                        <span id="header-title">the devEco</span>
+                    </a>
+                </div>
+                
+                <nav id="header-right">
+                    <a href="about.html">Our Mission</a>
+                    <a href="team.html">Our Team</a>
+                    <a href="events.html">Events</a>
+                    <a href="blog.html">Blog</a>
+                    <a class="solid-button" href="signup.html">Join Us</a>
+                    <button id="hamburger-menu">
+                        <img src="images/hamburger-icon.png" alt="hamburger menu icon"></img>
+                    </button>
+                </nav>
             </div>
-            
-            <nav class="header-right">
-                <a href="about.html">Our Mission</a>
-                <a href="team.html">Our Team</a>
-                <a href="events.html">Events</a>
-                <a href="blog.html">Blog</a>
-                <a class="solid-button" href="signup.html">Join Us</a>
-            </nav>
         </header>
 
-        <main>
+        <main class="full-width">
             <section id="main">
                 <div id="main-container">
                     <h1>Built <span class="blue">By Developers</span> | <span class="blue"> For Developers</span></h1>
@@ -43,178 +48,174 @@
                
                 
                 <div id="image-container">
-                    <img src="images/devEco.png" width="500" height="500" alt="Large devEco logo">
+                    <img id="main-image" src="images/devEco.png" alt="Large devEco logo">
                 </div>
             </section>
 
             <hr>
 
             <section id="highlights">
-                <h2 class="center" id="highlights-title">devEco Highlights</h2>
-                <div id="highlights-list">
-                    <ul id="highlights-left">
-                        <li>
-                            <span class="highlights-header">Collaborative Community</span>
-                            Join a global network of developers, engineers, and technologists eager to share ideas, solve problems, and innovate together.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Resources & Perks</span>
-                            Access tools, training, software licenses, and educational credits (when available)—designed to help you sharpen your skills and build your projects.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Network with Industry Experts</span>
-                            Connect with thought leaders, influencers, and experienced developers through meetups, AMAs, and special interest groups.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Community-Driven Initiatives</span>
-                            Shape the ecosystem with your input—members have partial ownership, contributing ideas, leading projects, and influencing events.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Global Reach, Local Impact</span>
-                            Engage with both global and local communities, from online meetups to regional events, fostering meaningful connections worldwide.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Sustained by the Community, for the Community</span>
-                            Every dollar raised goes back into the ecosystem—supporting events, giveaways, tools, and opportunities that directly benefit members.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Developer-Focused Discord Hub</span>
-                            Access an active Discord server with forums, SIGs, and gamified channels designed to make every interaction engaging and productive.
-                        </li>
-                    </ul>
-                    
-                    <ul id="highlights-right">
-                        <li>
-                            <span class="highlights-header">Engaging Events & Challenges</span>
-                            Participate in meetups, hackathons, and technical partner challenges that inspire growth and connect you with like-minded professionals.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Inclusive & Developer-First Culture</span>
-                            Be yourself in an open, welcoming environment where everyone's voice matters and innovation thrives through diversity and shared knowledge.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Cross-Technology Support</span>
-                            Explore and collaborate across a range of domains, from software to hardware, cloud to embedded systems, and beyond.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Mentorship & Learning Opportunities</span>
-                            Find mentors or become one—our ecosystem values growth through teaching, with structured mentorship programs and peer learning groups.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Open Source and Innovation-Focused</span>
-                            Build, contribute, and collaborate on open-source projects, staying on the cutting edge of technological trends and advancements.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Flexible Engagement Levels</span>
-                            Whether you're looking for deep involvement or casual participation, devEco meets you where you are, with no pressure to overcommit.
-                        </li>
-                        <li>
-                            <span class="highlights-header">Inclusive Governance and Moderation</span>
-                            Enjoy a safe, inclusive space governed by clear rules and fair moderation, ensuring all members feel respected and supported.
-                        </li>
-                    </ul>
-                </div>
+                <h2 class="center full" id="highlights-title">devEco Highlights</h2>
+                <ul id="highlights-left" class="left">
+                    <li>
+                        <span class="highlights-header">Collaborative Community</span>
+                        Join a global network of developers, engineers, and technologists eager to share ideas, solve problems, and innovate together.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Resources & Perks</span>
+                        Access tools, training, software licenses, and educational credits (when available)—designed to help you sharpen your skills and build your projects.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Network with Industry Experts</span>
+                        Connect with thought leaders, influencers, and experienced developers through meetups, AMAs, and special interest groups.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Community-Driven Initiatives</span>
+                        Shape the ecosystem with your input—members have partial ownership, contributing ideas, leading projects, and influencing events.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Global Reach, Local Impact</span>
+                        Engage with both global and local communities, from online meetups to regional events, fostering meaningful connections worldwide.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Sustained by the Community, for the Community</span>
+                        Every dollar raised goes back into the ecosystem—supporting events, giveaways, tools, and opportunities that directly benefit members.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Developer-Focused Discord Hub</span>
+                        Access an active Discord server with forums, SIGs, and gamified channels designed to make every interaction engaging and productive.
+                    </li>
+                </ul>
+                
+                <ul id="highlights-right" class="right">
+                    <li>
+                        <span class="highlights-header">Engaging Events & Challenges</span>
+                        Participate in meetups, hackathons, and technical partner challenges that inspire growth and connect you with like-minded professionals.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Inclusive & Developer-First Culture</span>
+                        Be yourself in an open, welcoming environment where everyone's voice matters and innovation thrives through diversity and shared knowledge.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Cross-Technology Support</span>
+                        Explore and collaborate across a range of domains, from software to hardware, cloud to embedded systems, and beyond.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Mentorship & Learning Opportunities</span>
+                        Find mentors or become one—our ecosystem values growth through teaching, with structured mentorship programs and peer learning groups.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Open Source and Innovation-Focused</span>
+                        Build, contribute, and collaborate on open-source projects, staying on the cutting edge of technological trends and advancements.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Flexible Engagement Levels</span>
+                        Whether you're looking for deep involvement or casual participation, devEco meets you where you are, with no pressure to overcommit.
+                    </li>
+                    <li>
+                        <span class="highlights-header">Inclusive Governance and Moderation</span>
+                        Enjoy a safe, inclusive space governed by clear rules and fair moderation, ensuring all members feel respected and supported.
+                    </li>
+                </ul>
             </section>
 
             <hr>
 
             <section id="benefits">
-                <h2 id="benefits-title" class="center">Benefits of the devEco</h2>
-                <div id="benefits-list">
-                    <ul id="benefits-left">
-                        <li>
-                            <span class="benefits-header">💎 Contribute to Something Bigger</span>
-                            Be part of an evolving movement where every contribution helps shape the future of technology beyond what any one developer can achieve alone.
-                        </li>
-                        <li>
-                            <span class="benefits-header">🤘 Collaborate with Esteemed Developers (Tech Rock Stars)</span>
-                            Work alongside influential developers, industry experts, and thought leaders from around the world—gaining insights and building connections with top talent.
-                        </li>
-                        <li>
-                            <span class="benefits-header">📅 Exclusive Access to Events, Meetups, and Hackathons</span>
-                            Attend bi-weekly meetups, online events, and hackathons that offer unique networking opportunities, mentorship, and hands-on collaboration.
-                        </li>
-                        <li>
-                            <span class="benefits-header">🏫 Mentorship and Learning Opportunities</span>
-                            Find mentors or share your expertise with others—our mentorship programs create a cycle of continuous learning and growth for all members.
-                        </li>
-                        <li>
-                            <span class="benefits-header">🧐 Opportunities for Thought Leadership</span>
-                            Host webinars, write blogs, or lead discussions—establish yourself as a leader within the ecosystem and beyond.
-                        </li>
-                        <li>
-                            <span class="benefits-header">🧾 A Developer-First Discord Hub for Networking and Collaboration</span>
-                            Access our active Discord server to engage in forums, participate in SIGs, and collaborate in real-time with developers across disciplines.
-                        </li>
-                        <li>
-                            <span class="benefits-header">📚 Endless Opportunities to Learn New Skills and Technologies</span>
-                            Engage with diverse technologies, from cloud and embedded systems to machine learning and hardware—broadening your technical horizons.
-                        </li>
-                    </ul>
+                <h2 id="benefits-title" class="center full">Benefits of the devEco</h2>
+                <ul id="benefits-left" class="left">
+                    <li>
+                        <span class="benefits-header">💎 Contribute to Something Bigger</span>
+                        Be part of an evolving movement where every contribution helps shape the future of technology beyond what any one developer can achieve alone.
+                    </li>
+                    <li>
+                        <span class="benefits-header">🤘 Collaborate with Esteemed Developers (Tech Rock Stars)</span>
+                        Work alongside influential developers, industry experts, and thought leaders from around the world—gaining insights and building connections with top talent.
+                    </li>
+                    <li>
+                        <span class="benefits-header">📅 Exclusive Access to Events, Meetups, and Hackathons</span>
+                        Attend bi-weekly meetups, online events, and hackathons that offer unique networking opportunities, mentorship, and hands-on collaboration.
+                    </li>
+                    <li>
+                        <span class="benefits-header">🏫 Mentorship and Learning Opportunities</span>
+                        Find mentors or share your expertise with others—our mentorship programs create a cycle of continuous learning and growth for all members.
+                    </li>
+                    <li>
+                        <span class="benefits-header">🧐 Opportunities for Thought Leadership</span>
+                        Host webinars, write blogs, or lead discussions—establish yourself as a leader within the ecosystem and beyond.
+                    </li>
+                    <li>
+                        <span class="benefits-header">🧾 A Developer-First Discord Hub for Networking and Collaboration</span>
+                        Access our active Discord server to engage in forums, participate in SIGs, and collaborate in real-time with developers across disciplines.
+                    </li>
+                    <li>
+                        <span class="benefits-header">📚 Endless Opportunities to Learn New Skills and Technologies</span>
+                        Engage with diverse technologies, from cloud and embedded systems to machine learning and hardware—broadening your technical horizons.
+                    </li>
+                </ul>
+                
+                <ul id="benefits-right" class="right">
+                    <li>
+                        <span class="benefits-header">🌐 Access to an Ecosystem of Technical Communities</span>
+                        Engage with multiple technical communities under one roof, covering a wide range of technologies and special interest groups—expanding your knowledge and network.
+                    </li>
                     
-                    <ul id="benefits-right">
-                        <li>
-                            <span class="benefits-header">🌐 Access to an Ecosystem of Technical Communities</span>
-                            Engage with multiple technical communities under one roof, covering a wide range of technologies and special interest groups—expanding your knowledge and network.
-                        </li>
-                        
-                        <li>
-                            <span class="benefits-header">🤝 Opportunities to Work with Industry Partners</span>
-                            Collaborate on projects with tech companies, open-source foundations, and organizations looking to partner with our members on real-world challenges.
-                        </li>
-                        
-                        <li>
-                            <span class="benefits-header">🛠️ Resources and Tools to Accelerate Your Growth</span>
-                            Get access to software licenses, hardware, educational credits, development tools, and other resources to enhance your skills and projects.
-                        </li>
-                        
-                        <li>
-                            <span class="benefits-header">🏛️  Community-Led Initiatives and Open Governance</span>
-                            Play a key role in shaping community goals, events, and initiatives—our open governance model ensures every voice is heard.
-                        </li>
-                        
-                        <li>
-                            <span class="benefits-header">🔓 Support for Open-Source Contributions</span>
-                            Get involved in open-source projects with access to support, contributors, and real-world problem-solving opportunities.
-                        </li>
-                        
-                        <li>
-                            <span class="benefits-header">🌎 Global Reach with Local Impact</span>
-                            Connect with a worldwide community, while also having opportunities to participate in regional meetups and localized events.
-                        </li>
-                        
-                        <li>
-                            <span class="benefits-header">📈 Give Back to the Community While Growing Your Career</span>
-                            As devEco reinvests all funds into events, tools, and perks for members, your involvement supports not only your growth but the growth of the entire community.
-                        </li>
-                    </ul>
-                </div>
+                    <li>
+                        <span class="benefits-header">🤝 Opportunities to Work with Industry Partners</span>
+                        Collaborate on projects with tech companies, open-source foundations, and organizations looking to partner with our members on real-world challenges.
+                    </li>
+                    
+                    <li>
+                        <span class="benefits-header">🛠️ Resources and Tools to Accelerate Your Growth</span>
+                        Get access to software licenses, hardware, educational credits, development tools, and other resources to enhance your skills and projects.
+                    </li>
+                    
+                    <li>
+                        <span class="benefits-header">🏛️  Community-Led Initiatives and Open Governance</span>
+                        Play a key role in shaping community goals, events, and initiatives—our open governance model ensures every voice is heard.
+                    </li>
+                    
+                    <li>
+                        <span class="benefits-header">🔓 Support for Open-Source Contributions</span>
+                        Get involved in open-source projects with access to support, contributors, and real-world problem-solving opportunities.
+                    </li>
+                    
+                    <li>
+                        <span class="benefits-header">🌎 Global Reach with Local Impact</span>
+                        Connect with a worldwide community, while also having opportunities to participate in regional meetups and localized events.
+                    </li>
+                    
+                    <li>
+                        <span class="benefits-header">📈 Give Back to the Community While Growing Your Career</span>
+                        As devEco reinvests all funds into events, tools, and perks for members, your involvement supports not only your growth but the growth of the entire community.
+                    </li>
+                </ul>
             </section>
 
             <hr>
 
-            <section id="faqs">
+            <section id="faqs" class="full full-width">
                 <h2 id="faqs-title">devEco FAQs</h2>
                 <p id="faqs-subtitle">Haven't found what you're looking for? Join us on Discord!</p>
 
                 <div id="faqs-container">
                     <div id="faqs-left">
-                        <details>
+                        <details name="faqs">
                             <summary>What is the Developer Ecosystem (devEco)?</summary>
                             <div class="answer">devEco is a global network of interconnected technical communities built by developers, for developers. It offers a collaborative space for learning, building, and growing together, with access to events, resources, mentorship, and industry partnerships.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>Who can join devEco?</summary>
                             <div class="answer">Anyone with a passion for technology and development is welcome to join! Whether you're a seasoned developer or just starting out, devEco offers opportunities for all skill levels.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>What makes devEco different from other communities?</summary>
                             <div class="answer">devEco is not just one community—it's an ecosystem of technical communities. We promote cross-discipline collaboration, open-source principles, and community-driven initiatives, offering a space where every contribution matters.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>What are the benefits of joining devEco?</summary>
                             <div class="answer">As a member, you'll have access to
                                 <ul>
@@ -243,54 +244,54 @@
                             </div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>How do I join devEco?</summary>
                             <div class="answer">Its simple! Just <a href="signup.html">sign up here</a> and start exploring the community. Once you've joined, connect with other members on our Discord server and participate in events and challenges.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>Does devEco have an open-source focus?</summary>
                             <div class="answer">Yes! Our community is built on open-source principles of transparency, collaboration, and shared ownership. Members can contribute to open-source projects or lead new initiatives within the ecosystem.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>What kinds of events does devEco host?</summary>
                             <div class="answer">We host bi-weekly virtual meetups, hackathons, technical workshops, and AMAs (Ask Me Anything) with industry leaders. Our events provide a great way to network, learn new skills, and showcase your work.</div>
                         </details>
                     </div>
                     
                     <div id="faqs-right">
-                        <details>
+                        <details name="faqs">
                             <summary>Can I collaborate with companies and partners through devEco?</summary>
                             <div class="answer">Absolutely! devEco offers opportunities to work on projects with tech companies, industry partners, and other organizations looking for developer talent and collaboration.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>How does devEco ensure a positive and inclusive environment?</summary>
                             <div class="answer">We follow clear community guidelines to maintain a safe, welcoming space for all members. Our moderators are committed to upholding these standards, and we encourage respectful interactions at all times.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>What happens to funds raised by the community?</summary>
                             <div class="answer">All proceeds go directly back into the community, supporting events, giveaways, tools, training, and other initiatives that benefit our members.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>How do I get involved in leading a project or initiative?</summary>
                             <div class="answer">We encourage community-led efforts! Once you join, you can propose projects, participate in open governance discussions, or join special interest groups (SIGs) aligned with your interests.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>Is there a cost to join devEco?</summary>
                             <div class="answer">Joining devEco is free! Some events or resources may have optional fees, but we strive to keep most offerings accessible to everyone.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>How do I connect with other members?</summary>
                             <div class="answer">Our primary hub for interaction is the devEco Discord server, where you can engage in forums, chat with members, join SIGs, and participate in live events.</div>
                         </details>
 
-                        <details>
+                        <details name="faqs">
                             <summary>Where can I find help if I have questions?</summary>
                             <div class="answer">If you need assistance, check out the FAQ/Help forum on our Discord server or contact a moderator directly through the server.</div>
                         </details>
@@ -301,12 +302,12 @@
             <hr>
 
             <section id="join">
-                <a href="signup.html" class="center solid-button" id="join-today-btn">Join Us Today!</a>
+                <a href="signup.html" class="center solid-button full" id="join-today-btn">Join Us Today!</a>
             </section>
         </main>
 
         <footer>
-            <div id="footer-container">
+            <div id="footer-container" class="full-width">
                 <div class="footer-section" id="deveco-footer">
                     <h2 id="footer-title">the devEco</h2>
                     <p id="footer-subtitle">A realtime community built by developers for developers. Come join the awesome.</p>
