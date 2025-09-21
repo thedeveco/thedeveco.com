@@ -10,22 +10,22 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: September 16, 2025
-    hidden_date: 09-16-2025
-    link: ''
-    title: devOSH LIVE Monthly
-  - date: September 17, 2025
-    hidden_date: 09-17-2025
-    link: ''
-    title: '[VIRTUAL MEETUP] Developers Anonymous'
-  - date: September 17, 2025
-    hidden_date: 09-17-2025
+  - date: September 24, 2025
+    hidden_date: 09-24-2025
     link: Your Happy Place
     title: devWalks Weekly
-  - date: September 18, 2025
-    hidden_date: 09-18-2025
+  - date: October 15, 2025
+    hidden_date: 10-15-2025
+    link: ''
+    title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: October 16, 2025
+    hidden_date: 10-16-2025
     link: https://discord.gg/hacksterio
     title: Hacksterio Office Hour
+  - date: October 21, 2025
+    hidden_date: 10-21-2025
+    link: ''
+    title: devOSH LIVE Monthly
   past:
   - date: November 2024
     hidden_date: 11-01-2024
@@ -258,5 +258,21 @@ content:
     hidden_date: 09-10-2025
     link: Your Happy Place
     title: devWalks Weekly
+  - date: September 16, 2025
+    hidden_date: 09-16-2025
+    link: ''
+    title: devOSH LIVE Monthly
+  - date: September 17, 2025
+    hidden_date: 09-17-2025
+    link: ''
+    title: '[VIRTUAL MEETUP] Developers Anonymous'
+  - date: September 17, 2025
+    hidden_date: 09-17-2025
+    link: Your Happy Place
+    title: devWalks Weekly
+  - date: September 18, 2025
+    hidden_date: 09-18-2025
+    link: https://discord.gg/hacksterio
+    title: Hacksterio Office Hour
 enabled: true
 id: events
