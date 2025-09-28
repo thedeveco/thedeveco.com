@@ -10,8 +10,8 @@ content:
     text: Initiative
     title: devOSH Collective
   future:
-  - date: September 24, 2025
-    hidden_date: 09-24-2025
+  - date: October 01, 2025
+    hidden_date: 10-01-2025
     link: Your Happy Place
     title: devWalks Weekly
   - date: October 15, 2025
@@ -274,5 +274,9 @@ content:
     hidden_date: 09-18-2025
     link: https://discord.gg/hacksterio
     title: Hacksterio Office Hour
+  - date: September 24, 2025
+    hidden_date: 09-24-2025
+    link: Your Happy Place
+    title: devWalks Weekly
 enabled: true
 id: events
