@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reactive Network Hex Grid</title>
+<style>
+  body {
+    background: radial-gradient(circle at center, #0b1724 0%, #1a2a38 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .hex-grid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+  }
+
+  .hex {
+    position: absolute;
+    width: 40px;
+    aspect-ratio: 1.1547;
+    background: #009999;
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    opacity: 0.85;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .connection {
+    position: absolute;
+    width: 2px;
+    background: rgba(0, 200, 200, 0.3);
+    transform-origin: top left;
+    transition: opacity 0.3s ease-in-out;
+  }
+</style>
+</head>
+<body>
+  <div class="hex-grid" id="grid"></div>
+
+  <script>
+    const grid = document.getElementById('grid');
+    const hexes = [];
+
+    const colors = ['#00ffc3', '#7d00ff', '#00baff', '#ff007c', '#ffd500', '#00ff85', '#ff6600', '#00ffea'];
+
+    const positions = Array.from({ length: 25 }, (_, i) => {
+      const row = Math.floor(i / 5);
+      const col = i % 5;
+      const offset = row % 2 === 0 ? 0 : 20;
+      return { x: col * 60 + offset, y: row * 52 };
+    });
+
+    positions.forEach((pos) => {
+      const hex = document.createElement('div');
+      hex.className = 'hex';
+      hex.style.left = pos.x + 'px';
+      hex.style.top = pos.y + 'px';
+      grid.appendChild(hex);
+      hexes.push(hex);
+    });
+
+    // Faster rearrangement
+    setInterval(() => {
+      hexes.forEach((hex) => {
+        const target = positions[Math.floor(Math.random() * positions.length)];
+        hex.style.left = target.x + 'px';
+        hex.style.top = target.y + 'px';
+      });
+    }, 4000);
+
+    // Connection visual
+    function connect(hexA, hexB, color) {
+      const conn = document.createElement('div');
+      conn.className = 'connection';
+      const x1 = parseFloat(hexA.style.left) + 20;
+      const y1 = parseFloat(hexA.style.top) + 20;
+      const x2 = parseFloat(hexB.style.left) + 20;
+      const y2 = parseFloat(hexB.style.top) + 20;
+      const length = Math.hypot(x2 - x1, y2 - y1);
+      const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+      conn.style.width = length + 'px';
+      conn.style.left = x1 + 'px';
+      conn.style.top = y1 + 'px';
+      conn.style.background = color;
+      conn.style.transform = `rotate(${angle}deg)`;
+      grid.appendChild(conn);
+      setTimeout(() => conn.remove(), 1000);
+    }
+
+    // Pulse wave through network
+    function pulseWave() {
+      const start = Math.floor(Math.random() * hexes.length);
+      let current = start;
+      const pathLength = 3 + Math.floor(Math.random() * 7);
+      const used = new Set([current]);
+
+      for (let i = 0; i < pathLength; i++) {
+        const neighbors = hexes.filter((_, idx) => !used.has(idx));
+        if (neighbors.length === 0) break;
+        const next = hexes[Math.floor(Math.random() * neighbors.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const hexA = hexes[current];
+
+        // Visual pulse
+        hexA.style.background = color;
+        hexA.style.transform = 'scale(1.4)';
+        hexA.style.boxShadow = `0 0 20px ${color}`;
+
+        setTimeout(() => {
+          hexA.style.transform = 'scale(1)';
+          hexA.style.boxShadow = 'none';
+        }, 300);
+
+        connect(hexA, next, color);
+
+        current = hexes.indexOf(next);
+        used.add(current);
+      }
+    }
+
+    setInterval(pulseWave, 600);
+  </script>
+</body>
+</html>
