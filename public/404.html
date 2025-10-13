@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/images/deveco-community-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevEco - Developer Relations Consulting</title>
+    <script>
+      // Single Page App GitHub Pages redirect workaround
+      // When GitHub Pages returns 404, it serves this file which then redirects to the main app
+      // preserving the URL path for the Vue router to handle
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      // Store the path in sessionStorage to handle it after redirect
+      sessionStorage.setItem('redirect', path + search + hash);
+
+      // Redirect to the root which will load index.html
+      window.location.replace('/');
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
