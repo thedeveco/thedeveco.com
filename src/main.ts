@@ -6,14 +6,6 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-// Handle redirect from 404.html for GitHub Pages SPA support
-const redirect = sessionStorage.getItem('redirect')
-if (redirect) {
-  sessionStorage.removeItem('redirect')
-  // Use replace to avoid adding the redirect to browser history
-  router.replace(redirect)
-}
-
 // Font Awesome Configuration
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -91,5 +83,16 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.use(createPinia())
 app.use(router)
+
+// Handle redirect from 404.html for GitHub Pages SPA support
+// Must be done after router is installed but before mounting
+const redirect = sessionStorage.getItem('redirect')
+if (redirect) {
+  sessionStorage.removeItem('redirect')
+  // Wait for router to be ready then navigate
+  router.isReady().then(() => {
+    router.replace(redirect)
+  })
+}
 
 app.mount('#app')
