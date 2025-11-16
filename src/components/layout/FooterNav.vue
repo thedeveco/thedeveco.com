@@ -10,7 +10,7 @@
             Empowering organizations to grow and enhance their developer ecosystems through comprehensive consulting and community solutions.
           </p>
           <p class="membership-badge">
-            Member of <a href="https://www.edgeaifoundation.org/" target="_blank" class="edge-ai-link">Edge AI Foundation</a>
+            Member of <a href="https://www.edgeaifoundation.org/" target="_blank" class="edge-ai-link">EDGE AI FOUNDATION</a>
           </p>
           <div class="social-links">
             <a href="https://discord.gg/deveco" target="_blank" class="social-link discord" aria-label="Discord">
