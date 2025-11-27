@@ -22,7 +22,7 @@
         <div class="client-logo">
           <img src="/clients/edgeai.png" alt="Edge AI Foundation" />
         </div>
-        <div class="public/clients/client-logo">
+        <div class="client-logo">
           <img src="/clients/solidrun.png" alt="SolidRun" />
         </div>
       </div>
