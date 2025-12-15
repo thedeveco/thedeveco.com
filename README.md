@@ -106,15 +106,77 @@ npm run lint
 npm run build
 ```
 
-## Adding Client Logos
+## Adding Client Logos - STEP-BY-STEP GUIDE
 
-1. Add logo files to `/public/clients/` directory
-2. Use lowercase filenames (e.g., `microsoft.png`, `google.svg`)
-3. Supported formats: PNG, SVG, JPG, WebP
-4. Recommended size: 200x100px aspect ratio
-5. Logos will automatically appear on the homepage
+### ⚠️ IMPORTANT: The logo system is MANUAL, not automatic!
 
-See `/public/clients/README.md` for detailed instructions.
+### Step 1: Prepare Your Logo File
+1. **Get the logo file** in PNG, SVG, JPG, or WebP format
+2. **Optimize the image**:
+   - Recommended dimensions: ~400px width, ~200px height (2:1 ratio works best)
+   - File size: Keep under 50KB if possible
+   - Background: Transparent (PNG/SVG) or white
+3. **Name the file** using lowercase with no spaces:
+   - ✅ CORRECT: `solidrun.png`, `microsoft.svg`, `edge-ai.png`
+   - ❌ WRONG: `SolidRun.PNG`, `Microsoft Logo.svg`, `EDGE AI.png`
+
+### Step 2: Add Logo File to Project
+1. Place the logo file in: `/public/clients/` directory
+2. Verify file is there: `ls public/clients/` should show your new logo
+
+### Step 3: Update the Vue Component (REQUIRED!)
+1. Open the file: `src/components/ui/ClientLogos.vue`
+2. Find the `<div class="clients-grid">` section (around line 9-28)
+3. Add a new logo entry BEFORE the closing `</div>` tag:
+   ```html
+   <div class="client-logo">
+     <img src="/clients/YOUR-LOGO-FILENAME.png" alt="Company Name" />
+   </div>
+   ```
+4. Replace:
+   - `YOUR-LOGO-FILENAME.png` with your actual filename
+   - `Company Name` with the actual company name
+
+### Step 4: Example - Adding a New Logo
+If adding a logo for "Acme Corp" with file `acme.png`:
+
+1. Save `acme.png` to `/public/clients/acme.png`
+2. Edit `src/components/ui/ClientLogos.vue`:
+   ```html
+   <!-- Existing logos -->
+   <div class="client-logo">
+     <img src="/clients/solidrun.png" alt="SolidRun" />
+   </div>
+   <!-- ADD YOUR NEW LOGO HERE -->
+   <div class="client-logo">
+     <img src="/clients/acme.png" alt="Acme Corp" />
+   </div>
+   ```
+
+### Step 5: Test Your Changes
+1. Run the development server: `npm run dev`
+2. Open browser to `http://localhost:5173`
+3. Scroll to "Our Partners & Clients" section
+4. Verify your logo appears and looks good
+
+### Step 6: Common Mistakes to Avoid
+- ❌ **DON'T** write `class="public/clients/client-logo"` (wrong path in class)
+- ❌ **DON'T** forget the `/` at the start of the image path
+- ❌ **DON'T** use uppercase in filenames
+- ❌ **DON'T** forget to add the HTML code to ClientLogos.vue
+- ✅ **DO** use `class="client-logo"` for the div
+- ✅ **DO** use `src="/clients/filename.ext"` for the image
+
+### Step 7: Commit Your Changes
+After testing, commit both files:
+```bash
+git add public/clients/your-logo.png
+git add src/components/ui/ClientLogos.vue
+git commit -m "Added [Company Name] logo to partners section"
+```
+
+### Need Help?
+Check the existing logos in `ClientLogos.vue` as examples - they all follow the same pattern!
 
 ## Project Structure
 
