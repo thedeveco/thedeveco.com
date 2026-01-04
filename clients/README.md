@@ -56,7 +56,7 @@ After adding logos:
 1. Restart the development server: `npm run dev`
 2. Visit the homepage to see the client logos section
 3. Check browser console for any loading errors
-4. Test on different screen sizes for responsivenesss
+4. Test on different screen sizes for responsiveness
 
 ## Deployment
 
