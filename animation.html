@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>devEco Intro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #0b0f14;
+      overflow: hidden;
+    }
+    
+    .container {
+      width: 100%;
+      height: 100%;
+      max-width: 430px;
+      max-height: 932px;
+      margin: 0 auto;
+      background: #0b0f14;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Background pulse */
+    .bg-pulse {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(77, 179, 168, 0.2) 0%, transparent 70%);
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      opacity: 0;
+    }
+    
+    .bg-pulse.active {
+      animation: bgPulse 1.5s ease-out forwards;
+    }
+    
+    @keyframes bgPulse {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0.8; }
+      100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
+    }
+    
+    /* Logo container */
+    .logo-wrap {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 220px;
+      height: 246px;
+    }
+    
+    .logo-wrap svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Frame animation */
+    .logo-frame {
+      opacity: 0;
+      transform-origin: center;
+    }
+    
+    .logo-frame.slam {
+      animation: frameSlamIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    @keyframes frameSlamIn {
+      0% { opacity: 0; transform: scale(2) rotate(30deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    
+    /* Hex animations */
+    .logo-hex {
+      opacity: 0;
+      transform-origin: center;
+    }
+    
+    .logo-hex.pop {
+      animation: hexPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    @keyframes hexPop {
+      0% { opacity: 0; transform: scale(0) rotate(-180deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    
+    /* Color shift */
+    .logo-hex.shift {
+      opacity: 1;
+      animation: colorShift 2s ease-in-out infinite;
+    }
+    
+    @keyframes colorShift {
+      0%, 100% { fill: #ffffff; }
+      50% { fill: #4db3a8; }
+    }
+    
+    /* Glitch effect */
+    .logo-wrap.glitch {
+      animation: glitch 0.3s ease-out;
+    }
+    
+    @keyframes glitch {
+      0% { transform: translate(-50%, -50%); }
+      20% { transform: translate(-48%, -50%); filter: hue-rotate(90deg); }
+      40% { transform: translate(-52%, -49%); filter: hue-rotate(-90deg); }
+      60% { transform: translate(-49%, -51%); filter: hue-rotate(45deg); }
+      80% { transform: translate(-51%, -50%); filter: hue-rotate(0deg); }
+      100% { transform: translate(-50%, -50%); filter: hue-rotate(0deg); }
+    }
+    
+    /* Text */
+    .text-wrap {
+      position: absolute;
+      top: 58%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    
+    .brand-text {
+      font-family: 'Nunito', sans-serif;
+      font-size: 64px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -2px;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    
+    .brand-text.slide {
+      animation: textSlide 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    
+    @keyframes textSlide {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    .tagline {
+      font-family: 'Nunito', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #4db3a8;
+      opacity: 0;
+      transform: translateY(20px);
+      margin-top: 8px;
+    }
+    
+    .tagline.slide {
+      animation: tagSlide 0.4s ease-out forwards;
+    }
+    
+    @keyframes tagSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Accent lines */
+    .accent-line {
+      position: absolute;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #4db3a8, transparent);
+      opacity: 0;
+    }
+    
+    .accent-line.left {
+      top: 52%;
+      left: 0;
+      width: 150px;
+    }
+    
+    .accent-line.right {
+      top: 52%;
+      right: 0;
+      width: 150px;
+    }
+    
+    .accent-line.left.shoot {
+      animation: lineShootLeft 0.6s ease-out forwards;
+    }
+    
+    .accent-line.right.shoot {
+      animation: lineShootRight 0.6s ease-out forwards;
+    }
+    
+    @keyframes lineShootLeft {
+      0% { opacity: 1; transform: translateX(-100%); }
+      50% { opacity: 1; transform: translateX(100%); }
+      100% { opacity: 0; transform: translateX(200%); }
+    }
+    
+    @keyframes lineShootRight {
+      0% { opacity: 1; transform: translateX(100%); }
+      50% { opacity: 1; transform: translateX(-100%); }
+      100% { opacity: 0; transform: translateX(-200%); }
+    }
+    
+    /* Particle burst */
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #4db3a8;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    
+    .particle.burst {
+      animation: particleBurst 0.8s ease-out forwards;
+    }
+    
+    @keyframes particleBurst {
+      0% { opacity: 1; transform: translate(0, 0) scale(1); }
+      100% { opacity: 0; transform: var(--end-pos) scale(0); }
+    }
+    
+    /* Flash overlay */
+    .flash-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .flash-overlay.flash {
+      animation: flashBang 0.2s ease-out;
+    }
+    
+    @keyframes flashBang {
+      0% { opacity: 0.7; }
+      100% { opacity: 0; }
+    }
+    
+    /* Replay */
+    .replay {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(77, 179, 168, 0.2);
+      border: 2px solid #4db3a8;
+      color: #4db3a8;
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.2s;
+    }
+    .replay:hover { 
+      background: #4db3a8; 
+      color: #0b0f14;
+    }
+    
+    /* Color flash on hexes */
+    .logo-hex.color-flash {
+      opacity: 1;
+      animation: hexColorFlash 0.25s ease-out forwards !important;
+    }
+    
+    @keyframes hexColorFlash {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Background pulse -->
+    <div class="bg-pulse" id="bgPulse"></div>
+    <div class="bg-pulse" id="bgPulse2"></div>
+    
+    <!-- Accent lines -->
+    <div class="accent-line left" id="lineLeft"></div>
+    <div class="accent-line right" id="lineRight"></div>
+    
+    <!-- Logo -->
+    <div class="logo-wrap" id="logoWrap">
+      <svg viewBox="0 0 524 586">
+        <path id="logoFrame" class="logo-frame" fill="#ffffff" fill-rule="evenodd" d="M262,22 L492.8,155.25 L492.8,421.75 L262,555 L31.2,421.75 L31.2,155.25 Z M262,84 
+L439.1,186.25 L439.1,390.75 L262,493 L84.9,390.75 L84.9,186.25 Z"/>
+        <g id="logoHexes">
+          <polygon class="logo-hex" points="211.11,146.74 255.28,172.24 255.28,223.24 211.11,248.74 166.94,223.24 166.94,172.24" fill="#ffffff"/>
+          <polygon class="logo-hex" points="315.85,146.72 360.01,172.22 360.01,223.22 315.85,248.72 271.68,223.22 271.68,172.22" fill="#ffffff"/>
+          <polygon class="logo-hex" points="159.06,237.57 203.23,263.07 203.23,314.07 159.06,339.57 114.9,314.07 114.9,263.07" fill="#ffffff"/>
+          <polygon class="logo-hex" points="263.14,237.57 307.31,263.07 307.31,314.07 263.14,339.57 218.98,314.07 218.98,263.07" fill="#ffffff"/>
+          <polygon class="logo-hex" points="367.56,237.57 411.73,263.07 411.73,314.07 367.56,339.57 323.39,314.07 323.39,263.07" fill="#ffffff"/>
+          <polygon class="logo-hex" points="211.13,327.96 255.3,353.46 255.3,404.46 211.13,429.96 166.96,404.46 166.96,353.46" fill="#ffffff"/>
+          <polygon class="logo-hex" points="315.84,327.95 360.01,353.45 360.01,404.45 315.84,429.95 271.67,404.45 271.67,353.45" fill="#ffffff"/>
+        </g>
+      </svg>
+    </div>
+    
+    <!-- Text -->
+    <div class="text-wrap">
+      <div class="brand-text" id="brandText">devEco</div>
+      <div class="tagline" id="tagline">Developer Relations</div>
+    </div>
+    
+    <!-- Particles container -->
+    <div id="particles"></div>
+    
+    <!-- Flash overlay -->
+    <div class="flash-overlay" id="flashOverlay"></div>
+    
+    <!-- Replay button -->
+    <button class="replay" onclick="runAnimation()">↻ Replay</button>
+  </div>
+  
+  <script>
+    const colors = ['#4db3a8', '#e85a85', '#f4c84b', '#5bc5e8', '#6ab4a8'];
+    
+    const logoFrame = document.getElementById('logoFrame');
+    const logoHexes = document.querySelectorAll('.logo-hex');
+    const logoWrap = document.getElementById('logoWrap');
+    const brandText = document.getElementById('brandText');
+    const tagline = document.getElementById('tagline');
+    const bgPulse = document.getElementById('bgPulse');
+    const bgPulse2 = document.getElementById('bgPulse2');
+    const lineLeft = document.getElementById('lineLeft');
+    const lineRight = document.getElementById('lineRight');
+    const flashOverlay = document.getElementById('flashOverlay');
+    const particlesContainer = document.getElementById('particles');
+    
+    let colorFlashInterval;
+    
+    function createParticles() {
+      particlesContainer.innerHTML = '';
+      for (let i = 0; i < 16; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.top = '35%';
+        particle.style.left = '50%';
+        const angle = (i / 16) * Math.PI * 2;
+        const distance = 80 + Math.random() * 120;
+        const x = Math.cos(angle) * distance;
+        const y = Math.sin(angle) * distance;
+        particle.style.setProperty('--end-pos', `translate(${x}px, ${y}px)`);
+        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+        particlesContainer.appendChild(particle);
+      }
+    }
+    
+    function burstParticles() {
+      document.querySelectorAll('.particle').forEach((p, i) => {
+        setTimeout(() => p.classList.add('burst'), i * 15);
+      });
+    }
+    
+    function startColorFlash() {
+      colorFlashInterval = setInterval(() => {
+        const hex = logoHexes[Math.floor(Math.random() * logoHexes.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        hex.style.fill = color;
+        hex.classList.add('color-flash');
+        setTimeout(() => {
+          hex.style.fill = '';
+          hex.style.opacity = '1';
+          hex.classList.remove('color-flash');
+        }, 250);
+      }, 700);
+    }
+    
+    function stopColorFlash() {
+      clearInterval(colorFlashInterval);
+    }
+    
+    function reset() {
+      stopColorFlash();
+      logoFrame.classList.remove('slam');
+      logoHexes.forEach(h => {
+        h.classList.remove('pop', 'shift', 'color-flash');
+        h.style.fill = '';
+        h.style.opacity = '';
+        h.style.animationDelay = '';
+      });
+      logoWrap.classList.remove('glitch');
+      brandText.classList.remove('slide');
+      tagline.classList.remove('slide');
+      bgPulse.classList.remove('active');
+      bgPulse2.classList.remove('active');
+      lineLeft.classList.remove('shoot');
+      lineRight.classList.remove('shoot');
+      flashOverlay.classList.remove('flash');
+      document.querySelectorAll('.particle').forEach(p => p.classList.remove('burst'));
+    }
+    
+    function runAnimation() {
+      reset();
+      createParticles();
+      
+      // T=0: Background pulse + frame slam in
+      setTimeout(() => {
+        bgPulse.classList.add('active');
+        flashOverlay.classList.add('flash');
+        logoFrame.classList.add('slam');
+      }, 100);
+      
+      // T=400ms: Hexes pop in rapid fire
+      setTimeout(() => {
+        logoHexes.forEach((hex, i) => {
+          setTimeout(() => {
+            hex.classList.add('pop');
+          }, i * 50);
+        });
+      }, 400);
+      
+      // T=800ms: Glitch + second pulse
+      setTimeout(() => {
+        logoWrap.classList.add('glitch');
+        bgPulse2.classList.add('active');
+        burstParticles();
+      }, 800);
+      
+      // T=1000ms: Lines shoot + text slides
+      setTimeout(() => {
+        lineLeft.classList.add('shoot');
+        lineRight.classList.add('shoot');
+      }, 1000);
+      
+      setTimeout(() => {
+        brandText.classList.add('slide');
+      }, 1100);
+      
+      setTimeout(() => {
+        tagline.classList.add('slide');
+      }, 1300);
+      
+      // T=1600ms: Start color shift
+      setTimeout(() => {
+        logoHexes.forEach((hex, i) => {
+          hex.style.opacity = '1';
+          hex.style.animationDelay = `${i * 0.12}s`;
+          hex.classList.add('shift');
+        });
+      }, 1600);
+      
+      // T=2200ms: Start random color flashes
+      setTimeout(() => {
+        startColorFlash();
+      }, 2200);
+    }
+    
+    // Auto-start
+    runAnimation();
+  </script>
+</body>
+</html>

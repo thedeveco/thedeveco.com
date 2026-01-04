@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevEco Consulting | Developer Relations from the Workshop Floor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       DEVECO DESIGN SYSTEM
+       Using DevEco Brand Colors
+       ============================================ */
+
+    :root {
+      /* DevEco Brand Colors */
+      --teal-dark: #2a6b6b;
+      --teal: #3d9991;
+      --teal-light: #4db3a8;
+      --navy: #1e3a3a;
+      --bg-light: #eef3f6;
+      --bg-white: #f8fafb;
+      
+      /* Accent Colors */
+      --accent-pink: #e84a7f;
+      --accent-yellow: #f7c948;
+      --accent-cyan: #4ecdc4;
+      --accent-blue: #5bc0eb;
+      
+      /* Neutrals */
+      --text-dark: #1a2e2e;
+      --text-mid: #4a5e5e;
+      --text-light: #7a8e8e;
+      --border: #c5d5d5;
+      
+      /* Typography */
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      /* Spacing */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 2rem;
+      --space-xl: 4rem;
+      --space-2xl: 6rem;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-mono);
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--teal);
+      color: white;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+
+    /* --- Typography --- */
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--navy);
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    h3 { font-size: 1.25rem; }
+
+    .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--teal);
+    }
+
+    .highlight {
+      background: var(--accent-yellow);
+      padding: 0 0.25rem;
+      color: var(--navy);
+    }
+
+    .text-teal { color: var(--teal); }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: 0.875rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: white;
+      box-shadow: 4px 4px 0 var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--navy);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* --- Stamps & Badges --- */
+    .stamp {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 2px dashed currentColor;
+      transform: rotate(-2deg);
+    }
+
+    .stamp-teal { color: var(--teal); }
+    .stamp-pink { color: var(--accent-pink); }
+    .stamp-yellow { color: #b8941a; }
+    .stamp-navy { color: var(--navy); }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .badge-teal { background: var(--teal); color: white; }
+    .badge-pink { background: var(--accent-pink); color: white; }
+    .badge-navy { background: var(--navy); color: white; }
+
+    /* --- Cards --- */
+    .card {
+      background: white;
+      border: 2px solid var(--border);
+      padding: var(--space-lg);
+      transition: all 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--teal);
+      box-shadow: 6px 6px 0 var(--teal);
+    }
+
+    /* --- Navigation --- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-white);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-md) 0;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .nav-logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.55rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .nav-logo-text {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--navy);
+    }
+
+    .nav-logo-text span { color: var(--teal); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: var(--space-sm) var(--space-md);
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--teal);
+      color: white;
+    }
+
+    .nav-cta { margin-left: var(--space-md); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 2px solid var(--navy);
+      padding: var(--space-sm);
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-white);
+        border-bottom: 2px solid var(--border);
+        flex-direction: column;
+        padding: var(--space-md);
+      }
+      .nav-links.active { display: flex; }
+      .nav-cta { display: none; }
+    }
+
+    /* --- Sections --- */
+    section { padding: var(--space-2xl) 0; }
+
+    .section-header { margin-bottom: var(--space-xl); }
+
+    .section-header h2 {
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--teal);
+    }
+
+    /* --- Hero --- */
+    .hero {
+      padding: var(--space-xl) 0 var(--space-2xl);
+      background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+      border-bottom: 2px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-animation { display: none; }
+    }
+
+    .hero-content { max-width: 600px; }
+
+    .hero h1 { margin-bottom: var(--space-lg); }
+
+    .hero-underline {
+      position: relative;
+      display: inline-block;
+      color: var(--teal);
+    }
+
+    .hero-underline::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: var(--accent-yellow);
+      z-index: -1;
+      transform: skewX(-3deg);
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-mid);
+      margin-bottom: var(--space-xl);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .hero-stamp {
+      position: absolute;
+      top: var(--space-lg);
+      right: var(--space-lg);
+      padding: var(--space-sm) var(--space-md);
+      border: 2px solid var(--teal);
+      color: var(--teal);
+      font-size: 0.75rem;
+      font-weight: 700;
+      transform: rotate(12deg);
+      opacity: 0.6;
+    }
+
+    /* --- Hero Animation --- */
+    .hero-animation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+    }
+
+    .hero-animation svg {
+      width: 100%;
+      height: 100%;
+      max-width: 400px;
+    }
+
+    .scatter-hex {
+      opacity: 1;
+      transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scatter-hex.hidden {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .logo-frame {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.8s ease-out;
+    }
+
+    .logo-frame.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .logo-hex {
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .logo-hex.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .logo-hex.color-shift {
+      animation: colorShift 2.5s ease-in-out infinite;
+    }
+
+    .logo-hex.color-shift:nth-child(1) { animation-delay: 0s; }
+    .logo-hex.color-shift:nth-child(2) { animation-delay: 0.2s; }
+    .logo-hex.color-shift:nth-child(3) { animation-delay: 0.4s; }
+    .logo-hex.color-shift:nth-child(4) { animation-delay: 0.6s; }
+    .logo-hex.color-shift:nth-child(5) { animation-delay: 0.8s; }
+    .logo-hex.color-shift:nth-child(6) { animation-delay: 1.0s; }
+    .logo-hex.color-shift:nth-child(7) { animation-delay: 1.2s; }
+
+    @keyframes colorShift {
+      0%, 100% { fill: #ffffff; }
+      50% { fill: #4db3a8; }
+    }
+
+    .logo-hex.flash {
+      animation: flash 0.3s ease-out !important;
+    }
+
+    @keyframes flash {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    /* --- Services Grid --- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .service-card .stamp { margin-bottom: var(--space-md); }
+    .service-card h3 { margin-bottom: var(--space-sm); }
+    .service-card p { font-size: 0.875rem; color: var(--text-mid); }
+
+    /* --- Process --- */
+    .process-section {
+      background: var(--bg-white);
+      border-top: 2px solid var(--border);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .process-step {
+      position: relative;
+      padding-left: var(--space-xl);
+    }
+
+    .process-step::before {
+      content: attr(data-step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--teal);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .process-step h4 { margin-bottom: var(--space-sm); }
+    .process-step p { font-size: 0.875rem; color: var(--text-mid); }
+
+    /* --- Team --- */
+    .team-section {
+      background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .team-member { text-align: center; }
+
+    .team-photo {
+      width: 120px;
+      height: 135px;
+      margin: 0 auto var(--space-md);
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: var(--teal);
+      position: relative;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .team-photo .badge {
+      position: absolute;
+      bottom: 12px;
+      right: -10px;
+      transform: rotate(6deg);
+    }
+
+    .team-member h3 { margin-bottom: var(--space-xs); }
+
+    .team-member .role {
+      color: var(--teal);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .team-member p { font-size: 0.875rem; color: var(--text-mid); }
+
+    /* --- Partners --- */
+    .partners {
+      background: var(--bg-white);
+      border-top: 2px solid var(--border);
+      border-bottom: 2px solid var(--border);
+      padding: var(--space-xl) 0;
+    }
+
+    .partners-label { text-align: center; margin-bottom: var(--space-lg); }
+
+    .partners-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-xl);
+      opacity: 0.5;
+    }
+
+    .partners-logos:hover { opacity: 0.8; }
+    .partners-logos span { font-size: 1.125rem; font-weight: 700; color: var(--navy); }
+
+    /* --- CTA --- */
+    .cta-section {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-section h2 { color: white; margin-bottom: var(--space-md); }
+    .cta-section p { color: var(--text-light); margin-bottom: var(--space-xl); max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    .cta-section .btn-primary {
+      background: var(--teal);
+      box-shadow: 4px 4px 0 var(--teal-dark);
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    .cta-section .btn-primary:hover {
+      background: var(--teal-light);
+    }
+
+    .cta-link { margin-top: var(--space-lg); font-size: 0.875rem; color: var(--text-light); }
+    .cta-link a { color: var(--teal-light); text-decoration: underline; }
+    .cta-link a:hover { text-decoration: none; }
+
+    /* --- Footer --- */
+    .footer {
+      background: var(--text-dark);
+      color: white;
+      padding: var(--space-xl) 0 var(--space-lg);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .footer-brand p { font-size: 0.875rem; color: var(--text-light); margin-top: var(--space-md); }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-md);
+      color: white;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: var(--space-sm); }
+    .footer-col a { font-size: 0.875rem; color: var(--text-light); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--teal-light); }
+
+    .footer-bottom {
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--text-mid);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+
+    .footer-bottom a { color: var(--teal-light); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-mark">dev<br>Eco</div>
+        <div class="nav-logo-text">dev<span>Eco</span></div>
+      </a>
+      
+      <button class="nav-toggle" onclick="toggleNav()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li class="nav-cta"><a href="#contact" class="btn btn-primary">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="label">Developer Relations Consulting</p>
+          <h1>
+            We didn't read about<br>
+            <span class="hero-underline">community building</span><br>
+            in a book.
+          </h1>
+          <p>
+            Hardware hackers. Hackerspace veterans. DevRel practitioners who've been building communities since before it was a job title. <span class="highlight">Let's 
+build yours.</span>
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">Our Services</a>
+            <a href="#contact" class="btn btn-secondary">Get Started →</a>
+          </div>
+        </div>
+        
+        <div class="hero-animation">
+          <svg viewBox="0 0 600 700">
+            <defs>
+              <polygon id="gridHex" points="0,-20 17.3,-10 17.3,10 0,20 -17.3,10 -17.3,-10"/>
+            </defs>
+            <g id="scatterGrid"></g>
+            <g id="logo" transform="translate(38, 50)">
+              <path id="logoFrame" class="logo-frame" fill="#1e3a3a" fill-rule="evenodd" d="M262,22 L492.8,155.25 L492.8,421.75 L262,555 L31.2,421.75 L31.2,155.25 Z M262,84 
+L439.1,186.25 L439.1,390.75 L262,493 L84.9,390.75 L84.9,186.25 Z"/>
+              <g id="logoHexes">
+                <polygon class="logo-hex" points="367.56,237.57 411.73,263.07 411.73,314.07 367.56,339.57 323.39,314.07 323.39,263.07" fill="#1e3a3a"/>
+                <polygon class="logo-hex" points="211.11,146.74 255.28,172.24 255.28,223.24 211.11,248.74 166.94,223.24 166.94,172.24" fill="#1e3a3a"/>
+                <polygon class="logo-hex" points="315.85,146.72 360.01,172.22 360.01,223.22 315.85,248.72 271.68,223.22 271.68,172.22" fill="#1e3a3a"/>
+                <polygon class="logo-hex" points="159.06,237.57 203.23,263.07 203.23,314.07 159.06,339.57 114.9,314.07 114.9,263.07" fill="#1e3a3a"/>
+                <polygon class="logo-hex" points="211.13,327.96 255.3,353.46 255.3,404.46 211.13,429.96 166.96,404.46 166.96,353.46" fill="#1e3a3a"/>
+                <polygon class="logo-hex" points="315.84,327.95 360.01,353.45 360.01,404.45 315.84,429.95 271.67,404.45 271.67,353.45" fill="#1e3a3a"/>
+                <polygon class="logo-hex" points="263.14,237.57 307.31,263.07 307.31,314.07 263.14,339.57 218.98,314.07 218.98,263.07" fill="#1e3a3a"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stamp">Est. 2023</div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>How We Help</h2>
+      </div>
+      
+      <div class="services-grid">
+        <div class="card service-card">
+          <span class="stamp stamp-teal">Community</span>
+          <h3>Community Building</h3>
+          <p>Real communities, not vanity metrics. Discord servers that don't die after launch. Humans actually helping each other and making things.</p>
+        </div>
+        
+        <div class="card service-card">
+          <span class="stamp stamp-pink">Content</span>
+          <h3>Technical Content</h3>
+          <p>Tutorials, documentation, and videos from people who've actually built the thing. We know what developers need because we are developers.</p>
+        </div>
+        
+        <div class="card service-card">
+          <span class="stamp stamp-navy">Strategy</span>
+          <h3>DevRel Strategy</h3>
+          <p>No 47-slide frameworks. Clear strategy from practitioners who've run programs at AWS, SORACOM, SignalWire, and in hackerspaces.</p>
+        </div>
+        
+        <div class="card service-card">
+          <span class="stamp stamp-teal">Training</span>
+          <h3>Workshops & Training</h3>
+          <p>Hands-on workshops for your team. From DevRel fundamentals to community management to technical writing. We teach what we practice.</p>
+        </div>
+        
+        <div class="card service-card">
+          <span class="stamp stamp-pink">Events</span>
+          <h3>Events & Hackathons</h3>
+          <p>We've run events at 2am and know what breaks. Hackathons, meetups, livestreams. Planned and executed with practitioners, not event planners.</p>
+        </div>
+        
+        <div class="card service-card">
+          <span class="stamp stamp-navy">Adoption</span>
+          <h3>Product Adoption</h3>
+          <p>Onboarding that works. Integration guides that developers actually read. The bridge between your product and the people who'll use it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Process</h2>
+        <p style="color: var(--text-mid); margin-top: var(--space-sm);">From ideation to deployment. We're your embedded partner.</p>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-step" data-step="1">
+          <h4>Discovery</h4>
+          <p>We analyze your goals, audience, and current state to understand what you actually need.</p>
+        </div>
+        
+        <div class="process-step" data-step="2">
+          <h4>Strategy</h4>
+          <p>Clear roadmaps using methods that work. No jargon. Just a plan you can execute.</p>
+        </div>
+        
+        <div class="process-step" data-step="3">
+          <h4>Implementation</h4>
+          <p>We build alongside you. Communities, content, programs. Hands-on work.</p>
+        </div>
+        
+        <div class="process-step" data-step="4">
+          <h4>Growth</h4>
+          <p>Monitor, optimize, scale. Systems that grow, not dependencies that require us forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Collective</h2>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-photo">
+            R
+            <span class="badge badge-teal">Founder</span>
+          </div>
+          <h3>Robert Wolff</h3>
+          <p class="role">Founder & Partner</p>
+          <p>Developer advocate and community strategist. Former Arm DevRel lead. Built developer programs before "DevRel" was a job title.</p>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-photo">
+            T
+            <span class="badge badge-pink">Hardware</span>
+          </div>
+          <h3>Tory Moghadam</h3>
+          <p class="role">Partner</p>
+          <p>Embedded systems and AI engineer. Lead AI Engineer at Be Well Health. Founder of OpenMuscle.</p>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-photo">
+            M
+            <span class="badge badge-navy">Maker</span>
+          </div>
+          <h3>Moheeb Zara</h3>
+          <p class="role">Partner</p>
+          <p>Creative technologist. Hardware hacker. HeatSync Labs alum. Founder of LumenCanvas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="partners">
+    <div class="container">
+      <p class="label partners-label">Trusted by practitioners at</p>
+      <div class="partners-logos">
+        <span>Hackster.io</span>
+        <span>Pantacor</span>
+        <span>Thistle</span>
+        <span>CrunchLabs</span>
+        <span>EdgeAI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="cta-section">
+    <div class="container">
+      <h2>Ready to build something real?</h2>
+      <p>No pitch decks. No frameworks. Just a conversation about what you're trying to build and how we might help.</p>
+      <a href="mailto:hello@thedeveco.com" class="btn btn-primary">Start a Conversation</a>
+      <p class="cta-link">Or join the <a href="#">Discord community</a> first</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-mark">dev<br>Eco</div>
+            <div class="nav-logo-text" style="color: white;">dev<span style="color: var(--teal-light);">Eco</span></div>
+          </div>
+          <p>DevRel from the workshop floor.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Community Building</a></li>
+            <li><a href="#">Technical Content</a></li>
+            <li><a href="#">DevRel Strategy</a></li>
+            <li><a href="#">Training</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Projects</h4>
+          <ul>
+            <li><a href="#">Portal Network</a></li>
+            <li><a href="#">B3VY Live Hub</a></li>
+            <li><a href="#">LaunchCue CRM</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>© 2025 DevEco Consulting</span>
+        <span>Scholarship Partner of <a href="#">Edge AI Foundation</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
+
+    // Logo Animation
+    const colors = [
+      '#4a7c7c', '#5a9a9a', '#6ab4a8', '#7ecec4', '#4db3a8',
+      '#e85a85', '#f4c84b', '#5bc5e8', '#3d8b8b', '#88d4c8',
+    ];
+    
+    const scatterGrid = document.getElementById('scatterGrid');
+    const logoFrame = document.getElementById('logoFrame');
+    const logoHexes = document.querySelectorAll('.logo-hex');
+    
+    function generateScatterGrid() {
+      scatterGrid.innerHTML = '';
+      const rows = 8;
+      const cols = 7;
+      const hexWidth = 70;
+      const hexHeight = 60;
+      
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+          const x = 60 + col * hexWidth + (row % 2 === 1 ? hexWidth / 2 : 0);
+          const y = 80 + row * hexHeight;
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          
+          const hex = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+          hex.setAttribute('href', '#gridHex');
+          hex.setAttribute('x', x);
+          hex.setAttribute('y', y);
+          hex.setAttribute('fill', color);
+          hex.classList.add('scatter-hex');
+          hex.style.transformOrigin = `${x}px ${y}px`;
+          hex.style.transitionDelay = `${Math.random() * 0.5}s`;
+          
+          scatterGrid.appendChild(hex);
+        }
+      }
+    }
+    
+    let flashInterval;
+    function startColorFlash() {
+      flashInterval = setInterval(() => {
+        const randomHex = logoHexes[Math.floor(Math.random() * logoHexes.length)];
+        const flashColor = colors[Math.floor(Math.random() * colors.length)];
+        
+        randomHex.style.fill = flashColor;
+        randomHex.classList.add('flash');
+        
+        setTimeout(() => {
+          randomHex.style.fill = '';
+          randomHex.classList.remove('flash');
+        }, 300);
+      }, 800 + Math.random() * 1200);
+    }
+    
+    function stopColorFlash() {
+      clearInterval(flashInterval);
+    }
+    
+    function runAnimation() {
+      stopColorFlash();
+      logoFrame.classList.remove('visible');
+      logoHexes.forEach(hex => {
+        hex.classList.remove('visible', 'color-shift');
+        hex.style.fill = '';
+      });
+      
+      generateScatterGrid();
+      const scatterHexes = document.querySelectorAll('.scatter-hex');
+      
+      setTimeout(() => {
+        scatterHexes.forEach(hex => hex.classList.add('hidden'));
+        setTimeout(() => {
+          logoFrame.classList.add('visible');
+        }, 800);
+      }, 1500);
+      
+      setTimeout(() => {
+        logoHexes.forEach((hex, i) => {
+          setTimeout(() => {
+            hex.classList.add('visible');
+          }, i * 100);
+        });
+      }, 2800);
+      
+      setTimeout(() => {
+        logoHexes.forEach(hex => hex.classList.add('color-shift'));
+      }, 4000);
+      
+      setTimeout(() => {
+        startColorFlash();
+      }, 5000);
+    }
+    
+    runAnimation();
+  </script>
+
+</body>
+</html>

@@ -2,389 +2,674 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">Developer Community</h1>
-        <p class="hero-subtitle">
-          Open community for developers to connect and collaborate.
-        </p>
-        <div class="hero-cta">
-          <a href="https://discord.gg/deveco" target="_blank" class="btn btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
-              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.010c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+      <div class="hero-inner">
+        <div class="hero-animation" ref="heroAnimation">
+          <!-- Accent lines -->
+          <div class="accent-line left" ref="lineLeft"></div>
+          <div class="accent-line right" ref="lineRight"></div>
+          <!-- Logo -->
+          <div class="logo-wrap" ref="logoWrap">
+            <svg viewBox="0 0 524 586">
+              <path ref="logoFrame" class="logo-frame" fill="#ffffff" fill-rule="evenodd" d="M262,22 L492.8,155.25 L492.8,421.75 L262,555 L31.2,421.75 L31.2,155.25 Z M262,84 L439.1,186.25 L439.1,390.75 L262,493 L84.9,390.75 L84.9,186.25 Z"/>
+              <g ref="logoHexes">
+                <polygon class="logo-hex" points="211.11,146.74 255.28,172.24 255.28,223.24 211.11,248.74 166.94,223.24 166.94,172.24" fill="#ffffff"/>
+                <polygon class="logo-hex" points="315.85,146.72 360.01,172.22 360.01,223.22 315.85,248.72 271.68,223.22 271.68,172.22" fill="#ffffff"/>
+                <polygon class="logo-hex" points="159.06,237.57 203.23,263.07 203.23,314.07 159.06,339.57 114.9,314.07 114.9,263.07" fill="#ffffff"/>
+                <polygon class="logo-hex" points="263.14,237.57 307.31,263.07 307.31,314.07 263.14,339.57 218.98,314.07 218.98,263.07" fill="#ffffff"/>
+                <polygon class="logo-hex" points="367.56,237.57 411.73,263.07 411.73,314.07 367.56,339.57 323.39,314.07 323.39,263.07" fill="#ffffff"/>
+                <polygon class="logo-hex" points="211.13,327.96 255.3,353.46 255.3,404.46 211.13,429.96 166.96,404.46 166.96,353.46" fill="#ffffff"/>
+                <polygon class="logo-hex" points="315.84,327.95 360.01,353.45 360.01,404.45 315.84,429.95 271.67,404.45 271.67,353.45" fill="#ffffff"/>
+              </g>
             </svg>
-            Join Discord
-          </a>
-          <router-link to="/projects" class="btn btn-secondary">View Projects</router-link>
+          </div>
+          <!-- Text -->
+          <div class="text-wrap">
+            <div class="brand-text" ref="brandText">devEco</div>
+            <div class="tagline" ref="tagline">Community</div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <p class="label">Developer Community</p>
+          <h1>Where makers actually make things.</h1>
+          <p class="hero-subtitle">
+            Not a Slack that goes quiet after launch. A real community of hardware hackers, DevRel practitioners, and builders.
+          </p>
+          <div class="hero-cta">
+            <a href="https://discord.gg/deveco" target="_blank" class="btn btn-primary">Join Discord</a>
+            <router-link to="/projects" class="btn btn-secondary">View Projects</router-link>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Community Values -->
-  <section class="section values-section">
+  <!-- Values Section -->
+  <section class="values-section">
     <div class="container">
       <div class="section-header">
-        <h2>Our Community Values</h2>
-        <p>The principles that guide our community and ensure a positive experience for all members</p>
+        <h2>Community Values</h2>
       </div>
 
       <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-          </div>
-          <h3>Safety First</h3>
-          <p>Moderated spaces with clear guidelines and active community guardians to ensure a safe, welcoming environment for all developers.</p>
+        <div class="card value-card">
+          <span class="stamp stamp-teal">Safety</span>
+          <h3>Moderated Spaces</h3>
+          <p>Active moderation with clear guidelines. We've run hackerspaces and know what keeps communities healthy.</p>
         </div>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="8.5" cy="7" r="4"></circle>
-              <path d="M20 8v6M23 11h-6"></path>
-            </svg>
-          </div>
-          <h3>Authentic Connections</h3>
-          <p>Real developers building genuine relationships. No spam, no bad actors - just authentic community members sharing and learning together.</p>
+        <div class="card value-card">
+          <span class="stamp stamp-pink">Authentic</span>
+          <h3>Real Connections</h3>
+          <p>No spam, no bad actors. Just developers and makers building genuine relationships.</p>
         </div>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-          </div>
-          <h3>Global Inclusivity</h3>
-          <p>Welcoming developers from all backgrounds, skill levels, and locations. Our diverse community is our greatest strength.</p>
+        <div class="card value-card">
+          <span class="stamp stamp-navy">Global</span>
+          <h3>Inclusive Community</h3>
+          <p>Developers from all backgrounds, skill levels, and locations. Diversity makes us stronger.</p>
         </div>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-          </div>
+        <div class="card value-card">
+          <span class="stamp stamp-teal">Open</span>
           <h3>Knowledge Sharing</h3>
-          <p>Open collaboration and resource sharing. What helps one developer succeed helps our entire ecosystem thrive.</p>
+          <p>Open collaboration. What helps one developer succeed helps the entire ecosystem.</p>
         </div>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-              <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-            </svg>
-          </div>
+        <div class="card value-card">
+          <span class="stamp stamp-pink">Creative</span>
           <h3>Innovation Focus</h3>
-          <p>Encouraging experimentation, creativity, and cutting-edge technology exploration in a supportive environment.</p>
+          <p>Experimentation encouraged. Cutting-edge technology exploration in a supportive environment.</p>
         </div>
 
-        <div class="value-card">
-          <div class="value-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
-            </svg>
-          </div>
-          <h3>Always Active</h3>
-          <p>24/7 community presence across global time zones, ensuring you can always find active discussions and support when you need it.</p>
+        <div class="card value-card">
+          <span class="stamp stamp-navy">Active</span>
+          <h3>24/7 Presence</h3>
+          <p>Global timezones mean someone's always around. Get help when you need it.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Events Section -->
-  <section class="section events-section">
+  <section class="events-section">
     <div class="container">
       <div class="section-header">
-        <h2>Community Events & Workshops</h2>
-        <p>Regular events bringing developers together for learning, collaboration, and innovation</p>
+        <h2>Community Events</h2>
       </div>
 
       <div class="events-grid">
-        <div class="event-card">
-          <div class="event-type">Live Streams</div>
+        <div class="card event-card">
+          <span class="badge badge-teal">Live Streams</span>
           <h3>PROCEPTION Live</h3>
-          <p>Live-streamed sessions featuring industry experts and hands-on tech demos. Explore cutting-edge technologies with guided walkthroughs and Q&A sessions.</p>
-          <div class="event-schedule">
-            <span>Monthly • Live on YouTube & Discord</span>
-          </div>
+          <p>Live-streamed sessions with industry experts and hands-on tech demos. Cutting-edge tech with guided walkthroughs.</p>
+          <p class="event-schedule">Monthly on YouTube & Discord</p>
         </div>
 
-        <div class="event-card">
-          <div class="event-type">Workshops</div>
+        <div class="card event-card">
+          <span class="badge badge-pink">Workshops</span>
           <h3>Developer Skills Sessions</h3>
-          <p>Hands-on workshops covering everything from technical skills to community building. Learn from experienced practitioners in interactive sessions.</p>
-          <div class="event-schedule">
-            <span>Bi-weekly • Various Topics</span>
-          </div>
+          <p>Hands-on workshops covering technical skills to community building. Learn from practitioners.</p>
+          <p class="event-schedule">Bi-weekly, various topics</p>
         </div>
 
-        <div class="event-card">
-          <div class="event-type">Collaboration</div>
+        <div class="card event-card">
+          <span class="badge badge-navy">Collaboration</span>
           <h3>Cross-Community Projects</h3>
-          <p>Collaborative initiatives where members from different communities work together on innovative projects and challenges.</p>
-          <div class="event-schedule">
-            <span>Ongoing • Project-Based</span>
-          </div>
+          <p>Members from different communities work together on innovative projects and challenges.</p>
+          <p class="event-schedule">Ongoing, project-based</p>
         </div>
 
-        <div class="event-card">
-          <div class="event-type">Networking</div>
+        <div class="card event-card">
+          <span class="badge badge-teal">Networking</span>
           <h3>Developer Meetups</h3>
-          <p>Regular networking events, both virtual and in-person, designed to help developers connect, share experiences, and build lasting relationships.</p>
-          <div class="event-schedule">
-            <span>Weekly • Global Timezones</span>
-          </div>
+          <p>Virtual and in-person networking events. Connect, share experiences, build relationships.</p>
+          <p class="event-schedule">Weekly, global timezones</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="section cta-section">
+  <section class="cta-section">
     <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Connect with Developers Worldwide?</h2>
-        <p>Join our growing community and accelerate your learning journey.</p>
-        <div class="cta-buttons">
-          <a href="https://discord.gg/deveco" target="_blank" class="btn btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
-              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.010c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-            </svg>
-            Join Our Discord
-          </a>
-          <router-link to="/consultancy" class="btn btn-secondary">Explore Consulting</router-link>
-        </div>
+      <h2>Ready to connect?</h2>
+      <p>Join developers from around the world. No gatekeeping.</p>
+      <div class="cta-buttons">
+        <a href="https://discord.gg/deveco" target="_blank" class="btn btn-primary">Join Our Discord</a>
+        <router-link to="/consultancy" class="btn btn-secondary">Explore Consulting</router-link>
       </div>
     </div>
   </section>
 </template>
 
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue'
+
+const heroAnimation = ref<HTMLElement | null>(null)
+const logoWrap = ref<HTMLElement | null>(null)
+const logoFrame = ref<SVGPathElement | null>(null)
+const logoHexes = ref<SVGGElement | null>(null)
+const lineLeft = ref<HTMLElement | null>(null)
+const lineRight = ref<HTMLElement | null>(null)
+const brandText = ref<HTMLElement | null>(null)
+const tagline = ref<HTMLElement | null>(null)
+
+let colorFlashInterval: number | null = null
+const colors = ['#4db3a8', '#e85a85', '#f4c84b', '#5bc5e8', '#6ab4a8']
+
+const createParticles = () => {
+  if (!heroAnimation.value) return
+  // Remove old particles
+  heroAnimation.value.querySelectorAll('.particle').forEach(p => p.remove())
+  // Create new particles directly in heroAnimation (like the original)
+  for (let i = 0; i < 16; i++) {
+    const particle = document.createElement('div')
+    particle.className = 'particle'
+    particle.style.top = '35%'
+    particle.style.left = '50%'
+    const angle = (i / 16) * Math.PI * 2
+    const distance = 80 + Math.random() * 120
+    const x = Math.cos(angle) * distance
+    const y = Math.sin(angle) * distance
+    particle.style.setProperty('--end-pos', `translate(${x}px, ${y}px)`)
+    particle.style.background = colors[Math.floor(Math.random() * colors.length)] || '#4db3a8'
+    heroAnimation.value.appendChild(particle)
+  }
+}
+
+const burstParticles = () => {
+  heroAnimation.value?.querySelectorAll('.particle').forEach((p, i) => {
+    setTimeout(() => p.classList.add('burst'), i * 15)
+  })
+}
+
+const startColorFlash = () => {
+  const hexes = logoHexes.value?.querySelectorAll('.logo-hex') || []
+  colorFlashInterval = window.setInterval(() => {
+    const hex = hexes[Math.floor(Math.random() * hexes.length)] as SVGPolygonElement
+    const color = colors[Math.floor(Math.random() * colors.length)]
+    if (hex && color) {
+      hex.style.fill = color
+      hex.classList.add('color-flash')
+      setTimeout(() => {
+        hex.style.fill = ''
+        hex.classList.remove('color-flash')
+      }, 250)
+    }
+  }, 700)
+}
+
+const stopColorFlash = () => {
+  if (colorFlashInterval) {
+    clearInterval(colorFlashInterval)
+    colorFlashInterval = null
+  }
+}
+
+const runAnimation = () => {
+  createParticles()
+  const hexes = logoHexes.value?.querySelectorAll('.logo-hex') || []
+
+  // T=100ms: Frame slam in
+  setTimeout(() => {
+    logoFrame.value?.classList.add('slam')
+  }, 100)
+
+  // T=400ms: Hexes pop in rapid fire
+  setTimeout(() => {
+    hexes.forEach((hex, i) => {
+      const el = hex as SVGPolygonElement
+      setTimeout(() => {
+        el.classList.add('pop')
+        // Add visible class after animation completes (300ms)
+        setTimeout(() => {
+          el.classList.add('visible')
+        }, 300)
+      }, i * 50)
+    })
+  }, 400)
+
+  // T=800ms: Glitch + particles
+  setTimeout(() => {
+    logoWrap.value?.classList.add('glitch')
+    burstParticles()
+  }, 800)
+
+  // T=1000ms: Lines shoot
+  setTimeout(() => {
+    lineLeft.value?.classList.add('shoot')
+    lineRight.value?.classList.add('shoot')
+  }, 1000)
+
+  // T=1100ms: Brand text slides
+  setTimeout(() => {
+    brandText.value?.classList.add('slide')
+  }, 1100)
+
+  // T=1300ms: Tagline slides
+  setTimeout(() => {
+    tagline.value?.classList.add('slide')
+  }, 1300)
+
+  // T=1600ms: Start color shift
+  setTimeout(() => {
+    hexes.forEach((hex, i) => {
+      const el = hex as SVGPolygonElement
+      el.style.animationDelay = `${i * 0.12}s`
+      el.classList.add('shift')
+    })
+  }, 1600)
+
+  // T=2200ms: Start random color flashes
+  setTimeout(() => {
+    startColorFlash()
+  }, 2200)
+}
+
+onMounted(() => {
+  runAnimation()
+})
+
+onUnmounted(() => {
+  stopColorFlash()
+})
+</script>
+
+<style>
+/* Animation styles (unscoped for SVG elements) */
+
+/* Frame animation */
+.logo-frame {
+  opacity: 0;
+  transform-origin: center;
+}
+
+.logo-frame.slam {
+  animation: communityFrameSlamIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes communityFrameSlamIn {
+  0% { opacity: 0; transform: scale(2) rotate(30deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* Hex animations */
+.logo-hex {
+  transform-origin: center;
+  opacity: 0;
+}
+
+.logo-hex.pop {
+  animation: communityHexPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes communityHexPop {
+  0% { opacity: 0; transform: scale(0) rotate(-180deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* Keep hexes visible after pop */
+.logo-hex.visible {
+  opacity: 1;
+}
+
+/* Color shift */
+.logo-hex.shift {
+  opacity: 1;
+  animation: communityColorShift 2s ease-in-out infinite;
+}
+
+@keyframes communityColorShift {
+  0%, 100% { fill: #ffffff; }
+  50% { fill: #4db3a8; }
+}
+
+/* Color flash on hexes */
+.logo-hex.color-flash {
+  opacity: 1;
+  animation: communityHexColorFlash 0.25s ease-out forwards !important;
+}
+
+@keyframes communityHexColorFlash {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Glitch effect */
+.logo-wrap.glitch {
+  animation: communityGlitch 0.3s ease-out;
+}
+
+@keyframes communityGlitch {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(2px, 0); filter: hue-rotate(90deg); }
+  40% { transform: translate(-2px, 1px); filter: hue-rotate(-90deg); }
+  60% { transform: translate(1px, -1px); filter: hue-rotate(45deg); }
+  80% { transform: translate(-1px, 0); filter: hue-rotate(0deg); }
+  100% { transform: translate(0, 0); filter: hue-rotate(0deg); }
+}
+
+/* Particle styles (unscoped) */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.particle.burst {
+  animation: communityParticleBurst 0.8s ease-out forwards;
+}
+
+@keyframes communityParticleBurst {
+  0% { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: var(--end-pos) scale(0); }
+}
+</style>
+
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, #378a8b 0%, #2d6e6f 100%);
+  background: var(--teal);
   color: white;
-  padding: 6rem 0;
-  text-align: center;
-  position: relative;
+  padding: var(--space-2xl) 0;
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.hero-animation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  overflow: hidden;
+}
+
+.logo-wrap {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  z-index: 2;
+}
+
+.logo-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.text-wrap {
+  text-align: center;
+  margin-top: var(--space-md);
+  z-index: 2;
+}
+
+.brand-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.brand-text.slide {
+  animation: textSlide 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes textSlide {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px);
+  margin-top: -2px;
+  letter-spacing: 0.1em;
+}
+
+.tagline.slide {
+  animation: tagSlide 0.4s ease-out forwards;
+}
+
+@keyframes tagSlide {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.accent-line {
   position: absolute;
-  top: 0;
+  height: 3px;
+  width: 150px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+  opacity: 0;
+}
+
+.accent-line.left {
+  top: 40%;
   left: 0;
+}
+
+.accent-line.right {
+  top: 40%;
   right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Ccircle cx='19' cy='9' r='2'/%3E%3Ccircle cx='29' cy='9' r='2'/%3E%3Ccircle cx='39' cy='9' r='2'/%3E%3Ccircle cx='49' cy='9' r='2'/%3E%3Ccircle cx='9' cy='19' r='2'/%3E%3Ccircle cx='19' cy='19' r='2'/%3E%3Ccircle cx='29' cy='19' r='2'/%3E%3Ccircle cx='39' cy='19' r='2'/%3E%3Ccircle cx='49' cy='19' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+
+.accent-line.left.shoot {
+  animation: lineShootLeft 0.6s ease-out forwards;
+}
+
+.accent-line.right.shoot {
+  animation: lineShootRight 0.6s ease-out forwards;
+}
+
+@keyframes lineShootLeft {
+  0% { opacity: 1; transform: translateX(-100%); }
+  50% { opacity: 1; transform: translateX(100%); }
+  100% { opacity: 0; transform: translateX(200%); }
+}
+
+@keyframes lineShootRight {
+  0% { opacity: 1; transform: translateX(100%); }
+  50% { opacity: 1; transform: translateX(-100%); }
+  100% { opacity: 0; transform: translateX(-200%); }
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
+  text-align: left;
 }
 
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
+.hero .label {
+  color: white;
+  opacity: 0.8;
+  margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: var(--space-lg);
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.125rem;
+  color: white;
   opacity: 0.9;
+  margin-bottom: var(--space-xl);
+  max-width: 500px;
 }
 
 .hero-cta {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  gap: var(--space-md);
   flex-wrap: wrap;
 }
 
-.events-section {
+.hero .btn-primary {
+  background: var(--navy);
+  box-shadow: 4px 4px 0 var(--teal-dark);
+}
+
+.hero .btn-primary:hover {
+  background: var(--text-dark);
+}
+
+.hero .btn-secondary {
+  border-color: white;
+  color: white;
+}
+
+.hero .btn-secondary:hover {
   background: white;
+  color: var(--teal);
+}
+
+/* Values */
+.values-section {
+  background: var(--bg-white);
+  border-bottom: 2px solid var(--border);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.value-card .stamp {
+  margin-bottom: var(--space-md);
+}
+
+.value-card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.value-card p {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+}
+
+/* Events */
+.events-section {
+  background: var(--bg-light);
 }
 
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: var(--space-lg);
 }
 
-.event-card {
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border-radius: 16px;
-  padding: 2rem;
-  border: 1px solid rgba(55, 138, 139, 0.1);
-  transition: all 0.3s ease;
-}
-
-.event-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(55, 138, 139, 0.15);
-}
-
-.event-type {
-  background: linear-gradient(135deg, #378a8b, #5fb3b4);
-  color: white;
-  padding: 0.25rem 1rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 1rem;
+.event-card .badge {
+  margin-bottom: var(--space-md);
 }
 
 .event-card h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #2d3748;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .event-card p {
-  color: #4a5568;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  margin-bottom: var(--space-sm);
 }
 
 .event-schedule {
-  color: #378a8b;
+  color: var(--teal);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
-.values-section {
-  background: #f8fafc;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.value-card {
-  text-align: center;
-  padding: 2rem;
-  border-radius: 16px;
-  border: 1px solid rgba(55, 138, 139, 0.1);
-  transition: all 0.3s ease;
-  background: white;
-}
-
-.value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(55, 138, 139, 0.15);
-}
-
-.value-icon {
-  margin-bottom: 1rem;
-  color: #378a8b;
-}
-
-.value-card h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #2d3748;
-  margin-bottom: 1rem;
-}
-
-.value-card p {
-  color: #4a5568;
-  line-height: 1.6;
-}
-
+/* CTA */
 .cta-section {
-  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  background: var(--navy);
   color: white;
-}
-
-.cta-content {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .cta-section h2 {
   color: white;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
 
-.cta-section p {
-  color: #e2e8f0;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.cta-section > .container > p {
+  color: var(--text-light);
+  margin-bottom: var(--space-xl);
 }
 
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-md);
   justify-content: center;
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 4rem 0;
+.cta-section .btn-secondary {
+  border-color: white;
+  color: white;
+}
+
+.cta-section .btn-secondary:hover {
+  background: white;
+  color: var(--navy);
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .hero-title {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
+  .hero-animation {
+    order: -1;
+    height: 280px;
+  }
+
+  .hero-content {
+    text-align: center;
   }
 
   .hero-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-cta {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
   }
 
-  .hero-cta .btn {
-    width: 100%;
-    max-width: 280px;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-  }
-
-  .events-grid, .values-grid {
+  .values-grid {
     grid-template-columns: 1fr;
   }
 
-  .cta-section h2 {
-    font-size: 2rem;
+  .events-grid {
+    grid-template-columns: 1fr;
   }
 
   .cta-buttons {
     flex-direction: column;
     align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .step {
-    min-width: 160px;
   }
 }
 </style>

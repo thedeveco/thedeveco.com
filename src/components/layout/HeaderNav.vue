@@ -1,43 +1,50 @@
 <template>
-  <header class="header">
-    <nav class="nav-container">
-      <div class="nav-brand">
-        <router-link to="/" class="brand-link">
-          <img src="/images/deveco-consulting-logo.png" alt="DevEco" class="logo-image" />
-        </router-link>
-      </div>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <router-link to="/" class="nav-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" class="logo-svg">
+          <g transform="translate(5, 5)">
+            <circle cx="39.3" cy="39.5" r="30.3" fill="none" stroke="#4db3a8" stroke-width="2.5"/>
+            <line x1="39.29" y1="39.5" x2="39.15" y2="18.63" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="39.29" y1="39.5" x2="49.69" y2="29.78" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="39.29" y1="39.5" x2="59.84" y2="39.5" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="39.29" y1="39.5" x2="49.69" y2="49.22" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="39.29" y1="39.5" x2="39.15" y2="60.37" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="39.29" y1="39.5" x2="28.31" y2="49.22" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="39.29" y1="39.5" x2="18.16" y2="39.5" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <line x1="39.29" y1="39.5" x2="28.31" y2="29.78" stroke="#4db3a8" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="39.15" cy="18.63" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="59.84" cy="39.5" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="39.15" cy="60.37" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="18.16" cy="39.5" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="49.69" cy="29.78" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="49.69" cy="49.22" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="28.31" cy="49.22" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="28.31" cy="29.78" r="3.5" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+            <circle cx="39.29" cy="39.5" r="2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.2"/>
+          </g>
+          <text x="95" y="48" font-family="'JetBrains Mono', monospace" font-size="36" font-weight="bold" fill="#1e3a3a">DEV</text>
+          <text x="165" y="48" font-family="'JetBrains Mono', monospace" font-size="36" font-weight="bold" fill="#3d9991">ECO</text>
+          <text x="97" y="68" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="0.2em" fill="#1e3a3a">CONSULTING LLC</text>
+        </svg>
+      </router-link>
 
-      <div class="nav-links">
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/consultancy" class="nav-link">Consultancy</router-link>
-        <router-link to="/community" class="nav-link">Community</router-link>
-        <router-link to="/projects" class="nav-link">Projects</router-link>
-        <router-link to="/contact" class="nav-link cta-button">Contact Us</router-link>
-        <a href="https://discord.gg/deveco" target="_blank" class="discord-link" aria-label="Join Discord">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.010c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-          </svg>
-        </a>
-      </div>
-
-      <button class="mobile-menu-toggle" @click="toggleMobileMenu" :class="{ active: mobileMenuOpen }">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-toggle" @click="toggleNav" :class="{ active: mobileMenuOpen }">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
-    </nav>
 
-    <div class="mobile-menu" :class="{ open: mobileMenuOpen }">
-      <router-link to="/" class="mobile-nav-link" @click="closeMobileMenu">Home</router-link>
-      <router-link to="/consultancy" class="mobile-nav-link" @click="closeMobileMenu">Consultancy</router-link>
-      <router-link to="/community" class="mobile-nav-link" @click="closeMobileMenu">Community</router-link>
-      <router-link to="/projects" class="mobile-nav-link" @click="closeMobileMenu">Projects</router-link>
-      <router-link to="/contact" class="mobile-nav-link cta-mobile" @click="closeMobileMenu">Contact Us</router-link>
-      <a href="https://discord.gg/deveco" target="_blank" class="mobile-nav-link discord-mobile" @click="closeMobileMenu">
-        Join Discord
-      </a>
+      <ul class="nav-links" :class="{ active: mobileMenuOpen }">
+        <li><router-link to="/consultancy" @click="closeNav">Services</router-link></li>
+        <li><router-link to="/community" @click="closeNav">Community</router-link></li>
+        <li><router-link to="/projects" @click="closeNav">Projects</router-link></li>
+        <li class="nav-cta"><router-link to="/contact" class="btn btn-primary" @click="closeNav">Contact Us</router-link></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 </template>
 
 <script setup lang="ts">
@@ -45,210 +52,138 @@ import { ref } from 'vue'
 
 const mobileMenuOpen = ref(false)
 
-const toggleMobileMenu = () => {
+const toggleNav = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
 }
 
-const closeMobileMenu = () => {
+const closeNav = () => {
   mobileMenuOpen.value = false
 }
 </script>
 
 <style scoped>
-.header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(55, 138, 139, 0.1);
+.nav {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
+  background: var(--bg-white);
+  border-bottom: 2px solid var(--border);
 }
 
-.nav-container {
-  width: 100%;
-  margin: 0;
+.nav-inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  padding: var(--space-md) 0;
 }
 
-.nav-brand {
-  display: flex;
-  align-items: center;
-}
-
-.brand-link {
+.nav-logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #2d3748;
 }
 
-.logo-image {
-  height: 45px;
+.logo-svg {
+  height: 50px;
   width: auto;
-  display: block;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: var(--space-xs);
+  list-style: none;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: #4a5568;
-  font-weight: 500;
+.nav-links a {
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  transition: all 0.2s;
+}
+
+.nav-links a:hover {
+  background: var(--teal);
+  color: white;
+}
+
+.nav-links a.router-link-active {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.nav-links a.router-link-active:hover {
+  background: var(--teal);
+  color: white;
+}
+
+.nav-cta {
+  margin-left: var(--space-md);
+}
+
+.nav-cta .btn {
   padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #378a8b;
-  background-color: rgba(55, 138, 139, 0.1);
-}
-
-.nav-link.router-link-active {
-  color: #378a8b;
-  font-weight: 600;
-}
-
-.cta-button {
-  background: linear-gradient(135deg, #378a8b, #5fb3b4);
   color: white !important;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem !important;
 }
 
-.cta-button:hover {
-  background: linear-gradient(135deg, #2d6e6f, #4a9a9b) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(55, 138, 139, 0.3);
+.nav-cta .btn:hover {
+  color: white !important;
 }
 
-.discord-link {
-  color: #5865f2;
-  transition: all 0.3s ease;
+.nav-cta .btn.router-link-active {
+  color: white !important;
 }
 
-.discord-link:hover {
-  color: #4752c4;
-  transform: scale(1.1);
-}
-
-.mobile-menu-toggle {
+.nav-toggle {
   display: none;
-  flex-direction: column;
-  gap: 4px;
   background: none;
-  border: none;
-  padding: 12px;
+  border: 2px solid var(--navy);
+  padding: var(--space-sm);
   cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.mobile-menu-toggle:hover {
-  background-color: rgba(55, 138, 139, 0.1);
-}
-
-.mobile-menu-toggle span {
-  width: 24px;
-  height: 3px;
-  background: #4a5568;
-  transition: all 0.3s ease;
-  border-radius: 2px;
-}
-
-.mobile-menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.mobile-menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border-top: 1px solid rgba(55, 138, 139, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem;
-  gap: 1rem;
-  transform: translateY(-10px);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.mobile-menu.open {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.mobile-nav-link {
-  text-decoration: none;
-  color: #4a5568;
-  font-weight: 500;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(55, 138, 139, 0.1);
-  transition: color 0.3s ease;
-  font-size: 1.1rem;
-  display: block;
-}
-
-.mobile-nav-link:hover {
-  color: #378a8b;
-}
-
-.mobile-nav-link.router-link-active {
-  color: #378a8b;
-  font-weight: 600;
-}
-
-.cta-mobile {
-  background: linear-gradient(135deg, #378a8b, #5fb3b4);
-  color: white !important;
-  font-weight: 600;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 1rem;
-  border-bottom: none !important;
-}
-
-.discord-mobile {
-  color: #5865f2 !important;
-  text-align: center;
-  border-bottom: none !important;
+  color: var(--navy);
 }
 
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--border);
+    flex-direction: column;
+    padding: var(--space-md);
+    gap: 0;
   }
 
-  .mobile-menu-toggle {
+  .nav-links.active {
     display: flex;
   }
 
-  .mobile-menu {
-    display: flex;
+  .nav-links li {
+    width: 100%;
   }
 
-  .nav-container {
-    padding: 1rem 0;
+  .nav-links a {
+    display: block;
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    margin-top: var(--space-md);
+  }
+
+  .nav-cta .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 </style>
