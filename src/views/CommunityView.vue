@@ -37,7 +37,7 @@
           </p>
           <div class="hero-cta">
             <a href="https://discord.gg/deveco" target="_blank" class="btn btn-primary">Join Discord</a>
-            <router-link to="/projects" class="btn btn-secondary">View Projects</router-link>
+            <router-link to="/projects" class="btn btn-secondary">View Products</router-link>
           </div>
         </div>
       </div>

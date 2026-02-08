@@ -39,8 +39,9 @@
 
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
         <li><router-link to="/consultancy" @click="closeNav">Services</router-link></li>
+        <li><router-link to="/devxrl" @click="closeNav">DevXRL</router-link></li>
         <li><router-link to="/community" @click="closeNav">Community</router-link></li>
-        <li><router-link to="/projects" @click="closeNav">Projects</router-link></li>
+        <li><router-link to="/projects" @click="closeNav">Products</router-link></li>
         <li class="nav-cta"><router-link to="/contact" class="btn btn-primary" @click="closeNav">Contact Us</router-link></li>
       </ul>
     </div>

@@ -250,7 +250,7 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div class="hero-stamp">Est. 2023</div>
+    <div class="hero-stamp">Est. 2024</div>
   </section>
 
   <!-- Services Section -->

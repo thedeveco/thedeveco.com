@@ -14,11 +14,12 @@
             <li><router-link to="/consultancy">Technical Content</router-link></li>
             <li><router-link to="/consultancy">DevRel Strategy</router-link></li>
             <li><router-link to="/consultancy">Training</router-link></li>
+            <li><router-link to="/devxrl">DevXRL Audit</router-link></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Projects</h4>
+          <h4>Products</h4>
           <ul>
             <li><router-link to="/projects">Portal Network</router-link></li>
             <li><router-link to="/projects">B3VY Live Hub</router-link></li>

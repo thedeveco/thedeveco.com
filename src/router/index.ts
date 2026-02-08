@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import('../views/ConsultancyView.vue'),
     },
     {
+      path: '/devxrl',
+      name: 'devxrl',
+      component: () => import('../views/DevXRL.vue'),
+    },
+    {
       path: '/community',
       name: 'community',
       component: () => import('../views/CommunityView.vue'),

@@ -109,7 +109,7 @@
           </svg>
         </div>
         <div class="hero-content">
-          <p class="label">Our Projects</p>
+          <p class="label">Our Products</p>
           <h1>Tools we actually use.</h1>
           <p class="hero-subtitle">
             Open source platforms and tools built from real community needs.
