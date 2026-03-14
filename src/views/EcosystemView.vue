@@ -4,312 +4,308 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
-          <p class="label">Ecosystem</p>
-          <h1>Ecosystem</h1>
+          <p class="label">Our Network</p>
+          <h1>Explore Our Ecosystem</h1>
           <p class="hero-subtitle">
-            Not another agency with slide decks. Practitioners who've built communities from hackerspaces to enterprise scale.
+            The people, partners, and communities that make devEco thrive.
           </p>
-          <div class="hero-cta">
-            <router-link to="/contact" class="btn btn-primary">Start Your Project</router-link>
-            <a href="#services" class="btn btn-secondary">Our Services</a>
-          </div>
-        </div>
-        <div class="hero-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 130" width="380" height="130">
-            <g transform="translate(10, 10)">
-              <circle class="ring" cx="49.3" cy="44.5" r="35.3" fill="none" stroke="#4db3a8" stroke-width="3"/>
-              <line class="connector c1" x1="49.29" y1="44.5" x2="49.15" y2="20.63" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <line class="connector c2" x1="49.29" y1="44.5" x2="60.69" y2="32.78" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <line class="connector c3" x1="49.29" y1="44.5" x2="71.84" y2="44.5" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <line class="connector c4" x1="49.29" y1="44.5" x2="60.69" y2="56.22" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <line class="connector c5" x1="49.29" y1="44.5" x2="49.15" y2="68.37" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <line class="connector c6" x1="49.29" y1="44.5" x2="37.31" y2="56.22" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <line class="connector c7" x1="49.29" y1="44.5" x2="26.16" y2="44.5" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <line class="connector c8" x1="49.29" y1="44.5" x2="37.31" y2="32.78" stroke="#4db3a8" stroke-width="2.5" stroke-linecap="round"/>
-              <circle class="node n1" cx="49.15" cy="20.63" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="node n3" cx="71.84" cy="44.5" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="node n5" cx="49.15" cy="68.37" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="node n7" cx="26.16" cy="44.5" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="node n2" cx="60.69" cy="32.78" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="node n4" cx="60.69" cy="56.22" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="node n6" cx="37.31" cy="56.22" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="node n8" cx="37.31" cy="32.78" r="4.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-              <circle class="center-node" cx="49.29" cy="44.5" r="2.2" fill="#3d9991" stroke="#1e3a3a" stroke-width="1.5"/>
-            </g>
-            <text class="text-dev" x="125" y="58" font-family="'JetBrains Mono', monospace" font-size="46" font-weight="bold" fill="#ffffff">DEV</text>
-            <text class="text-eco" x="205" y="58" font-family="'JetBrains Mono', monospace" font-size="46" font-weight="bold" fill="#4db3a8">ECO</text>
-            <text class="text-consulting" x="127" y="82" font-family="'JetBrains Mono', monospace" font-size="15" letter-spacing="0.25em" fill="#ffffff">CONSULTING LLC</text>
-          </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services">
+  <!-- Ecosystem Sections -->
+  <section
+    v-for="section in sections"
+    :key="section.category"
+    class="ecosystem-section"
+    :class="section.category"
+  >
     <div class="container">
       <div class="section-header">
-        <h2>Our Services</h2>
+        <h2>{{ section.title }}</h2>
+        <p class="section-description">{{ section.description }}</p>
       </div>
 
-      <div class="services-grid">
-        <div class="card service-card">
-          <span class="stamp stamp-teal">Community</span>
-          <h3>Community Building</h3>
-          <p>Real communities, not vanity metrics.</p>
-          <ul class="service-list">
-            <li>Community strategy</li>
-            <li>Platform setup</li>
-            <li>Engagement programs</li>
-          </ul>
-        </div>
-
-        <div class="card service-card">
-          <span class="stamp stamp-pink">Content</span>
-          <h3>Technical Content</h3>
-          <p>Content from people who build.</p>
-          <ul class="service-list">
-            <li>Content strategy</li>
-            <li>Technical docs</li>
-            <li>Video tutorials</li>
-          </ul>
-        </div>
-
-        <div class="card service-card">
-          <span class="stamp stamp-navy">Adoption</span>
-          <h3>Product Adoption</h3>
-          <p>Get developers using your product.</p>
-          <ul class="service-list">
-            <li>Onboarding design</li>
-            <li>Integration guides</li>
-            <li>Hackathons</li>
-          </ul>
-        </div>
-
-        <div class="card service-card">
-          <span class="stamp stamp-teal">Training</span>
-          <h3>Training & Workshops</h3>
-          <p>Hands-on learning for teams.</p>
-          <ul class="service-list">
-            <li>Team training</li>
-            <li>DevRel practices</li>
-            <li>Strategic planning</li>
-          </ul>
-        </div>
-
-        <div class="card service-card">
-          <span class="stamp stamp-pink">Strategy</span>
-          <h3>DevRel Strategy</h3>
-          <p>Clear roadmaps. Real results.</p>
-          <ul class="service-list">
-            <li>Program design</li>
-            <li>Metrics framework</li>
-            <li>Team structure</li>
-          </ul>
-        </div>
-
-        <div class="card service-card">
-          <span class="stamp stamp-navy">Partnerships</span>
-          <h3>Developer Partnerships</h3>
-          <p>Build authentic advocacy.</p>
-          <ul class="service-list">
-            <li>Partner programs</li>
-            <li>Ambassador networks</li>
-            <li>Community campaigns</li>
-          </ul>
-        </div>
+      <div class="ecosystem-grid">
+        <EcosystemTile
+          v-for="listing in section.listings"
+          :key="listing.id"
+          v-bind="listing"
+          @select="openModal(listing)"
+        />
       </div>
     </div>
   </section>
 
-  <!-- Process Section -->
-  <section id="process" class="process-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Process</h2>
-        <p class="process-subtitle">From discovery to deployment. We're your embedded partner.</p>
-      </div>
-
-      <div class="process-grid">
-        <div class="process-step" data-step="1">
-          <h4>Discovery</h4>
-          <p>We analyze your goals, audience, and current state to understand what you actually need.</p>
-        </div>
-
-        <div class="process-step" data-step="2">
-          <h4>Strategy</h4>
-          <p>Clear roadmaps using methods that work. No jargon. Just a plan you can execute.</p>
-        </div>
-
-        <div class="process-step" data-step="3">
-          <h4>Implementation</h4>
-          <p>We build alongside you. Communities, content, programs. Hands-on work.</p>
-        </div>
-
-        <div class="process-step" data-step="4">
-          <h4>Growth</h4>
-          <p>Monitor, optimize, scale. Systems that grow, not dependencies that require us forever.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section id="team" class="team-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Meet Our Team</h2>
-      </div>
-
-      <div class="team-grid">
-        <div class="team-member" :class="{ expanded: expanded.robert }">
-          <div class="member-photo">
-            <img src="/team/robert.jpg" alt="Robert Wolff" />
-          </div>
-          <h3>Robert Wolff</h3>
-          <p class="member-title">Founder & Partner</p>
-          <p class="member-bio-preview">Developer advocate and community strategist with a decade of experience building and scaling developer ecosystems.</p>
-          <p class="member-bio">
-            Robert is a developer advocate and community strategist with a decade of experience building and scaling developer ecosystems.
-            As the founder of DevEco Consulting, he's helped companies connect with developers through authentic storytelling, content, and hands-on engagement.
-            Previously at Arm, he led developer programs, community growth, and global advocacy initiatives.
-            Robert is passionate about open source, collaboration, and helping technology teams connect with the people who build the future.
-          </p>
-          <button class="read-more-btn" @click="expanded.robert = !expanded.robert">
-            {{ expanded.robert ? 'Show less' : 'Read more' }}
-          </button>
-          <div class="member-tags">
-            <span class="tag">Developer Advocacy</span>
-            <span class="tag">Community Strategy</span>
-            <span class="tag">Open Source</span>
-          </div>
-        </div>
-
-        <div class="team-member" :class="{ expanded: expanded.moheeb }">
-          <div class="member-photo">
-            <img src="/team/moheeb.jpg" alt="Moheeb Zara" />
-          </div>
-          <h3>Moheeb Zara</h3>
-          <p class="member-title">Partner</p>
-          <p class="member-bio-preview">Developer relations engineer, creative technologist, and founder of LumenCanvas, a browser-native projection mapping platform.</p>
-          <p class="member-bio">
-            Moheeb is a developer relations engineer, creative technologist, and founder of LumenCanvas, a browser-native projection mapping platform.
-            With over a decade of experience spanning art, robotics, and open-source software, he's worked with companies like AWS, SignalWire, and SORACOM
-            to bring complex technologies to life through content, demos, and community.
-            As a partner at DevEco Consulting, Moheeb leads development on creative tools and developer-focused projects that blend art and engineering.
-          </p>
-          <button class="read-more-btn" @click="expanded.moheeb = !expanded.moheeb">
-            {{ expanded.moheeb ? 'Show less' : 'Read more' }}
-          </button>
-          <div class="member-tags">
-            <span class="tag">Creative Technology</span>
-            <span class="tag">Developer Relations</span>
-            <span class="tag">Open Source</span>
-          </div>
-        </div>
-
-        <div class="team-member" :class="{ expanded: expanded.tory }">
-          <div class="member-photo">
-            <img src="/team/tory.jpg" alt="Tory Moghadam" />
-          </div>
-          <h3>Tory (TURFPTAx) Moghadam</h3>
-          <p class="member-title">Partner</p>
-          <p class="member-bio-preview">Embedded systems and AI engineer with deep experience in compliance, cybersecurity, and large-scale systems.</p>
-          <p class="member-bio">
-            Tory is an embedded systems and AI engineer with deep experience in compliance, cybersecurity, and large-scale technical systems.
-            As Lead AI Engineer at Be Well Health, he designs secure, scalable AI solutions for healthcare.
-            He's also the founder of OpenMuscle, an open-source initiative advancing prosthetic sensor technology.
-            A partner at DevEco Consulting, Tory combines rigorous technical insight with a passion for accessibility, open hardware, and applied AI innovation.
-          </p>
-          <button class="read-more-btn" @click="expanded.tory = !expanded.tory">
-            {{ expanded.tory ? 'Show less' : 'Read more' }}
-          </button>
-          <div class="member-tags">
-            <span class="tag">AI Engineering</span>
-            <span class="tag">Embedded Systems</span>
-            <span class="tag">Cybersecurity</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to build something real?</h2>
-      <p>No pitch decks. Just a conversation about what you need.</p>
-      <div class="cta-buttons">
-        <router-link to="/contact" class="btn btn-primary">Start a Conversation</router-link>
-        <router-link to="/community" class="btn btn-secondary">Join Our Community</router-link>
-      </div>
-    </div>
-  </section>
+  <!-- Detail Modal -->
+  <EcosystemModal
+    v-if="selectedListing"
+    :visible="modalOpen"
+    v-bind="selectedListing"
+    @close="closeModal"
+  />
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { ref, computed } from 'vue'
+import EcosystemTile from '@/components/ui/EcosystemTile.vue'
+import EcosystemModal from '@/components/ui/EcosystemModal.vue'
 
-const expanded = reactive({
-  robert: false,
-  moheeb: false,
-  tory: false
-})
+export interface EcosystemListing {
+  id: string
+  name: string
+  logo?: string
+  category: 'partner' | 'support' | 'client' | 'collaborator'
+  shortDescription: string
+  tags?: string[]
+  longDescription?: string
+  website?: string
+  socialLinks?: { platform: string; url: string }[]
+  highlights?: string[]
+  featured?: boolean
+}
+
+export interface EcosystemSection {
+  title: string
+  description: string
+  category: 'partner' | 'support' | 'client' | 'collaborator'
+  listings: EcosystemListing[]
+}
+
+const listings: EcosystemListing[] = [
+  // Partners
+  {
+    id: 'edge-ai-foundation',
+    name: 'Edge AI Foundation',
+    logo: '/clients/edgeai.png',
+    category: 'partner',
+    shortDescription: 'Advancing edge AI adoption through open standards, community building, and developer education.',
+    tags: ['Edge AI', 'Open Standards', 'Developer Education'],
+    longDescription: 'The Edge AI Foundation is dedicated to accelerating the adoption of AI at the edge through open standards, collaborative research, and developer education. As a founding partner, devEco works closely with the foundation to build developer programs, create educational content, and foster a global community of edge AI practitioners.',
+    website: 'https://edgeai.foundation',
+    highlights: [
+      'Founding partner and community advisor',
+      'Co-developed edge AI developer curriculum',
+      'Organized global edge AI hackathon series'
+    ]
+  },
+  {
+    id: 'arm-developer',
+    name: 'Arm Developer Program',
+    category: 'partner',
+    shortDescription: 'Strategic partnership supporting Arm ecosystem developer relations and community growth.',
+    tags: ['Semiconductors', 'IoT', 'Developer Programs'],
+    longDescription: 'The Arm Developer Program provides tools, resources, and community for millions of developers building on Arm architecture. devEco has partnered with Arm to scale developer advocacy efforts, build community engagement programs, and create technical content that drives adoption across embedded, IoT, and edge computing markets.',
+    website: 'https://developer.arm.com',
+    highlights: [
+      'Led developer advocacy across embedded and IoT verticals',
+      'Built community engagement programs reaching 50k+ developers',
+      'Created technical content strategy for Arm developer portal'
+    ]
+  },
+  {
+    id: 'linaro',
+    name: 'Linaro',
+    category: 'partner',
+    shortDescription: 'Collaborative engineering organization driving open source software on Arm architecture.',
+    tags: ['Open Source', 'Arm', 'Linux'],
+    longDescription: 'Linaro is a collaborative engineering organization that brings together the Linux community and semiconductor companies to work on key open source projects. devEco partners with Linaro on developer outreach, event coordination, and community strategy to strengthen the open source Arm ecosystem.',
+    website: 'https://www.linaro.org',
+    highlights: [
+      'Developer outreach and event coordination',
+      'Community strategy consulting',
+      'Open source advocacy programs'
+    ]
+  },
+
+  // Support
+  {
+    id: 'whitney-knitter',
+    name: 'Whitney Knitter',
+    category: 'support',
+    shortDescription: 'FPGA engineer and content creator producing tutorials on embedded systems and hardware design.',
+    tags: ['FPGA', 'Content Creator', 'Hardware'],
+    longDescription: 'Whitney Knitter is an FPGA engineer and prolific content creator known for her accessible tutorials on embedded systems, hardware design, and FPGA development. devEco supports Whitney through content amplification, sponsorship coordination, and community platform access to help her reach a broader audience of hardware developers.',
+    website: 'https://www.hackster.io/whitney-knitter',
+    socialLinks: [
+      { platform: 'YouTube', url: 'https://youtube.com' },
+      { platform: 'GitHub', url: 'https://github.com' }
+    ],
+    highlights: [
+      'Featured content creator in devEco community streams',
+      'Hardware workshop series co-organizer',
+      'Open source FPGA project contributor'
+    ]
+  },
+  {
+    id: 'explaining-computers',
+    name: 'ExplainingComputers',
+    category: 'support',
+    shortDescription: 'YouTube channel dedicated to exploring computing hardware, single-board computers, and emerging tech.',
+    tags: ['YouTube', 'Education', 'Hardware Reviews'],
+    longDescription: 'ExplainingComputers is a popular YouTube channel run by Christopher Barnatt, covering computing hardware, single-board computers, 3D printing, and emerging technologies. devEco supports the channel through community collaboration, hardware access programs, and cross-promotion to connect audiences with hands-on learning opportunities.',
+    website: 'https://www.youtube.com/@ExplainingComputers',
+    socialLinks: [
+      { platform: 'YouTube', url: 'https://www.youtube.com/@ExplainingComputers' }
+    ],
+    highlights: [
+      'Community collaboration on hardware education',
+      'Cross-promotion for developer learning content',
+      '500k+ subscriber reach in developer education'
+    ]
+  },
+  {
+    id: 'jeff-geerling',
+    name: 'Jeff Geerling',
+    category: 'support',
+    shortDescription: 'DevOps engineer and content creator known for Raspberry Pi, Ansible, and Kubernetes content.',
+    tags: ['DevOps', 'Raspberry Pi', 'Open Source'],
+    longDescription: 'Jeff Geerling is a DevOps engineer, author, and content creator widely recognized for his work with Raspberry Pi, Ansible, Kubernetes, and Linux. devEco supports Jeff through community integration, event participation, and collaborative projects that bridge the gap between hobbyist and enterprise developer audiences.',
+    website: 'https://www.jeffgeerling.com',
+    socialLinks: [
+      { platform: 'YouTube', url: 'https://www.youtube.com/@JeffGeerling' },
+      { platform: 'GitHub', url: 'https://github.com/geerlingguy' }
+    ],
+    highlights: [
+      'Collaborative community streaming events',
+      'Open source infrastructure project advocacy',
+      '1M+ subscriber reach in DevOps education'
+    ]
+  },
+
+  // Clients
+  {
+    id: 'atym',
+    name: 'Atym',
+    logo: '/clients/atym.png',
+    category: 'client',
+    shortDescription: 'Edge computing platform enabling secure, scalable deployment of AI workloads at the network edge.',
+    tags: ['Edge Computing', 'AI', 'Platform'],
+    longDescription: 'Atym provides an edge computing platform that enables organizations to securely deploy and manage AI workloads at the network edge. devEco provides developer relations consulting to Atym, including developer experience audits, content strategy, and community building to accelerate platform adoption among edge computing developers.',
+    website: 'https://www.atym.io',
+    highlights: [
+      'Developer experience audit and recommendations',
+      'Technical content strategy and execution',
+      'Community launch and growth program'
+    ]
+  },
+  {
+    id: 'solidrun',
+    name: 'SolidRun',
+    logo: '/clients/solidrun.png',
+    category: 'client',
+    shortDescription: 'Hardware manufacturer specializing in high-performance embedded computing and networking solutions.',
+    tags: ['Hardware', 'Embedded', 'Networking'],
+    longDescription: 'SolidRun designs and manufactures high-performance embedded computing and networking hardware used in enterprise, edge, and IoT applications. devEco works with SolidRun on developer outreach, technical documentation, and community engagement to grow their developer ecosystem and drive adoption of their hardware platforms.',
+    website: 'https://www.solid-run.com',
+    highlights: [
+      'Developer outreach and advocacy programs',
+      'Technical documentation overhaul',
+      'Community engagement strategy'
+    ]
+  },
+  {
+    id: 'ao-electric',
+    name: 'A&O Electric',
+    category: 'client',
+    shortDescription: 'Smart energy solutions company building connected devices for commercial and residential markets.',
+    tags: ['Energy', 'IoT', 'Smart Devices'],
+    longDescription: 'A&O Electric develops smart energy solutions and connected devices for commercial and residential markets. devEco provides developer relations support including API documentation, developer onboarding flows, and integration partner programs to help A&O Electric build a thriving developer ecosystem around their energy platform.',
+    highlights: [
+      'API documentation and developer portal design',
+      'Developer onboarding flow optimization',
+      'Integration partner program launch'
+    ]
+  },
+
+  // Collaborators
+  {
+    id: 'hackster',
+    name: 'Hackster.io',
+    logo: '/clients/hackster.png',
+    category: 'collaborator',
+    shortDescription: 'Global community platform for hardware and IoT developers to share projects and learn together.',
+    tags: ['Community Platform', 'Hardware', 'IoT'],
+    longDescription: 'Hackster.io is the world\'s largest community for hardware and IoT developers, hosting millions of projects and tutorials. devEco collaborates with Hackster on content programs, hackathon coordination, and community cross-pollination to connect developers across platforms and amplify project visibility.',
+    website: 'https://www.hackster.io',
+    highlights: [
+      'Joint hackathon and contest coordination',
+      'Content cross-promotion programs',
+      'Community event co-hosting'
+    ]
+  },
+  {
+    id: 'pantacor',
+    name: 'Pantacor',
+    logo: '/clients/pantacor.svg',
+    category: 'collaborator',
+    shortDescription: 'Linux container-based device management platform for IoT and embedded systems.',
+    tags: ['Linux', 'Containers', 'Device Management'],
+    longDescription: 'Pantacor provides a Linux container-based device management platform that simplifies the deployment, updating, and management of IoT and embedded devices. devEco works with Pantacor on developer tooling advocacy, technical content creation, and community outreach to grow adoption among embedded Linux developers.',
+    website: 'https://www.pantacor.com',
+    highlights: [
+      'Developer tooling advocacy and demos',
+      'Technical content and tutorial creation',
+      'Embedded Linux community outreach'
+    ]
+  },
+  {
+    id: 'thistle',
+    name: 'Thistle Technologies',
+    logo: '/clients/thistle.png',
+    category: 'collaborator',
+    shortDescription: 'Security platform providing over-the-air update infrastructure for IoT and embedded devices.',
+    tags: ['Security', 'OTA Updates', 'IoT'],
+    longDescription: 'Thistle Technologies builds security infrastructure for IoT and embedded devices, specializing in secure over-the-air update delivery. devEco collaborates with Thistle on developer education, security-focused content, and community engagement to promote best practices in embedded device security.',
+    website: 'https://www.thistle.tech',
+    highlights: [
+      'Security-focused developer education content',
+      'IoT security best practices workshops',
+      'Community engagement and developer outreach'
+    ]
+  }
+]
+
+const sections = computed<EcosystemSection[]>(() => [
+  {
+    title: 'We Are Partnered With',
+    description: 'Strategic alliances and foundation partnerships that drive innovation across the developer ecosystem.',
+    category: 'partner',
+    listings: listings.filter(l => l.category === 'partner')
+  },
+  {
+    title: 'We Support',
+    description: 'Content creators, open source maintainers, and community leaders we champion and amplify.',
+    category: 'support',
+    listings: listings.filter(l => l.category === 'support')
+  },
+  {
+    title: 'We Serve',
+    description: 'Companies and organizations we provide developer relations consulting and community strategy to.',
+    category: 'client',
+    listings: listings.filter(l => l.category === 'client')
+  },
+  {
+    title: 'We Work With',
+    description: 'Technology platforms, tool providers, and communities we integrate and collaborate with.',
+    category: 'collaborator',
+    listings: listings.filter(l => l.category === 'collaborator')
+  }
+])
+
+const modalOpen = ref(false)
+const selectedListing = ref<EcosystemListing | null>(null)
+
+const openModal = (listing: EcosystemListing) => {
+  selectedListing.value = listing
+  modalOpen.value = true
+}
+
+const closeModal = () => {
+  modalOpen.value = false
+}
 </script>
-
-<style>
-/* Animation keyframes for SVG logo */
-@keyframes hub-emerge {
-  0% { transform: scale(0); opacity: 0; }
-  60% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
-}
-@keyframes node-join {
-  0% { transform: scale(0) translateY(10px); opacity: 0; }
-  70% { transform: scale(1.15) translateY(0); opacity: 1; }
-  100% { transform: scale(1) translateY(0); opacity: 1; }
-}
-@keyframes connection-form {
-  0% { stroke-dashoffset: 30; opacity: 0; }
-  30% { opacity: 1; }
-  100% { stroke-dashoffset: 0; opacity: 1; }
-}
-@keyframes ring-complete {
-  0% { stroke-dashoffset: 222; opacity: 0.3; }
-  100% { stroke-dashoffset: 0; opacity: 1; }
-}
-@keyframes text-arrive {
-  0% { opacity: 0; transform: translateX(-8px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-@keyframes consulting-settle {
-  0% { opacity: 0; letter-spacing: 0.5em; }
-  100% { opacity: 1; letter-spacing: 0.3em; }
-}
-
-.center-node { animation: hub-emerge 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both; }
-.connector { stroke-dasharray: 30; stroke-dashoffset: 30; }
-.c1 { animation: connection-form 0.4s ease-out 0.5s both; }
-.c2 { animation: connection-form 0.4s ease-out 0.65s both; }
-.c3 { animation: connection-form 0.4s ease-out 0.8s both; }
-.c4 { animation: connection-form 0.4s ease-out 0.95s both; }
-.c5 { animation: connection-form 0.4s ease-out 1.1s both; }
-.c6 { animation: connection-form 0.4s ease-out 1.25s both; }
-.c7 { animation: connection-form 0.4s ease-out 1.4s both; }
-.c8 { animation: connection-form 0.4s ease-out 1.55s both; }
-.n1 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both; }
-.n2 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.75s both; }
-.n3 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s both; }
-.n4 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1.05s both; }
-.n5 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s both; }
-.n6 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1.35s both; }
-.n7 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1.5s both; }
-.n8 { animation: node-join 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1.65s both; }
-.ring { stroke-dasharray: 222; animation: ring-complete 0.8s ease-out 1.8s both; }
-.text-dev { animation: text-arrive 0.5s ease-out 2.0s both; }
-.text-eco { animation: text-arrive 0.5s ease-out 2.1s both; }
-.text-consulting { animation: consulting-settle 0.6s ease-out 2.2s both; }
-</style>
 
 <style scoped>
 .hero {
@@ -319,10 +315,7 @@ const expanded = reactive({
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--space-xl);
-  align-items: center;
+  max-width: 640px;
 }
 
 .hero .label {
@@ -338,321 +331,43 @@ const expanded = reactive({
 .hero-subtitle {
   font-size: 1.125rem;
   color: var(--text-light);
-  margin-bottom: var(--space-xl);
-  max-width: 500px;
 }
 
-.hero-cta {
-  display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
+/* Ecosystem Sections */
+.ecosystem-section {
+  padding: var(--space-2xl) 0;
 }
 
-.hero .btn-secondary {
-  border-color: white;
-  color: white;
+.ecosystem-section:nth-child(odd) {
+  background: var(--bg-light);
 }
 
-.hero .btn-secondary:hover {
-  background: white;
-  color: var(--navy);
-}
-
-.hero-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-logo svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Services */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--space-lg);
-}
-
-.service-card .stamp {
-  margin-bottom: var(--space-md);
-}
-
-.service-card h3 {
-  margin-bottom: var(--space-sm);
-}
-
-.service-card > p {
-  font-size: 0.875rem;
-  color: var(--text-mid);
-  margin-bottom: var(--space-md);
-}
-
-.service-list {
-  list-style: none;
-}
-
-.service-list li {
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.875rem;
-  color: var(--text-mid);
-  position: relative;
-  padding-left: 1.25rem;
-}
-
-.service-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  background: var(--teal);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-/* Process */
-.process-section {
+.ecosystem-section:nth-child(even) {
   background: var(--bg-white);
-  border-top: 2px solid var(--border);
-  border-bottom: 2px solid var(--border);
 }
 
-.process-subtitle {
+.section-description {
   color: var(--text-mid);
   margin-top: var(--space-sm);
+  max-width: 600px;
 }
 
-.process-grid {
+.ecosystem-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
-}
-
-.process-step {
-  position: relative;
-  padding-left: var(--space-xl);
-}
-
-.process-step::before {
-  content: attr(data-step);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 36px;
-  height: 36px;
-  background: var(--teal);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-.process-step h4 {
-  margin-bottom: var(--space-sm);
-}
-
-.process-step p {
-  font-size: 0.875rem;
-  color: var(--text-mid);
-}
-
-/* Team */
-.team-section {
-  background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
-}
-
-.team-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xl);
-}
-
-.team-member {
-  background: white;
-  border: 2px solid var(--border);
-  padding: var(--space-xl);
-}
-
-.member-photo {
-  width: 100px;
-  height: 100px;
-  margin-bottom: var(--space-md);
-  background: var(--navy);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  overflow: hidden;
-}
-
-.member-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.team-member h3 {
-  margin-bottom: var(--space-xs);
-}
-
-.member-title {
-  color: var(--teal);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-md);
-}
-
-.member-bio-preview {
-  display: none;
-  font-size: 0.875rem;
-  color: var(--text-mid);
-  line-height: 1.7;
-  margin-bottom: var(--space-sm);
-}
-
-.member-bio {
-  font-size: 0.875rem;
-  color: var(--text-mid);
-  line-height: 1.7;
-  margin-bottom: var(--space-md);
-}
-
-.read-more-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--teal);
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0;
-  margin-bottom: var(--space-md);
-}
-
-.read-more-btn:hover {
-  text-decoration: underline;
-}
-
-.member-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-
-.tag {
-  background: var(--bg-light);
-  color: var(--teal);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-/* CTA */
-.cta-section {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-}
-
-.cta-section h2 {
-  color: white;
-  margin-bottom: var(--space-md);
-}
-
-.cta-section > .container > p {
-  color: var(--text-light);
-  margin-bottom: var(--space-xl);
-}
-
-.cta-buttons {
-  display: flex;
-  gap: var(--space-md);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-section .btn-secondary {
-  border-color: white;
-  color: white;
-}
-
-.cta-section .btn-secondary:hover {
-  background: white;
-  color: var(--navy);
+  margin-top: var(--space-xl);
 }
 
 @media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-logo {
-    order: -1;
-    margin-bottom: var(--space-lg);
-  }
-
-  .hero-logo svg {
-    width: 280px;
-    height: auto;
-  }
-
-  .hero-subtitle {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-cta {
-    justify-content: center;
+  .ecosystem-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .hero-cta {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .services-grid {
+@media (max-width: 600px) {
+  .ecosystem-grid {
     grid-template-columns: 1fr;
-  }
-
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .member-bio-preview {
-    display: block;
-  }
-
-  .member-bio {
-    display: none;
-  }
-
-  .read-more-btn {
-    display: block;
-  }
-
-  .team-member.expanded .member-bio-preview {
-    display: none;
-  }
-
-  .team-member.expanded .member-bio {
-    display: block;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
   }
 }
 </style>
