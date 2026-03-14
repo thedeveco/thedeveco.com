@@ -40,13 +40,13 @@ This is a modern Vue 3 + TypeScript website built with Vite, featuring:
 - Detailed service descriptions
 
 ### 🌐 Community Platform
-- Portal Network explanation and stats
+- portalNetwork explanation and stats
 - B3VY community overview
 - Events and workshops information
 - Community values and guidelines
 
 ### 📦 Products & Tools
-- Portal Network Discord bot details
+- portalNetwork Discord bot details
 - B3VY meta-community platform
 - LaunchCue CRM (beta)
 - Technical specifications
