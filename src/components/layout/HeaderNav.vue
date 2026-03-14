@@ -39,6 +39,7 @@
 
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
         <li><router-link to="/consultancy" @click="closeNav">Services</router-link></li>
+        <li><router-link to="/ecosystem" @click="closeNav">Ecosystem</router-link></li>
         <li><router-link to="/devxrl" @click="closeNav">DevXRL</router-link></li>
         <li
           class="nav-dropdown"
