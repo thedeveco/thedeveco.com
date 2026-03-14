@@ -226,6 +226,51 @@ const listings: EcosystemListing[] = [
       '98% of parents report positive impact on child development'
     ]
   },
+  {
+    id: 'source-network',
+    name: 'Source Network',
+    logo: '/clients/source.png',
+    category: 'client',
+    shortDescription: 'Decentralized data management infrastructure providing peer-to-peer databases and trust layer protocols for Web3 applications.',
+    tags: ['Web3', 'Decentralized Data', 'Infrastructure'],
+    longDescription: 'Source Network builds decentralized data management infrastructure driven by Web3\'s vision of a permissionless and trustless future. With DefraDB, their peer-to-peer database, and SourceHub, their Cosmos SDK-based trust layer protocol, developers gain tools to create truly decentralized applications with native cryptographic primitives, granular privacy controls, and P2P synchronization across edge devices and cloud platforms.',
+    website: 'https://source.network',
+    highlights: [
+      'DefraDB peer-to-peer database for decentralized apps',
+      'SourceHub trust layer protocol on Cosmos SDK',
+      'Chainlink BUILD program member'
+    ]
+  },
+  {
+    id: 'openmv',
+    name: 'OpenMV',
+    logo: '/clients/OpenMV.png',
+    category: 'client',
+    shortDescription: 'Open source machine vision platform with MicroPython-programmable cameras for embedded AI and robotics applications.',
+    tags: ['Machine Vision', 'MicroPython', 'Embedded AI'],
+    longDescription: 'OpenMV makes machine vision accessible with small, affordable cameras programmable in MicroPython. Their platform supports TensorFlow, ST Edge AI, and NPU acceleration, with a rich image processing library for color tracking, QR decoding, AprilTag recognition, and more. From Robocup robots to wildlife cameras, OpenMV enables developers to sense, plan, and act — all in one Python script.',
+    website: 'https://openmv.io',
+    highlights: [
+      'Open source hardware and software platform',
+      'MicroPython-programmable embedded vision cameras',
+      'TensorFlow and NPU acceleration support'
+    ]
+  },
+  {
+    id: 'edge-ai-foundation-client',
+    name: 'Edge AI Foundation',
+    logo: '/clients/edgeai.png',
+    category: 'client',
+    shortDescription: 'Global 501(c)(3) community advancing energy-efficient edge AI through working groups, academia partnerships, and developer education.',
+    tags: ['Edge AI', 'Industry Consortium', 'Developer Education'],
+    longDescription: 'The Edge AI Foundation is a California-based 501(c)(3) and the world\'s largest community of edge AI developers, technology makers, and academia. Formerly known as TinyML, the foundation drives innovation from tinyML to agentic AI, physical AI, and neuromorphic computing through working groups, scholarship programs, and academia-industry partnerships that democratize AI technologies at the network\'s edge.',
+    website: 'https://www.edgeaifoundation.org',
+    highlights: [
+      'World\'s largest edge AI developer community',
+      'Working groups spanning generative AI, neuromorphic, and benchmarking',
+      'Edge AI Scholarship Fund for academia and students'
+    ]
+  },
 
   // Collaborators
   {
