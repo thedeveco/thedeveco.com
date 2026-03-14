@@ -4,7 +4,7 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
-          <p class="label">Our Network</p>
+          <p class="label">A High-Integrity Network</p>
           <h1>Explore Our Ecosystem</h1>
           <p class="hero-subtitle">
             The people, partners, and communities that make devEco thrive.
@@ -91,31 +91,35 @@ const listings: EcosystemListing[] = [
     ]
   },
   {
-    id: 'arm-developer',
-    name: 'Arm Developer Program',
+    id: 'iot-stars',
+    name: 'IoT Stars',
     category: 'partner',
-    shortDescription: 'Strategic partnership supporting Arm ecosystem developer relations and community growth.',
-    tags: ['Semiconductors', 'IoT', 'Developer Programs'],
-    longDescription: 'The Arm Developer Program provides tools, resources, and community for millions of developers building on Arm architecture. devEco has partnered with Arm to scale developer advocacy efforts, build community engagement programs, and create technical content that drives adoption across embedded, IoT, and edge computing markets.',
-    website: 'https://developer.arm.com',
+    shortDescription: 'Community of IoT professionals connecting at key industry events for honest conversations about IoT, embedded, and Edge AI.',
+    tags: ['IoT', 'Community Events', 'Edge AI'],
+    longDescription: 'IoT Stars brings together a diverse community of IoT professionals — from pioneering startups and open source initiatives to corporate leaders and technology foundations. Through curated events at Embedded World, Electronica, and MWC, IoT Stars facilitates C-level conversations about the future of IoT, connectivity, and business models. devEco partners with IoT Stars on community programming and event coordination.',
+    website: 'https://www.iotstars.com',
+    socialLinks: [
+      { platform: 'LinkedIn', url: 'https://www.linkedin.com/company/iotstars/' },
+      { platform: 'Twitter', url: 'https://x.com/iotstars' }
+    ],
     highlights: [
-      'Led developer advocacy across embedded and IoT verticals',
-      'Built community engagement programs reaching 50k+ developers',
-      'Created technical content strategy for Arm developer portal'
+      'Event partnerships at Embedded World and Electronica',
+      'IoT community networking and developer outreach',
+      'The IoT Show podcast collaboration'
     ]
   },
   {
-    id: 'linaro',
-    name: 'Linaro',
+    id: 'advanced-solutions-nederland',
+    name: 'Advanced Solutions Nederland',
     category: 'partner',
-    shortDescription: 'Collaborative engineering organization driving open source software on Arm architecture.',
-    tags: ['Open Source', 'Arm', 'Linux'],
-    longDescription: 'Linaro is a collaborative engineering organization that brings together the Linux community and semiconductor companies to work on key open source projects. devEco partners with Linaro on developer outreach, event coordination, and community strategy to strengthen the open source Arm ecosystem.',
-    website: 'https://www.linaro.org',
+    shortDescription: 'Hi-tech design consultancy specializing in DSP algorithms, AIoT edge solutions, and smart sensor signal processing.',
+    tags: ['DSP', 'AIoT', 'Biomedical'],
+    longDescription: 'Advanced Solutions Nederland (ASN) is an international leader in innovative AIoT edge algorithmic solutions for Industry 4.0, smart buildings, and biomedical applications. Founded in 2006, ASN specializes in digital signal processing algorithms, data analytics, and consultancy — with products like the ASN Filter Designer that cuts embedded development costs by up to 75%. As an Arm DSP knowledge partner, ASN serves clients including Bosch and Siemens across automotive, aerospace, and medical industries.',
+    website: 'https://www.advsolned.com',
     highlights: [
-      'Developer outreach and event coordination',
-      'Community strategy consulting',
-      'Open source advocacy programs'
+      'Arm DSP core team knowledge partner',
+      'ASN Filter Designer for embedded AIoT development',
+      'Real-time heart arrhythmia detection on Arm Cortex-M'
     ]
   },
 
@@ -139,38 +143,39 @@ const listings: EcosystemListing[] = [
     ]
   },
   {
-    id: 'explaining-computers',
-    name: 'ExplainingComputers',
+    id: 'dr-jon-ea',
+    name: 'Dr Jon EA',
     category: 'support',
-    shortDescription: 'YouTube channel dedicated to exploring computing hardware, single-board computers, and emerging tech.',
-    tags: ['YouTube', 'Education', 'Hardware Reviews'],
-    longDescription: 'ExplainingComputers is a popular YouTube channel run by Christopher Barnatt, covering computing hardware, single-board computers, 3D printing, and emerging technologies. devEco supports the channel through community collaboration, hardware access programs, and cross-promotion to connect audiences with hands-on learning opportunities.',
-    website: 'https://www.youtube.com/@ExplainingComputers',
+    shortDescription: 'YouTuber, trainer, and consultant building robotics projects with Raspberry Pi Pico, ROS2, and FreeRTOS.',
+    tags: ['Robotics', 'Raspberry Pi', 'Content Creator'],
+    longDescription: 'Dr Jon EA is the maker persona of Dr. Jon Durant, who pivoted from decades in enterprise IT architecture to hands-on embedded systems and community-driven content creation. He produces tutorials and builds on Raspberry Pi Pico, FreeRTOS, and ROS2 — including his Star Wars-inspired RexP1 droid and the DIY Dev Droid platform. devEco supports Dr Jon EA through community platform access and collaborative streaming.',
+    website: 'https://drjonea.co.uk',
     socialLinks: [
-      { platform: 'YouTube', url: 'https://www.youtube.com/@ExplainingComputers' }
+      { platform: 'YouTube', url: 'https://www.youtube.com/@DrJonEA' },
+      { platform: 'GitHub', url: 'https://github.com/DrJonEA' }
     ],
     highlights: [
-      'Community collaboration on hardware education',
-      'Cross-promotion for developer learning content',
-      '500k+ subscriber reach in developer education'
+      'FreeRTOS on Raspberry Pi Pico course series',
+      'RexP1 droid build with ROS2 and MicroROS',
+      'Active devEco Discord community member'
     ]
   },
   {
-    id: 'jeff-geerling',
-    name: 'Jeff Geerling',
+    id: 'sean-hodgins',
+    name: 'Sean Hodgins',
     category: 'support',
-    shortDescription: 'DevOps engineer and content creator known for Raspberry Pi, Ansible, and Kubernetes content.',
-    tags: ['DevOps', 'Raspberry Pi', 'Open Source'],
-    longDescription: 'Jeff Geerling is a DevOps engineer, author, and content creator widely recognized for his work with Raspberry Pi, Ansible, Kubernetes, and Linux. devEco supports Jeff through community integration, event participation, and collaborative projects that bridge the gap between hobbyist and enterprise developer audiences.',
-    website: 'https://www.jeffgeerling.com',
+    shortDescription: 'Engineer, filmmaker, and open source maker creating custom PCB projects and sharing the build process with 160k+ subscribers.',
+    tags: ['Open Source', 'PCB Design', 'Maker'],
+    longDescription: 'Sean Hodgins is a Canadian engineer, filmmaker, and maker who designs open source electronics and custom circuit boards. His projects range from volumetric displays with stacked transparent OLEDs to self-balancing robots powered by neural networks. Sean shares every build through detailed videos and open source files, driven by a belief that knowledge should be free and accessible to everyone.',
+    website: 'https://www.seanhodgins.com',
     socialLinks: [
-      { platform: 'YouTube', url: 'https://www.youtube.com/@JeffGeerling' },
-      { platform: 'GitHub', url: 'https://github.com/geerlingguy' }
+      { platform: 'YouTube', url: 'https://www.youtube.com/@SeanHodgins' },
+      { platform: 'GitHub', url: 'https://github.com/seanhodgins' }
     ],
     highlights: [
-      'Collaborative community streaming events',
-      'Open source infrastructure project advocacy',
-      '1M+ subscriber reach in DevOps education'
+      'Open source PCB designs and build documentation',
+      'Volumetric display and self-balancing robot projects',
+      '160k+ YouTube subscribers in maker education'
     ]
   },
 
@@ -206,16 +211,18 @@ const listings: EcosystemListing[] = [
     ]
   },
   {
-    id: 'ao-electric',
-    name: 'A&O Electric',
+    id: 'crunchlabs',
+    name: 'CrunchLabs',
+    logo: '/clients/crunchlabs.png',
     category: 'client',
-    shortDescription: 'Smart energy solutions company building connected devices for commercial and residential markets.',
-    tags: ['Energy', 'IoT', 'Smart Devices'],
-    longDescription: 'A&O Electric develops smart energy solutions and connected devices for commercial and residential markets. devEco provides developer relations support including API documentation, developer onboarding flows, and integration partner programs to help A&O Electric build a thriving developer ecosystem around their energy platform.',
+    shortDescription: 'STEM education company founded by former NASA engineer Mark Rober, teaching kids to think like engineers through hands-on build kits.',
+    tags: ['STEM Education', 'Engineering Kits', 'Youth'],
+    longDescription: 'CrunchLabs is an educational STEM company founded by Mark Rober, a former NASA engineer who worked on the Curiosity Mars Rover and now reaches over 68 million YouTube subscribers. Through subscription build kits like Build Box, Hack Pack, and Creative Kit, CrunchLabs teaches kids ages 6–13 to think like engineers with hands-on projects paired with video explanations of the science behind each build.',
+    website: 'https://www.crunchlabs.com',
     highlights: [
-      'API documentation and developer portal design',
-      'Developer onboarding flow optimization',
-      'Integration partner program launch'
+      'Founded by former NASA engineer Mark Rober',
+      'Subscription STEM kits for ages 6–13',
+      '98% of parents report positive impact on child development'
     ]
   },
 
@@ -287,7 +294,7 @@ const sections = computed<EcosystemSection[]>(() => [
     listings: listings.filter(l => l.category === 'client')
   },
   {
-    title: 'We Work With',
+    title: 'We Have Worked With',
     description: 'Technology platforms, tool providers, and communities we integrate and collaborate with.',
     category: 'collaborator',
     listings: listings.filter(l => l.category === 'collaborator')
