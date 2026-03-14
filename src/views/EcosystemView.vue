@@ -93,6 +93,7 @@ const listings: EcosystemListing[] = [
   {
     id: 'iot-stars',
     name: 'IoT Stars',
+    logo: '/clients/iotstars.png',
     category: 'partner',
     shortDescription: 'Community of IoT professionals connecting at key industry events for honest conversations about IoT, embedded, and Edge AI.',
     tags: ['IoT', 'Community Events', 'Edge AI'],
