@@ -123,6 +123,24 @@ const listings: EcosystemListing[] = [
       'Real-time heart arrhythmia detection on Arm Cortex-M'
     ]
   },
+  {
+    id: 'delta-robotics',
+    name: 'Delta Robotics',
+    logo: '/clients/deltarobotics.png',
+    category: 'partner',
+    shortDescription: 'Texas-based startup developing open source Nitinol artificial muscle technology for robotics and prosthetics.',
+    tags: ['Artificial Muscle', 'Open Source Hardware', 'Robotics'],
+    longDescription: 'Delta Robotics is a Texas-based tech startup researching, developing, and commercializing Nitinol-based artificial muscle technology. Their ThermoFlex platform provides an accessible, Arduino-compatible system for controlling shape-memory alloy actuators, with open source firmware and controllers. Delta partners with universities on aquatic and prosthetic applications, driven by a mission to make advanced actuation affordable and accessible to researchers, hobbyists, and commercial developers.',
+    website: 'https://www.deltaroboticsinc.com',
+    socialLinks: [
+      { platform: 'GitHub', url: 'https://github.com/Delta-Robotics-Inc' }
+    ],
+    highlights: [
+      'ThermoFlex Nitinol artificial muscle platform',
+      'Open source firmware and controller designs',
+      'University collaborations on prosthetic and aquatic applications'
+    ]
+  },
 
   // Support
   {
