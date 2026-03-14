@@ -179,6 +179,68 @@ const listings: EcosystemListing[] = [
       '160k+ YouTube subscribers in maker education'
     ]
   },
+  {
+    id: 'becky-stern',
+    name: 'Becky Stern',
+    category: 'support',
+    shortDescription: 'DIY expert and former Adafruit Director of Wearable Electronics, creating tutorials on electronics, textile crafts, and maker projects.',
+    tags: ['Wearables', 'DIY Electronics', 'Content Creator'],
+    longDescription: 'Becky Stern is a New York City-based DIY expert who has authored hundreds of tutorials combining electronics, textile crafts, and fashion. As former Director of Wearable Electronics at Adafruit, she produced 140 weekly video tutorials and helped develop the FLORA wearable Arduino platform. Her work has been featured by the BBC, CNN, Forbes, and The Late Show with Stephen Colbert.',
+    website: 'https://www.youtube.com/@BeckyStern',
+    socialLinks: [
+      { platform: 'YouTube', url: 'https://www.youtube.com/@BeckyStern' }
+    ],
+    highlights: [
+      'Former Director of Wearable Electronics at Adafruit',
+      '140+ weekly craft+tech tutorial videos produced',
+      'Featured by BBC, CNN, Forbes, and Science Friday'
+    ]
+  },
+  {
+    id: 'makit',
+    name: 'MAKiT',
+    category: 'support',
+    shortDescription: 'Maker content creator producing YouTube videos, free software, and music for the DIY community.',
+    tags: ['Maker', 'Content Creator', 'Open Source'],
+    longDescription: 'MAKiT is a maker-focused content creator producing YouTube videos, free software, and music for the DIY and maker community. With an active Patreon community, MAKiT shares projects, tools, and resources that help makers bring their ideas to life. devEco supports MAKiT through community platform access and content collaboration.',
+    website: 'https://www.youtube.com/@MAKiTHappen',
+    highlights: [
+      'Active maker community on Patreon',
+      'Free software and resource creation for makers',
+      'YouTube video series on DIY projects'
+    ]
+  },
+  {
+    id: 'hack-pack-hackers',
+    name: 'HACK PACK Hackers',
+    category: 'support',
+    shortDescription: 'Community exploring and hacking CrunchLabs Hack Pack robots by modifying code and adding sensors for creative builds.',
+    tags: ['Robotics', 'STEM Education', 'Hacking'],
+    longDescription: 'HACK PACK Hackers explores and modifies CrunchLabs Hack Pack robots by Mark Rober, adding custom code, extra sensors, and creative modifications. Their hacks include IR remote-controlled turrets, domino-laying robots, label makers, and sand art bots — inspiring builders to go beyond the box and develop real engineering skills through hands-on experimentation.',
+    website: 'https://www.youtube.com/@HackPackHackers',
+    highlights: [
+      'Custom hacks for CrunchLabs Hack Pack robots',
+      'Code modifications and sensor integrations',
+      'Endorsed by Mark Rober: "You are a legend good sir"'
+    ]
+  },
+  {
+    id: 'shawn-hymel',
+    name: 'Shawn Hymel',
+    category: 'support',
+    shortDescription: 'Embedded systems engineer and technical educator creating courses on Edge AI, Zephyr, and TinyML at Edge Impulse.',
+    tags: ['Edge AI', 'Embedded Systems', 'Education'],
+    longDescription: 'Shawn Hymel is an embedded systems engineer with a passion for teaching, serving as a machine learning DevRel engineer and university program manager at Edge Impulse. Over the past decade he has worked with DigiKey, Microsoft, and Hackster to create technical content, and now offers hands-on courses in Edge AI, Zephyr, ESP32, and RTOS that inspire engineers and makers at all skill levels.',
+    website: 'https://www.youtube.com/@ShawnHymel',
+    socialLinks: [
+      { platform: 'YouTube', url: 'https://www.youtube.com/@ShawnHymel' }
+    ],
+    highlights: [
+      'Free Introduction to Edge AI course with certification',
+      'Senior DevRel Engineer at Edge Impulse',
+      'Courses on Edge AI, Zephyr, ESP32, and RTOS'
+    ]
+  },
 
   // Clients
   {
@@ -316,6 +378,21 @@ const listings: EcosystemListing[] = [
       'Security-focused developer education content',
       'IoT security best practices workshops',
       'Community engagement and developer outreach'
+    ]
+  },
+  {
+    id: 'beagleboard',
+    name: 'BeagleBoard',
+    logo: '/clients/bb-social-image.png',
+    category: 'collaborator',
+    shortDescription: 'Open source hardware foundation producing low-cost ARM and RISC-V single-board computers for makers, educators, and professionals.',
+    tags: ['Open Source Hardware', 'Embedded Linux', 'SBCs'],
+    longDescription: 'BeagleBoard.org is a Michigan-based 501(c)(3) non-profit foundation providing education and collaboration around open source software and hardware in embedded computing. Their boards — including BeagleBone Black, BeagleBone AI-64, and BeagleV — are fully open source, low-cost platforms running Linux, used by students and professionals worldwide for embedded development, AI, and IoT applications.',
+    website: 'https://www.beagleboard.org',
+    highlights: [
+      'Fully open source hardware and software designs',
+      'BeagleBone AI-64 for embedded AI development',
+      'BeagleV RISC-V single-board computer platform'
     ]
   }
 ]
