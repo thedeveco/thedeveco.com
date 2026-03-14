@@ -77,7 +77,7 @@
                 <option value="devrel">DevRel Strategy</option>
                 <option value="adoption">Product Adoption</option>
                 <option value="training">Training & Workshops</option>
-                <option value="portal">Portal Network Integration</option>
+                <option value="portal">portalNetwork Integration</option>
                 <option value="other">Other</option>
               </select>
             </div>

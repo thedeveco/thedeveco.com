@@ -21,7 +21,7 @@
         <div class="footer-col">
           <h4>Products</h4>
           <ul>
-            <li><router-link to="/projects">Portal Network</router-link></li>
+            <li><router-link to="/projects">portalNetwork</router-link></li>
             <li><router-link to="/projects">B3VY Live Hub</router-link></li>
             <li><router-link to="/projects">LaunchCue CRM</router-link></li>
           </ul>

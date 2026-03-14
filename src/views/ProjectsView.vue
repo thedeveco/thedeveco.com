@@ -122,16 +122,16 @@
   <!-- Projects Section -->
   <section class="projects-section">
     <div class="container">
-      <!-- Portal Network - Featured -->
+      <!-- portalNetwork - Featured -->
       <div class="project-card featured">
         <div class="featured-left">
           <div class="project-logo">
-            <img src="/projects/portalnetwork.png" alt="Portal Network" />
+            <img src="/projects/portalnetwork.png" alt="portalNetwork" />
           </div>
         </div>
         <div class="featured-content">
           <div class="project-title">
-            <h3>Portal Network</h3>
+            <h3>portalNetwork</h3>
             <span class="badge badge-teal">Active</span>
           </div>
           <p class="project-tagline">The world's first Internet of Communities</p>
@@ -154,7 +154,7 @@
               </div>
             </div>
             <div class="project-links">
-              <a href="https://www.portalnet.work/" target="_blank" class="btn btn-primary">Visit Portal Network</a>
+              <a href="https://www.portalnet.work/" target="_blank" class="btn btn-primary">Visit portalNetwork</a>
               <a href="https://discord.gg/deveco" target="_blank" class="btn btn-secondary">Try Bot</a>
             </div>
           </div>
@@ -390,7 +390,7 @@
   background: var(--bg-light);
 }
 
-/* Featured Card - Portal Network */
+/* Featured Card - portalNetwork */
 .project-card.featured {
   display: grid;
   grid-template-columns: auto 1fr;
