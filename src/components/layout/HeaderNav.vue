@@ -40,7 +40,39 @@
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
         <li><router-link to="/consultancy" @click="closeNav">Services</router-link></li>
         <li><router-link to="/devxrl" @click="closeNav">DevXRL</router-link></li>
-        <li><router-link to="/community" @click="closeNav">Community</router-link></li>
+        <li
+          class="nav-dropdown"
+          @mouseenter="openDropdown"
+          @mouseleave="closeDropdown"
+        >
+          <router-link to="/community" @click="closeNav" class="nav-dropdown__trigger">
+            Community
+            <svg class="nav-dropdown__chevron" :class="{ open: dropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </router-link>
+          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileDropdown">
+            <svg :class="{ open: mobileDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </button>
+          <Transition name="dropdown">
+            <ul v-show="dropdownOpen" class="nav-dropdown__menu">
+              <li v-for="link in communityLinks" :key="link.label">
+                <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                  {{ link.label }}
+                </a>
+              </li>
+            </ul>
+          </Transition>
+          <ul v-show="mobileDropdownOpen" class="nav-dropdown__mobile-menu">
+            <li v-for="link in communityLinks" :key="link.label">
+              <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </li>
         <li><router-link to="/projects" @click="closeNav">Products</router-link></li>
         <li class="nav-cta"><router-link to="/contact" class="btn btn-primary" @click="closeNav">Contact Us</router-link></li>
       </ul>
@@ -52,13 +84,48 @@
 import { ref } from 'vue'
 
 const mobileMenuOpen = ref(false)
+const dropdownOpen = ref(false)
+const mobileDropdownOpen = ref(false)
+let closeTimer: ReturnType<typeof setTimeout> | null = null
+
+const communityLinks = [
+  { label: 'Discord', url: 'https://discord.gg/deveco' },
+  { label: 'GitHub', url: 'https://github.com/thedeveco' },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/company/developerecosystem/' },
+  { label: 'YouTube', url: 'https://www.youtube.com/@thedeveco' },
+  { label: 'Instagram', url: 'https://www.instagram.com/thedev.eco' },
+  { label: 'Twitch', url: 'https://www.twitch.tv/thedeveco' },
+]
+
+const openDropdown = () => {
+  if (closeTimer) {
+    clearTimeout(closeTimer)
+    closeTimer = null
+  }
+  dropdownOpen.value = true
+}
+
+const closeDropdown = () => {
+  closeTimer = setTimeout(() => {
+    dropdownOpen.value = false
+  }, 150)
+}
+
+const toggleMobileDropdown = () => {
+  mobileDropdownOpen.value = !mobileDropdownOpen.value
+}
 
 const toggleNav = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
+  if (!mobileMenuOpen.value) {
+    mobileDropdownOpen.value = false
+  }
 }
 
 const closeNav = () => {
   mobileMenuOpen.value = false
+  mobileDropdownOpen.value = false
+  dropdownOpen.value = false
 }
 </script>
 
@@ -144,6 +211,75 @@ const closeNav = () => {
   color: var(--navy);
 }
 
+/* Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-dropdown__chevron {
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown__chevron.open {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__mobile-toggle {
+  display: none;
+}
+
+.nav-dropdown__mobile-menu {
+  display: none;
+}
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: var(--space-xs) 0;
+  z-index: 200;
+}
+
+.nav-dropdown__menu li a {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.nav-dropdown__menu li a:hover {
+  background: var(--teal);
+  color: white;
+}
+
+/* Dropdown transition */
+.dropdown-enter-active {
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.dropdown-leave-active {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -185,6 +321,72 @@ const closeNav = () => {
   .nav-cta .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  /* Mobile dropdown */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown__trigger {
+    display: block;
+  }
+
+  .nav-dropdown__chevron {
+    display: none;
+  }
+
+  .nav-dropdown__menu {
+    display: none !important;
+  }
+
+  .nav-dropdown__mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 100%;
+    background: none;
+    border: none;
+    border-left: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--text-mid);
+  }
+
+  .nav-dropdown__mobile-toggle svg {
+    transition: transform 0.2s ease;
+  }
+
+  .nav-dropdown__mobile-toggle svg.open {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown__mobile-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-dropdown__mobile-menu[style*="display: block"],
+  .nav-dropdown__mobile-menu[style*="display:block"] {
+    display: block !important;
+  }
+
+  .nav-dropdown__mobile-menu li a {
+    display: block;
+    padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-xl);
+    font-size: 0.825rem;
+    color: var(--text-mid);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.15s ease;
+  }
+
+  .nav-dropdown__mobile-menu li a:hover {
+    background: var(--teal);
+    color: white;
   }
 }
 </style>
