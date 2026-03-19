@@ -135,16 +135,16 @@ function drawGraph(p: number) {
   function drawCurve(data: number[], color: string, show: boolean) {
     if (!show || !ctx) return
     const pts = data.map((v, i) => ({ x: idxToX(i), y: valToY(v * p) }))
-    ctx.beginPath(); ctx.moveTo(pts[0].x, pts[0].y)
+    ctx.beginPath(); ctx.moveTo(pts[0]!.x, pts[0]!.y)
     for (let i = 0; i < pts.length - 1; i++) {
-      const c1 = pts[i].x + (pts[i + 1].x - pts[i].x) * 0.4
-      const c2 = pts[i + 1].x - (pts[i + 1].x - pts[i].x) * 0.4
-      ctx.bezierCurveTo(c1, pts[i].y, c2, pts[i + 1].y, pts[i + 1].x, pts[i + 1].y)
+      const c1 = pts[i]!.x + (pts[i + 1]!.x - pts[i]!.x) * 0.4
+      const c2 = pts[i + 1]!.x - (pts[i + 1]!.x - pts[i]!.x) * 0.4
+      ctx.bezierCurveTo(c1, pts[i]!.y, c2, pts[i + 1]!.y, pts[i + 1]!.x, pts[i + 1]!.y)
     }
     ctx.strokeStyle = color; ctx.lineWidth = 2.5; ctx.stroke()
 
-    ctx.lineTo(pts[pts.length - 1].x, valToY(0))
-    ctx.lineTo(pts[0].x, valToY(0))
+    ctx.lineTo(pts[pts.length - 1]!.x, valToY(0))
+    ctx.lineTo(pts[0]!.x, valToY(0))
     ctx.closePath()
     const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH)
     const r = parseInt(color.slice(1, 3), 16), g = parseInt(color.slice(3, 5), 16), b = parseInt(color.slice(5, 7), 16)
@@ -167,7 +167,7 @@ function drawGraph(p: number) {
     ctx.fillStyle = `rgba(196,91,91,${a * 0.8})`
     ctx.font = "8px 'JetBrains Mono',monospace"
     ctx.textAlign = 'center'
-    const dx = idxToX(5), dy = valToY(currentData[5] * p)
+    const dx = idxToX(5), dy = valToY(currentData[5]! * p)
     ctx.fillText('drop-off', dx, dy - 12)
     ctx.strokeStyle = `rgba(196,91,91,${a * 0.5})`
     ctx.lineWidth = 1; ctx.setLineDash([3, 3])
