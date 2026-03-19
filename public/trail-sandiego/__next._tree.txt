@@ -1,6 +1,6 @@
-:HL["/trail-sandiego/_next/static/chunks/9bb54f408165a6dd.css","style"]
+:HL["/trail-sandiego/_next/static/chunks/6c297389012dd3ed.css","style"]
 :HL["/trail-sandiego/_next/static/media/Poppins_Bold-s.p.ff2ed11e.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/trail-sandiego/_next/static/media/Poppins_Medium-s.p.99285781.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/trail-sandiego/_next/static/media/Poppins_Regular-s.p.88ab561d.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/trail-sandiego/_next/static/media/Poppins_SemiBold-s.p.161a6aa6.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
-0:{"buildId":"Pf9sJbpl0eQOu8lJERO4w","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"eOY7QSupQ8ujLMcCH05ZK","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
