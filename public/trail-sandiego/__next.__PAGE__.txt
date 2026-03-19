@@ -3,7 +3,7 @@
 3:I[31713,["/trail-sandiego/_next/static/chunks/52063395ce4abbe1.js"],"default"]
 6:I[89836,["/trail-sandiego/_next/static/chunks/1e086dccfb274931.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-0:{"buildId":"Pf9sJbpl0eQOu8lJERO4w","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/trail-sandiego/_next/static/chunks/52063395ce4abbe1.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"9iRTbeaMWpJsua5jpxN57","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/trail-sandiego/_next/static/chunks/52063395ce4abbe1.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null
