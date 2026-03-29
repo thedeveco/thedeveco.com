@@ -100,7 +100,7 @@ thedeveco.com/
 │   │   ├── WelcomeItem.vue   # Vue scaffolding (unused)
 │   │   └── icons/            # Vue scaffolding icon components (unused)
 │   ├── router/
-│   │   └── index.ts          # 7 routes: / /consultancy /ecosystem /devxrl /community /about /contact
+│   │   └── index.ts          # 8 routes: / /consultancy /ecosystem /devxrl /community /about /contact /heimdall
 │   ├── stores/
 │   │   └── counter.ts        # Pinia boilerplate (unused)
 │   └── views/
@@ -111,6 +111,7 @@ thedeveco.com/
 │       ├── CommunityView.vue  # Community page with logo slam animation
 │       ├── ProjectsView.vue   # Products page with rocket-portal SVG animation
 │       ├── ContactView.vue    # Contact form (simulated submission, no backend)
+│       ├── HeimdallView.vue   # Hidden easter egg page (not in nav)
 │       └── AboutView.vue      # Boilerplate placeholder (not in router)
 ├── index.html                # Vite entry HTML
 ├── package.json
@@ -144,6 +145,7 @@ thedeveco.com/
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
 | `/about` | ProjectsView.vue | Lazy | About |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
+| `/heimdall` | HeimdallView.vue | Lazy | (hidden — easter egg, not in nav) |
 
 **Nav order**: About | Services (dropdown) | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
 
@@ -426,5 +428,16 @@ When ending a session that made changes:
 
 ---
 
-*Last updated: 2026-03-28*
+## Easter Eggs
+
+### Heimdall Portal
+- **Trigger**: Hover over the top-left inner hexagon of the animated logo on the home page, then scroll the mouse wheel forward (up). Requires ~3-4 scroll ticks (threshold: `SCROLL_THRESHOLD = -150` accumulated deltaY).
+- **Effect**: A teal portal animation expands from the hexagon's position, then navigates to `/heimdall`.
+- **Route**: `/heimdall` — lazy-loaded `HeimdallView.vue`
+- **Page**: Placeholder with "You found the Bifrost" messaging. Not linked from nav or footer.
+- **Implementation**: Portal hex is the second `<polygon>` in `<g id="logoHexes">` in HomeView.vue, identified by `ref="portalHex"`. Event listeners attached in `onMounted`, cleaned up in `onUnmounted`. Portal overlay uses `<Teleport to="body">` with unscoped CSS animations.
+
+---
+
+*Last updated: 2026-03-29*
 *Bible file version: 1.0*
