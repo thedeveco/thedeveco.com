@@ -88,7 +88,7 @@ thedeveco.com/
 │   │   └── logo.svg          # Unused Vue default logo
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + Explore dropdown + Community dropdown
+│   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + Services dropdown + Community dropdown + Explore dropdown
 │   │   │   └── FooterNav.vue # 4-column footer with dynamic year
 │   │   ├── ui/
 │   │   │   ├── ClientLogos.vue        # Partner logo grid (manual entries, NOT auto-detected)
@@ -138,14 +138,16 @@ thedeveco.com/
 | Path | View Component | Load | Nav Label |
 |------|---------------|------|-----------|
 | `/` | HomeView.vue | Eager | (logo click) |
-| `/consultancy` | ConsultancyView.vue | Lazy | Services |
+| `/consultancy` | ConsultancyView.vue | Lazy | Services (dropdown trigger, clickable) |
 | `/ecosystem` | EcosystemView.vue | Lazy | Explore → Ecosystem (dropdown) |
-| `/devxrl` | DevXRL.vue | Lazy | DevXRL |
+| `/devxrl` | DevXRL.vue | Lazy | Services → DevXRL (dropdown) |
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
 | `/projects` | ProjectsView.vue | Lazy | Products |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
 
-**Nav order**: Services | Explore (dropdown) | DevXRL | Community (dropdown) | Products | Contact Us (CTA)
+**Nav order**: Services (dropdown) | Products | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
+
+The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route).
 
 The Explore nav item includes a dropdown with: Ecosystem (internal route), devEco.io (external), devEco.app (external).
 
