@@ -343,9 +343,9 @@ npm run lint         # ESLint with auto-fix
 - **Hex grid animation**: Procedurally generated SVG hexagons with 6 phases (appear → breathe → pulse → explode outward → logo frame expands → logo hexes pop in → color shift → random flash)
 - **Services**: 6-card grid with stamps
 - **Process**: 4-step numbered grid with hexagonal step indicators
-- **Team**: 3-member grid with hexagonal clipped photos
 - **Partners**: `ClientLogos` component
 - **CTA**: Navy background, centered
+- *Note*: The Collective team section was moved to the About page
 
 ### ConsultancyView (/consultancy)
 - **Hero**: Navy background with animated SVG logo (staggered keyframe entrance)
@@ -372,10 +372,9 @@ npm run lint         # ESLint with auto-fix
 - **CTA**: Navy background
 
 ### ProjectsView (/about)
-- **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence)
-- **Featured product**: portalNetwork in wide card layout with stats
-- **Products grid**: B3VY and LaunchCue in 2-column grid
-- **CTA**: Navy background
+- **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence), "About Us" label, "The people behind devEco." heading
+- **Team**: The Collective — 3-member grid with hexagonal clipped photos, badges, roles, bios, and links (moved from HomeView)
+- **CTA**: Navy background, "Ready to build something real?"
 
 ### ContactView (/contact)
 - **Hero**: Teal, centered

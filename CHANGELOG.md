@@ -20,12 +20,15 @@
 - Moved DevXRL from standalone nav link into Services dropdown
 - Renamed Products nav tab to About and changed route from /projects to /about
 - Reordered navigation: About, Services, Community, Explore, Contact Us
+- Moved The Collective team section from home page to /about page
+- Updated /about page hero text from Products to About Us
 
 ### Fixed
 - *(none yet)*
 
 ### Removed
-- *(none yet)*
+- Removed portalNetwork, B3VY, and LaunchCue product cards from /about page
+- Removed The Collective team section from home page
 
 ---
 

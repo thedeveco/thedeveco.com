@@ -332,49 +332,6 @@ onUnmounted(() => {
     </div>
   </section>
 
-  <!-- Team Section -->
-  <section id="team" class="team-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>The Collective</h2>
-      </div>
-
-      <div class="team-grid">
-        <div class="team-member">
-          <span class="badge badge-teal">Founder</span>
-          <div class="team-photo">
-            <img src="/team/robert.jpg" alt="Robert Wolff" />
-          </div>
-          <h3>Robert Wolff</h3>
-          <p class="role">Founder & Partner</p>
-          <p class="bio">Developer advocate and community strategist. Former Arm DevRel lead. Built developer programs before "DevRel" was a job title.</p>
-          <a href="https://linktr.ee/robertwolff" target="_blank" class="member-link">Linktree</a>
-        </div>
-
-        <div class="team-member">
-          <span class="badge badge-pink">Partner</span>
-          <div class="team-photo">
-            <img src="/team/moheeb.jpg" alt="Moheeb Zara" />
-          </div>
-          <h3>Moheeb Zara</h3>
-          <p class="role">Partner</p>
-          <p class="bio">Creative technologist. Hardware hacker. HeatSync Labs alum. Founder of LumenCanvas.</p>
-          <a href="https://hack.build" target="_blank" class="member-link">Portfolio</a>
-        </div>
-
-        <div class="team-member">
-          <span class="badge badge-navy">Partner</span>
-          <div class="team-photo">
-            <img src="/team/tory.jpg" alt="Tory Moghadam" />
-          </div>
-          <h3>Tory Moghadam</h3>
-          <p class="role">Partner</p>
-          <p class="bio">Embedded systems and AI engineer. Lead AI Engineer at Be Well Health. Founder of OpenMuscle.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Partners -->
   <ClientLogos />
 
@@ -670,81 +627,6 @@ onUnmounted(() => {
   color: var(--text-mid);
 }
 
-/* Team */
-.team-section {
-  background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-xl);
-}
-
-.team-member {
-  text-align: center;
-}
-
-.team-member > .badge {
-  display: inline-block;
-  margin-bottom: var(--space-sm);
-  transform: rotate(-3deg);
-}
-
-.team-photo {
-  width: 120px;
-  height: 135px;
-  margin: 0 auto var(--space-md);
-  background: var(--navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: var(--teal);
-  position: relative;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  overflow: hidden;
-}
-
-.team-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.team-member h3 {
-  margin-bottom: var(--space-xs);
-}
-
-.team-member .role {
-  color: var(--teal);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-sm);
-}
-
-.team-member .bio {
-  font-size: 0.875rem;
-  color: var(--text-mid);
-  margin-bottom: var(--space-sm);
-}
-
-.member-link {
-  display: inline-block;
-  font-size: 0.75rem;
-  color: var(--teal);
-  text-decoration: none;
-  border: 1px solid var(--teal);
-  padding: 0.25rem 0.75rem;
-  transition: all 0.2s;
-}
-
-.member-link:hover {
-  background: var(--teal);
-  color: white;
-}
-
 /* CTA */
 .cta-section {
   background: var(--navy);
@@ -830,10 +712,6 @@ onUnmounted(() => {
   }
 
   .process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .team-grid {
     grid-template-columns: 1fr;
   }
 }
