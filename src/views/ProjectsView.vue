@@ -134,7 +134,7 @@
           </div>
           <h3>Robert Wolff</h3>
           <p class="role">Founder & Partner</p>
-          <p class="bio">Developer advocate and community strategist. Former Arm DevRel lead. Built developer programs before "DevRel" was a job title.</p>
+          <p class="bio">Entrepreneur, developer advocate, community strategist, and systems orchestrator. Founder of the devEco Community Engine.</p>
           <a href="https://linktr.ee/robertwolff" target="_blank" class="member-link">Linktree</a>
         </div>
 
@@ -165,8 +165,8 @@
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2>Ready to build something real?</h2>
-      <p>No pitch decks. Just a conversation about what you need.</p>
+      <h2>The devEco Community Engine</h2>
+      <p>Community. Consulting. Content. CRM. Every devEco namespace, connected and driven by one engine. This is how developer ecosystems actually scale.</p>
       <div class="cta-buttons">
         <router-link to="/contact" class="btn btn-primary">Start a Conversation</router-link>
         <a href="https://discord.gg/deveco" target="_blank" class="btn btn-secondary">Join Our Community</a>
