@@ -373,7 +373,7 @@ npm run lint         # ESLint with auto-fix
 ### ProjectsView (/about)
 - **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence), "About Us" label, "The people behind devEco." heading
 - **Team**: The Collective — 3-member grid with hexagonal clipped photos, badges, roles, bios, and links (moved from HomeView)
-- **CTA**: Navy background, "The devEco Community Engine"
+- **Community Engine Explorer**: Interactive widget with 6-cell node grid (5 clickable nodes + 1 hub), expandable detail panel, pulse dot animations, and CTA buttons
 
 ### ContactView (/contact)
 - **Hero**: Teal, centered

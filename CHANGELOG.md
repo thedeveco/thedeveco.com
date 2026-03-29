@@ -13,6 +13,7 @@
 - `CHANGELOG.md` — This file
 - Created `LogoCarousel` component with auto-scrolling, pause-on-hover, and clickable logos
 - Added logo carousel to home page between hero and How We Help sections
+- Interactive devEco Community Engine explorer widget on /about page with clickable node grid, expandable detail panels, and pulse dot animations
 
 ### Changed
 - Moved Ecosystem from standalone nav link into new Explore dropdown in HeaderNav
@@ -37,6 +38,7 @@
 - Removed The Collective team section from home page
 - Removed Partners & Clients static grid section from home page
 - Deleted `ClientLogos.vue` component (replaced by `LogoCarousel`)
+- Removed static CTA section from /about page (replaced by Community Engine widget)
 
 ---
 
