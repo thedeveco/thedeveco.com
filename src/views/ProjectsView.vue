@@ -1,3 +1,30 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+interface EngineNode {
+  id: string
+  name: string
+  role: string
+  description: string
+}
+
+const activeNode = ref<string | null>(null)
+
+const engineNodes: EngineNode[] = [
+  { id: 'community', name: 'devEco Community', role: 'network', description: 'The living network. Discord servers, local meetups, Developers Anonymous, and the open source communities where builders connect and collaborate.' },
+  { id: 'consulting', name: 'devEco Consulting LLC', role: 'strategy', description: 'Strategy and execution. Developer ecosystem consulting, community operations, and technical content — from Edge AI to embedded systems.' },
+  { id: 'content', name: 'devEco Content Hub', role: 'publishing', description: 'The publishing engine. Blog posts, LinkedIn campaigns, certification courses, and the 52-principle Community Operating System knowledge base.' },
+  { id: 'crm', name: 'devEco CRM', role: 'relationships', description: 'The relationship layer. Contact management, engagement tracking, and pipeline operations across the entire ecosystem.' },
+  { id: 'estate', name: 'devEco Digital Estate', role: 'namespaces', description: 'Every namespace. Every platform. The full devEco presence — domains, repositories, social channels, and distribution endpoints across the web.' },
+]
+
+const toggleNode = (nodeId: string) => {
+  activeNode.value = activeNode.value === nodeId ? null : nodeId
+}
+
+const activeNodeData = () => engineNodes.find(n => n.id === activeNode.value)
+</script>
+
 <template>
   <!-- Hero Section -->
   <section class="hero">
@@ -162,12 +189,79 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
+  <!-- Community Engine Explorer -->
+  <section class="engine-section">
     <div class="container">
-      <h2>The devEco Community Engine</h2>
-      <p>Community. Consulting. Content. CRM. Every devEco namespace, connected and driven by one engine. This is how developer ecosystems actually scale.</p>
-      <div class="cta-buttons">
+      <div class="engine-header">
+        <h2>The devEco Community Engine</h2>
+        <p>One ecosystem. Many surfaces. Five connected layers driving developer community at scale.</p>
+      </div>
+
+      <div class="engine-grid">
+        <button
+          class="engine-node"
+          :class="{ active: activeNode === 'community' }"
+          @click="toggleNode('community')"
+        >
+          <span class="engine-node__pulse" style="animation-delay: 0s"></span>
+          <span class="engine-node__name">devEco Community</span>
+          <span class="engine-node__role">network</span>
+        </button>
+
+        <div class="engine-hub">
+          <span class="engine-hub__name">ENGINE</span>
+          <span class="engine-hub__sub">devEco</span>
+        </div>
+
+        <button
+          class="engine-node"
+          :class="{ active: activeNode === 'consulting' }"
+          @click="toggleNode('consulting')"
+        >
+          <span class="engine-node__pulse" style="animation-delay: 0.4s"></span>
+          <span class="engine-node__name">devEco Consulting LLC</span>
+          <span class="engine-node__role">strategy</span>
+        </button>
+
+        <button
+          class="engine-node"
+          :class="{ active: activeNode === 'content' }"
+          @click="toggleNode('content')"
+        >
+          <span class="engine-node__pulse" style="animation-delay: 0.8s"></span>
+          <span class="engine-node__name">devEco Content Hub</span>
+          <span class="engine-node__role">publishing</span>
+        </button>
+
+        <button
+          class="engine-node"
+          :class="{ active: activeNode === 'crm' }"
+          @click="toggleNode('crm')"
+        >
+          <span class="engine-node__pulse" style="animation-delay: 1.2s"></span>
+          <span class="engine-node__name">devEco CRM</span>
+          <span class="engine-node__role">relationships</span>
+        </button>
+
+        <button
+          class="engine-node"
+          :class="{ active: activeNode === 'estate' }"
+          @click="toggleNode('estate')"
+        >
+          <span class="engine-node__pulse" style="animation-delay: 1.6s"></span>
+          <span class="engine-node__name">devEco Digital Estate</span>
+          <span class="engine-node__role">namespaces</span>
+        </button>
+      </div>
+
+      <div class="engine-detail" :class="{ open: activeNode !== null }">
+        <template v-if="activeNodeData()">
+          <h4 class="engine-detail__name">{{ activeNodeData()!.name }}</h4>
+          <p class="engine-detail__desc">{{ activeNodeData()!.description }}</p>
+        </template>
+      </div>
+
+      <div class="engine-cta">
         <router-link to="/contact" class="btn btn-primary">Start a Conversation</router-link>
         <a href="https://discord.gg/deveco" target="_blank" class="btn btn-secondary">Join Our Community</a>
       </div>
@@ -410,38 +504,173 @@
   color: white;
 }
 
-/* CTA */
-.cta-section {
-  background: var(--navy);
-  color: white;
+/* Engine Section */
+.engine-section {
+  background: #1c3535;
+  padding: var(--space-2xl) 0;
+}
+
+.engine-header {
   text-align: center;
-}
-
-.cta-section h2 {
-  color: white;
-  margin-bottom: var(--space-md);
-}
-
-.cta-section > .container > p {
-  color: var(--text-light);
   margin-bottom: var(--space-xl);
 }
 
-.cta-buttons {
+.engine-header h2 {
+  color: #f0ede4;
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+}
+
+.engine-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #4db3a8;
+}
+
+.engine-header p {
+  color: rgba(240, 237, 228, 0.5);
+  font-size: 0.875rem;
+  margin-top: var(--space-md);
+}
+
+.engine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.engine-hub {
   display: flex;
-  gap: var(--space-md);
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 1.25rem;
+  border: 1.5px solid #d4a843;
+  background: rgba(212, 168, 67, 0.08);
+  text-align: center;
+}
+
+.engine-hub__name {
+  color: #d4a843;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.engine-hub__sub {
+  color: #d4a843;
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+  opacity: 0.7;
+}
+
+.engine-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  border: 1.5px dashed rgba(240, 237, 228, 0.15);
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.engine-node:hover {
+  border: 1.5px dashed #4db3a8;
+  background: rgba(77, 179, 168, 0.05);
+}
+
+.engine-node.active {
+  border: 1.5px solid #4db3a8;
+  background: rgba(77, 179, 168, 0.08);
+}
+
+.engine-node__name {
+  color: #f0ede4;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.engine-node__role {
+  color: #4db3a8;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 0.35rem;
+}
+
+.engine-node__pulse {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  background: #4db3a8;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.engine-detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease;
+  margin-top: 0;
+  background: rgba(77, 179, 168, 0.04);
+  border-left: 3px solid #4db3a8;
+  padding: 0 1.5rem;
+}
+
+.engine-detail.open {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.engine-detail__name {
+  color: #f0ede4;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.engine-detail__desc {
+  color: rgba(240, 237, 228, 0.7);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.engine-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 2.5rem;
 }
 
-.cta-section .btn-secondary {
-  border-color: white;
-  color: white;
+.engine-cta .btn-secondary {
+  border-color: rgba(240, 237, 228, 0.3);
+  color: rgba(240, 237, 228, 0.6);
 }
 
-.cta-section .btn-secondary:hover {
-  background: white;
-  color: var(--navy);
+.engine-cta .btn-secondary:hover {
+  border-color: #4db3a8;
+  color: #4db3a8;
 }
 
 @media (max-width: 900px) {
@@ -466,14 +695,24 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .engine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .cta-buttons {
+@media (max-width: 600px) {
+  .engine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .engine-cta {
     flex-direction: column;
     align-items: center;
   }
