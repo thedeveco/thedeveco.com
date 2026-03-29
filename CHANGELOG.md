@@ -13,7 +13,9 @@
 - `CHANGELOG.md` — This file
 
 ### Changed
-- *(none yet)*
+- Moved Ecosystem from standalone nav link into new Explore dropdown in HeaderNav
+- Added Explore dropdown with Ecosystem (internal route), devEco.io, and devEco.app (external links)
+- Nav order is now: Services | Explore (dropdown) | DevXRL | Community (dropdown) | Products | Contact Us
 
 ### Fixed
 - *(none yet)*

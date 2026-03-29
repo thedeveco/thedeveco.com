@@ -88,7 +88,7 @@ thedeveco.com/
 │   │   └── logo.svg          # Unused Vue default logo
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + Community dropdown
+│   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + Explore dropdown + Community dropdown
 │   │   │   └── FooterNav.vue # 4-column footer with dynamic year
 │   │   ├── ui/
 │   │   │   ├── ClientLogos.vue        # Partner logo grid (manual entries, NOT auto-detected)
@@ -139,11 +139,15 @@ thedeveco.com/
 |------|---------------|------|-----------|
 | `/` | HomeView.vue | Eager | (logo click) |
 | `/consultancy` | ConsultancyView.vue | Lazy | Services |
-| `/ecosystem` | EcosystemView.vue | Lazy | Ecosystem |
+| `/ecosystem` | EcosystemView.vue | Lazy | Explore → Ecosystem (dropdown) |
 | `/devxrl` | DevXRL.vue | Lazy | DevXRL |
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
 | `/projects` | ProjectsView.vue | Lazy | Products |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
+
+**Nav order**: Services | Explore (dropdown) | DevXRL | Community (dropdown) | Products | Contact Us (CTA)
+
+The Explore nav item includes a dropdown with: Ecosystem (internal route), devEco.io (external), devEco.app (external).
 
 The Community nav item includes a dropdown with external links: Discord, GitHub, LinkedIn, YouTube, Instagram, Twitch.
 
