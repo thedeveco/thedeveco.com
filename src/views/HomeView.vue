@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ClientLogos from '../components/ui/ClientLogos.vue'
+import LogoCarousel from '../components/ui/LogoCarousel.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
 
 const hexGrid = ref<SVGGElement | null>(null)
@@ -253,6 +253,9 @@ onUnmounted(() => {
     <div class="hero-stamp">Est. 2024</div>
   </section>
 
+  <!-- Logo Carousel -->
+  <LogoCarousel />
+
   <!-- Services Section -->
   <section id="services">
     <div class="container">
@@ -331,9 +334,6 @@ onUnmounted(() => {
       </div>
     </div>
   </section>
-
-  <!-- Partners -->
-  <ClientLogos />
 
   <!-- CTA Section -->
   <section id="contact" class="cta-section">

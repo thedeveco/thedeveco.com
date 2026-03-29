@@ -11,6 +11,8 @@
 - `README.md` — Rewritten project README reflecting actual architecture and deployment (replaces outdated version)
 - `ROADMAP.md` — Project roadmap with technical debt, planned features, and future vision
 - `CHANGELOG.md` — This file
+- Created `LogoCarousel` component with auto-scrolling, pause-on-hover, and clickable logos
+- Added logo carousel to home page between hero and How We Help sections
 
 ### Changed
 - Moved Ecosystem from standalone nav link into new Explore dropdown in HeaderNav
@@ -29,6 +31,8 @@
 ### Removed
 - Removed portalNetwork, B3VY, and LaunchCue product cards from /about page
 - Removed The Collective team section from home page
+- Removed Partners & Clients static grid section from home page
+- Deleted `ClientLogos.vue` component (replaced by `LogoCarousel`)
 
 ---
 
