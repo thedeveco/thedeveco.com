@@ -1,12 +1,61 @@
 <script setup lang="ts">
 import LogoCarousel from '../components/ui/LogoCarousel.vue'
+import { useRouter } from 'vue-router'
 import { onMounted, onUnmounted, ref } from 'vue'
+
+const router = useRouter()
 
 const hexGrid = ref<SVGGElement | null>(null)
 const logoFrame = ref<SVGPathElement | null>(null)
 const logoHexes = ref<SVGPolygonElement[]>([])
 let flashInterval: number | null = null
 let pulseInterval: number | null = null
+
+// Heimdall portal easter egg
+const portalHex = ref<SVGPolygonElement | null>(null)
+const isHoveringPortal = ref(false)
+const scrollAccumulator = ref(0)
+const portalActive = ref(false)
+const portalStyle = ref<Record<string, string>>({})
+const SCROLL_THRESHOLD = -150
+
+const activatePortal = () => {
+  portalActive.value = true
+  const rect = portalHex.value?.getBoundingClientRect()
+  if (rect) {
+    portalStyle.value = {
+      '--portal-x': `${rect.left + rect.width / 2}px`,
+      '--portal-y': `${rect.top + rect.height / 2}px`,
+    }
+  }
+  setTimeout(() => {
+    router.push('/heimdall')
+    setTimeout(() => {
+      portalActive.value = false
+    }, 100)
+  }, 800)
+}
+
+const onPortalEnter = () => {
+  isHoveringPortal.value = true
+  scrollAccumulator.value = 0
+  portalHex.value?.classList.add('portal-hover')
+}
+
+const onPortalLeave = () => {
+  isHoveringPortal.value = false
+  scrollAccumulator.value = 0
+  portalHex.value?.classList.remove('portal-hover')
+}
+
+const onPortalWheel = (e: WheelEvent) => {
+  if (!isHoveringPortal.value || portalActive.value) return
+  e.preventDefault()
+  scrollAccumulator.value += e.deltaY
+  if (scrollAccumulator.value <= SCROLL_THRESHOLD) {
+    activatePortal()
+  }
+}
 
 const colors = [
   '#4a7c7c', '#5a9a9a', '#6ab4a8', '#7ecec4', '#4db3a8',
@@ -199,11 +248,25 @@ const runAnimation = () => {
 onMounted(() => {
   logoHexes.value = Array.from(document.querySelectorAll('.logo-hex')) as SVGPolygonElement[]
   runAnimation()
+
+  // Attach portal easter egg listeners
+  if (portalHex.value) {
+    portalHex.value.addEventListener('mouseenter', onPortalEnter)
+    portalHex.value.addEventListener('mouseleave', onPortalLeave)
+    portalHex.value.addEventListener('wheel', onPortalWheel, { passive: false })
+  }
 })
 
 onUnmounted(() => {
   stopColorFlash()
   stopGridPulse()
+
+  // Clean up portal listeners
+  if (portalHex.value) {
+    portalHex.value.removeEventListener('mouseenter', onPortalEnter)
+    portalHex.value.removeEventListener('mouseleave', onPortalLeave)
+    portalHex.value.removeEventListener('wheel', onPortalWheel)
+  }
 })
 </script>
 
@@ -238,7 +301,7 @@ onUnmounted(() => {
               <path ref="logoFrame" class="logo-frame" fill="#1e3a3a" fill-rule="evenodd" d="M262,22 L492.8,155.25 L492.8,421.75 L262,555 L31.2,421.75 L31.2,155.25 Z M262,84 L439.1,186.25 L439.1,390.75 L262,493 L84.9,390.75 L84.9,186.25 Z"/>
               <g id="logoHexes">
                 <polygon class="logo-hex" points="367.56,237.57 411.73,263.07 411.73,314.07 367.56,339.57 323.39,314.07 323.39,263.07" fill="#1e3a3a"/>
-                <polygon class="logo-hex" points="211.11,146.74 255.28,172.24 255.28,223.24 211.11,248.74 166.94,223.24 166.94,172.24" fill="#1e3a3a"/>
+                <polygon ref="portalHex" class="logo-hex" points="211.11,146.74 255.28,172.24 255.28,223.24 211.11,248.74 166.94,223.24 166.94,172.24" fill="#1e3a3a"/>
                 <polygon class="logo-hex" points="315.85,146.72 360.01,172.22 360.01,223.22 315.85,248.72 271.68,223.22 271.68,172.22" fill="#1e3a3a"/>
                 <polygon class="logo-hex" points="159.06,237.57 203.23,263.07 203.23,314.07 159.06,339.57 114.9,314.07 114.9,263.07" fill="#1e3a3a"/>
                 <polygon class="logo-hex" points="211.13,327.96 255.3,353.46 255.3,404.46 211.13,429.96 166.96,404.46 166.96,353.46" fill="#1e3a3a"/>
@@ -344,6 +407,12 @@ onUnmounted(() => {
       <p class="cta-link">Or join the <a href="https://discord.gg/deveco" target="_blank">Discord community</a> first</p>
     </div>
   </section>
+
+  <Teleport to="body">
+    <div v-if="portalActive" class="portal-overlay" :style="portalStyle">
+      <div class="portal-hex-shape"></div>
+    </div>
+  </Teleport>
 </template>
 
 <style>
@@ -476,6 +545,69 @@ onUnmounted(() => {
   0% { transform: scale(1); }
   50% { transform: scale(1.15); }
   100% { transform: scale(1); }
+}
+
+/* Heimdall portal easter egg */
+.logo-hex.portal-hover {
+  filter: brightness(1.5);
+}
+
+.portal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--portal-x) var(--portal-y),
+    #4db3a8 0%,
+    #1e3a3a 30%,
+    #000000 70%
+  );
+  animation: portalZoom 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.portal-hex-shape {
+  position: absolute;
+  left: var(--portal-x);
+  top: var(--portal-y);
+  width: 40px;
+  height: 46px;
+  transform: translate(-50%, -50%);
+  background: #4db3a8;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: portalHexExpand 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes portalZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: var(--portal-x) var(--portal-y);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: var(--portal-x) var(--portal-y);
+  }
+}
+
+@keyframes portalHexExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(20);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(80);
+    opacity: 0;
+  }
 }
 </style>
 

@@ -39,6 +39,11 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
     },
+    {
+      path: '/heimdall',
+      name: 'heimdall',
+      component: () => import('../views/HeimdallView.vue'),
+    },
   ],
 })
 

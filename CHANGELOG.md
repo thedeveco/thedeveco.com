@@ -14,6 +14,8 @@
 - Created `LogoCarousel` component with auto-scrolling, pause-on-hover, and clickable logos
 - Added logo carousel to home page between hero and How We Help sections
 - Interactive devEco Community Engine explorer widget on /about page with clickable node grid, expandable detail panels, and pulse dot animations
+- Easter egg: Heimdall portal accessible by hovering the top-left logo hexagon and scrolling forward
+- Hidden /heimdall placeholder page
 
 ### Changed
 - Moved Ecosystem from standalone nav link into new Explore dropdown in HeaderNav
