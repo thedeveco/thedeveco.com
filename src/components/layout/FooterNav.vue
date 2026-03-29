@@ -10,37 +10,36 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><router-link to="/consultancy">Community Building</router-link></li>
-            <li><router-link to="/consultancy">Technical Content</router-link></li>
-            <li><router-link to="/consultancy">DevRel Strategy</router-link></li>
-            <li><router-link to="/consultancy">Training</router-link></li>
+            <li><router-link to="/consultancy">Consultancy</router-link></li>
             <li><router-link to="/devxrl">DevXRL Audit</router-link></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>About</h4>
+          <h4>Community</h4>
           <ul>
-            <li><router-link to="/about">portalNetwork</router-link></li>
-            <li><router-link to="/about">B3VY Live Hub</router-link></li>
-            <li><router-link to="/about">LaunchCue CRM</router-link></li>
+            <li><a href="https://discord.gg/deveco" target="_blank">Discord</a></li>
+            <li><a href="https://github.com/thedeveco" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/company/developerecosystem/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@thedeveco" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com/thedev.eco" target="_blank">Instagram</a></li>
+            <li><a href="https://www.twitch.tv/thedeveco" target="_blank">Twitch</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Connect</h4>
+          <h4>Explore</h4>
           <ul>
-            <li><a href="https://discord.gg/deveco" target="_blank">Discord</a></li>
-            <li><a href="https://github.com/thedeveco" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/company/thedeveco" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.youtube.com/@thedeveco" target="_blank">YouTube</a></li>
+            <li><router-link to="/ecosystem">Ecosystem</router-link></li>
+            <li><a href="https://deveco.io/" target="_blank">devEco.io</a></li>
+            <li><a href="https://deveco.app/" target="_blank">devEco.app</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>{{ currentYear }} DevEco Consulting</span>
-        <span>Scholarship Partner of <a href="https://www.edgeaifoundation.org/" target="_blank">Edge AI Foundation</a></span>
+        <span>{{ currentYear }} | devEco Consulting LLC</span>
+        <span>EDGE AI FOUNDATION | <a href="https://www.edgeaifoundation.org/" target="_blank">Scholarship Partner</a></span>
       </div>
     </div>
   </footer>

@@ -24,6 +24,10 @@
 - Reordered navigation: About, Services, Community, Explore, Contact Us
 - Moved The Collective team section from home page to /about page
 - Updated /about page hero text from Products to About Us
+- Updated Robert Wolff bio text on /about page
+- Updated /about CTA section to devEco Community Engine messaging
+- Restructured footer columns to mirror navigation: Services, Community, Explore
+- Updated footer bottom text: company name and Edge AI Foundation formatting
 
 ### Fixed
 - *(none yet)*

@@ -89,7 +89,7 @@ thedeveco.com/
 │   ├── components/
 │   │   ├── layout/
 │   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + Services dropdown + Community dropdown + Explore dropdown
-│   │   │   └── FooterNav.vue # 4-column footer with dynamic year
+│   │   │   └── FooterNav.vue # 4-column footer: brand + Services, Community, Explore columns
 │   │   ├── ui/
 │   │   │   ├── LogoCarousel.vue        # Auto-scrolling logo carousel (pause-on-hover, CSS animation)
 │   │   │   ├── EcosystemTile.vue      # Clickable tile card for ecosystem listings
@@ -373,7 +373,7 @@ npm run lint         # ESLint with auto-fix
 ### ProjectsView (/about)
 - **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence), "About Us" label, "The people behind devEco." heading
 - **Team**: The Collective — 3-member grid with hexagonal clipped photos, badges, roles, bios, and links (moved from HomeView)
-- **CTA**: Navy background, "Ready to build something real?"
+- **CTA**: Navy background, "The devEco Community Engine"
 
 ### ContactView (/contact)
 - **Hero**: Teal, centered
