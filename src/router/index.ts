@@ -30,8 +30,8 @@ const router = createRouter({
       component: () => import('../views/CommunityView.vue'),
     },
     {
-      path: '/projects',
-      name: 'projects',
+      path: '/about',
+      name: 'about',
       component: () => import('../views/ProjectsView.vue'),
     },
     {

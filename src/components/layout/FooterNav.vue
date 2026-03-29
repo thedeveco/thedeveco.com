@@ -19,11 +19,11 @@
         </div>
 
         <div class="footer-col">
-          <h4>Products</h4>
+          <h4>About</h4>
           <ul>
-            <li><router-link to="/projects">portalNetwork</router-link></li>
-            <li><router-link to="/projects">B3VY Live Hub</router-link></li>
-            <li><router-link to="/projects">LaunchCue CRM</router-link></li>
+            <li><router-link to="/about">portalNetwork</router-link></li>
+            <li><router-link to="/about">B3VY Live Hub</router-link></li>
+            <li><router-link to="/about">LaunchCue CRM</router-link></li>
           </ul>
         </div>
 
