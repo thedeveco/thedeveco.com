@@ -15,7 +15,9 @@
 ### Changed
 - Moved Ecosystem from standalone nav link into new Explore dropdown in HeaderNav
 - Added Explore dropdown with Ecosystem (internal route), devEco.io, and devEco.app (external links)
-- Nav order is now: Services | Explore (dropdown) | DevXRL | Community (dropdown) | Products | Contact Us
+- Reordered navigation: Services, Products, Community, Explore, Contact Us
+- Converted Services into dropdown containing Consultancy and DevXRL links
+- Moved DevXRL from standalone nav link into Services dropdown
 
 ### Fixed
 - *(none yet)*

@@ -38,7 +38,73 @@
       </button>
 
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
-        <li><router-link to="/consultancy" @click="closeNav">Services</router-link></li>
+        <li
+          class="nav-dropdown"
+          @mouseenter="openServicesDropdown"
+          @mouseleave="closeServicesDropdown"
+        >
+          <router-link to="/consultancy" @click="closeNav" class="nav-dropdown__trigger">
+            Services
+            <svg class="nav-dropdown__chevron" :class="{ open: servicesDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </router-link>
+          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileServicesDropdown">
+            <svg :class="{ open: mobileServicesDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </button>
+          <Transition name="dropdown">
+            <ul v-show="servicesDropdownOpen" class="nav-dropdown__menu">
+              <li v-for="link in servicesLinks" :key="link.label">
+                <router-link :to="link.route" @click="closeNav">
+                  {{ link.label }}
+                </router-link>
+              </li>
+            </ul>
+          </Transition>
+          <ul v-show="mobileServicesDropdownOpen" class="nav-dropdown__mobile-menu">
+            <li v-for="link in servicesLinks" :key="link.label">
+              <router-link :to="link.route" @click="closeNav">
+                {{ link.label }}
+              </router-link>
+            </li>
+          </ul>
+        </li>
+        <li><router-link to="/projects" @click="closeNav">Products</router-link></li>
+        <li
+          class="nav-dropdown"
+          @mouseenter="openDropdown"
+          @mouseleave="closeDropdown"
+        >
+          <router-link to="/community" @click="closeNav" class="nav-dropdown__trigger">
+            Community
+            <svg class="nav-dropdown__chevron" :class="{ open: dropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </router-link>
+          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileDropdown">
+            <svg :class="{ open: mobileDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </button>
+          <Transition name="dropdown">
+            <ul v-show="dropdownOpen" class="nav-dropdown__menu">
+              <li v-for="link in communityLinks" :key="link.label">
+                <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                  {{ link.label }}
+                </a>
+              </li>
+            </ul>
+          </Transition>
+          <ul v-show="mobileDropdownOpen" class="nav-dropdown__mobile-menu">
+            <li v-for="link in communityLinks" :key="link.label">
+              <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </li>
         <li
           class="nav-dropdown"
           @mouseenter="openExploreDropdown"
@@ -78,41 +144,6 @@
             </li>
           </ul>
         </li>
-        <li><router-link to="/devxrl" @click="closeNav">DevXRL</router-link></li>
-        <li
-          class="nav-dropdown"
-          @mouseenter="openDropdown"
-          @mouseleave="closeDropdown"
-        >
-          <router-link to="/community" @click="closeNav" class="nav-dropdown__trigger">
-            Community
-            <svg class="nav-dropdown__chevron" :class="{ open: dropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 1l4 4 4-4" />
-            </svg>
-          </router-link>
-          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileDropdown">
-            <svg :class="{ open: mobileDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 1l4 4 4-4" />
-            </svg>
-          </button>
-          <Transition name="dropdown">
-            <ul v-show="dropdownOpen" class="nav-dropdown__menu">
-              <li v-for="link in communityLinks" :key="link.label">
-                <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
-                  {{ link.label }}
-                </a>
-              </li>
-            </ul>
-          </Transition>
-          <ul v-show="mobileDropdownOpen" class="nav-dropdown__mobile-menu">
-            <li v-for="link in communityLinks" :key="link.label">
-              <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
-                {{ link.label }}
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li><router-link to="/projects" @click="closeNav">Products</router-link></li>
         <li class="nav-cta"><router-link to="/contact" class="btn btn-primary" @click="closeNav">Contact Us</router-link></li>
       </ul>
     </div>
@@ -123,12 +154,20 @@
 import { ref } from 'vue'
 
 const mobileMenuOpen = ref(false)
+const servicesDropdownOpen = ref(false)
+const mobileServicesDropdownOpen = ref(false)
 const dropdownOpen = ref(false)
 const mobileDropdownOpen = ref(false)
 const exploreDropdownOpen = ref(false)
 const mobileExploreDropdownOpen = ref(false)
+let servicesCloseTimer: ReturnType<typeof setTimeout> | null = null
 let closeTimer: ReturnType<typeof setTimeout> | null = null
 let exploreCloseTimer: ReturnType<typeof setTimeout> | null = null
+
+const servicesLinks = [
+  { label: 'Consultancy', route: '/consultancy' },
+  { label: 'DevXRL', route: '/devxrl' },
+]
 
 const exploreLinks: { label: string; route?: string; url?: string }[] = [
   { label: 'Ecosystem', route: '/ecosystem' },
@@ -144,6 +183,24 @@ const communityLinks = [
   { label: 'Instagram', url: 'https://www.instagram.com/thedev.eco' },
   { label: 'Twitch', url: 'https://www.twitch.tv/thedeveco' },
 ]
+
+const openServicesDropdown = () => {
+  if (servicesCloseTimer) {
+    clearTimeout(servicesCloseTimer)
+    servicesCloseTimer = null
+  }
+  servicesDropdownOpen.value = true
+}
+
+const closeServicesDropdown = () => {
+  servicesCloseTimer = setTimeout(() => {
+    servicesDropdownOpen.value = false
+  }, 150)
+}
+
+const toggleMobileServicesDropdown = () => {
+  mobileServicesDropdownOpen.value = !mobileServicesDropdownOpen.value
+}
 
 const openExploreDropdown = () => {
   if (exploreCloseTimer) {
@@ -184,6 +241,7 @@ const toggleMobileDropdown = () => {
 const toggleNav = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
   if (!mobileMenuOpen.value) {
+    mobileServicesDropdownOpen.value = false
     mobileDropdownOpen.value = false
     mobileExploreDropdownOpen.value = false
   }
@@ -191,8 +249,10 @@ const toggleNav = () => {
 
 const closeNav = () => {
   mobileMenuOpen.value = false
+  mobileServicesDropdownOpen.value = false
   mobileDropdownOpen.value = false
   mobileExploreDropdownOpen.value = false
+  servicesDropdownOpen.value = false
   dropdownOpen.value = false
   exploreDropdownOpen.value = false
 }
