@@ -18,6 +18,8 @@
 - Reordered navigation: Services, Products, Community, Explore, Contact Us
 - Converted Services into dropdown containing Consultancy and DevXRL links
 - Moved DevXRL from standalone nav link into Services dropdown
+- Renamed Products nav tab to About and changed route from /projects to /about
+- Reordered navigation: About, Services, Community, Explore, Contact Us
 
 ### Fixed
 - *(none yet)*

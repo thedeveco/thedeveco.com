@@ -38,6 +38,7 @@
       </button>
 
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
+        <li><router-link to="/about" @click="closeNav">About</router-link></li>
         <li
           class="nav-dropdown"
           @mouseenter="openServicesDropdown"
@@ -71,7 +72,6 @@
             </li>
           </ul>
         </li>
-        <li><router-link to="/projects" @click="closeNav">Products</router-link></li>
         <li
           class="nav-dropdown"
           @mouseenter="openDropdown"

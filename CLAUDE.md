@@ -100,7 +100,7 @@ thedeveco.com/
 │   │   ├── WelcomeItem.vue   # Vue scaffolding (unused)
 │   │   └── icons/            # Vue scaffolding icon components (unused)
 │   ├── router/
-│   │   └── index.ts          # 7 routes: / /consultancy /ecosystem /devxrl /community /projects /contact
+│   │   └── index.ts          # 7 routes: / /consultancy /ecosystem /devxrl /community /about /contact
 │   ├── stores/
 │   │   └── counter.ts        # Pinia boilerplate (unused)
 │   └── views/
@@ -142,10 +142,10 @@ thedeveco.com/
 | `/ecosystem` | EcosystemView.vue | Lazy | Explore → Ecosystem (dropdown) |
 | `/devxrl` | DevXRL.vue | Lazy | Services → DevXRL (dropdown) |
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
-| `/projects` | ProjectsView.vue | Lazy | Products |
+| `/about` | ProjectsView.vue | Lazy | About |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
 
-**Nav order**: Services (dropdown) | Products | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
+**Nav order**: About | Services (dropdown) | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
 
 The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route).
 
@@ -371,7 +371,7 @@ npm run lint         # ESLint with auto-fix
 - **Events**: 4-card grid
 - **CTA**: Navy background
 
-### ProjectsView (/projects)
+### ProjectsView (/about)
 - **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence)
 - **Featured product**: portalNetwork in wide card layout with stats
 - **Products grid**: B3VY and LaunchCue in 2-column grid
