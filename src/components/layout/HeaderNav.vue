@@ -39,7 +39,45 @@
 
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
         <li><router-link to="/consultancy" @click="closeNav">Services</router-link></li>
-        <li><router-link to="/ecosystem" @click="closeNav">Ecosystem</router-link></li>
+        <li
+          class="nav-dropdown"
+          @mouseenter="openExploreDropdown"
+          @mouseleave="closeExploreDropdown"
+        >
+          <span class="nav-dropdown__trigger nav-dropdown__trigger--static">
+            Explore
+            <svg class="nav-dropdown__chevron" :class="{ open: exploreDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </span>
+          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileExploreDropdown">
+            <svg :class="{ open: mobileExploreDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </button>
+          <Transition name="dropdown">
+            <ul v-show="exploreDropdownOpen" class="nav-dropdown__menu">
+              <li v-for="link in exploreLinks" :key="link.label">
+                <router-link v-if="link.route" :to="link.route" @click="closeNav">
+                  {{ link.label }}
+                </router-link>
+                <a v-else :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                  {{ link.label }}
+                </a>
+              </li>
+            </ul>
+          </Transition>
+          <ul v-show="mobileExploreDropdownOpen" class="nav-dropdown__mobile-menu">
+            <li v-for="link in exploreLinks" :key="link.label">
+              <router-link v-if="link.route" :to="link.route" @click="closeNav">
+                {{ link.label }}
+              </router-link>
+              <a v-else :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </li>
         <li><router-link to="/devxrl" @click="closeNav">DevXRL</router-link></li>
         <li
           class="nav-dropdown"
@@ -87,7 +125,16 @@ import { ref } from 'vue'
 const mobileMenuOpen = ref(false)
 const dropdownOpen = ref(false)
 const mobileDropdownOpen = ref(false)
+const exploreDropdownOpen = ref(false)
+const mobileExploreDropdownOpen = ref(false)
 let closeTimer: ReturnType<typeof setTimeout> | null = null
+let exploreCloseTimer: ReturnType<typeof setTimeout> | null = null
+
+const exploreLinks: { label: string; route?: string; url?: string }[] = [
+  { label: 'Ecosystem', route: '/ecosystem' },
+  { label: 'devEco.io', url: 'https://deveco.io/' },
+  { label: 'devEco.app', url: 'https://deveco.app/' },
+]
 
 const communityLinks = [
   { label: 'Discord', url: 'https://discord.gg/deveco' },
@@ -97,6 +144,24 @@ const communityLinks = [
   { label: 'Instagram', url: 'https://www.instagram.com/thedev.eco' },
   { label: 'Twitch', url: 'https://www.twitch.tv/thedeveco' },
 ]
+
+const openExploreDropdown = () => {
+  if (exploreCloseTimer) {
+    clearTimeout(exploreCloseTimer)
+    exploreCloseTimer = null
+  }
+  exploreDropdownOpen.value = true
+}
+
+const closeExploreDropdown = () => {
+  exploreCloseTimer = setTimeout(() => {
+    exploreDropdownOpen.value = false
+  }, 150)
+}
+
+const toggleMobileExploreDropdown = () => {
+  mobileExploreDropdownOpen.value = !mobileExploreDropdownOpen.value
+}
 
 const openDropdown = () => {
   if (closeTimer) {
@@ -120,13 +185,16 @@ const toggleNav = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
   if (!mobileMenuOpen.value) {
     mobileDropdownOpen.value = false
+    mobileExploreDropdownOpen.value = false
   }
 }
 
 const closeNav = () => {
   mobileMenuOpen.value = false
   mobileDropdownOpen.value = false
+  mobileExploreDropdownOpen.value = false
   dropdownOpen.value = false
+  exploreDropdownOpen.value = false
 }
 </script>
 
@@ -221,6 +289,19 @@ const closeNav = () => {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.nav-dropdown__trigger--static {
+  cursor: default;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  transition: all 0.2s;
+}
+
+.nav-dropdown__trigger--static:hover {
+  background: var(--teal);
+  color: white;
 }
 
 .nav-dropdown__chevron {
@@ -331,6 +412,13 @@ const closeNav = () => {
 
   .nav-dropdown__trigger {
     display: block;
+  }
+
+  .nav-dropdown__trigger--static {
+    display: block;
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--border);
+    width: 100%;
   }
 
   .nav-dropdown__chevron {
