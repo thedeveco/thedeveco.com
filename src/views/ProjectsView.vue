@@ -109,104 +109,54 @@
           </svg>
         </div>
         <div class="hero-content">
-          <p class="label">Our Products</p>
-          <h1>Tools we actually use.</h1>
+          <p class="label">About Us</p>
+          <h1>The people behind devEco.</h1>
           <p class="hero-subtitle">
-            Open source platforms and tools built from real community needs.
+            Practitioners who've been building developer communities since before it was a job title.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects-section">
+  <!-- Team Section -->
+  <section id="team" class="team-section">
     <div class="container">
-      <!-- portalNetwork - Featured -->
-      <div class="project-card featured">
-        <div class="featured-left">
-          <div class="project-logo">
-            <img src="/projects/portalnetwork.png" alt="portalNetwork" />
-          </div>
-        </div>
-        <div class="featured-content">
-          <div class="project-title">
-            <h3>portalNetwork</h3>
-            <span class="badge badge-teal">Active</span>
-          </div>
-          <p class="project-tagline">The world's first Internet of Communities</p>
-          <p class="project-description">
-            Platform agnostic layer that connects communities to our high-integrity network. No spam, no bad actors. Just real developers helping each other.
-          </p>
-          <div class="featured-bottom">
-            <div class="project-stats">
-              <div class="stat">
-                <span class="stat-number">36</span>
-                <span class="stat-label">Servers</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">80k+</span>
-                <span class="stat-label">Users</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">26</span>
-                <span class="stat-label">Network</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://www.portalnet.work/" target="_blank" class="btn btn-primary">Visit portalNetwork</a>
-              <a href="https://discord.gg/deveco" target="_blank" class="btn btn-secondary">Try Bot</a>
-            </div>
-          </div>
-        </div>
+      <div class="section-header">
+        <h2>The Collective</h2>
       </div>
 
-      <!-- Other Projects Grid -->
-      <div class="projects-grid">
-        <!-- B3VY Live Hub -->
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-logo">
-              <img src="/projects/b3vy.png" alt="B3VY" />
-            </div>
-            <div class="project-info">
-              <div class="project-title">
-                <h3>B3VY Live Hub</h3>
-                <span class="badge badge-pink">In Progress</span>
-              </div>
-              <p class="project-tagline">Connect with Creators</p>
-            </div>
+      <div class="team-grid">
+        <div class="team-member">
+          <span class="badge badge-teal">Founder</span>
+          <div class="team-photo">
+            <img src="/team/robert.jpg" alt="Robert Wolff" />
           </div>
-          <p class="project-description">
-            Always-on livestream platform with self-serve scheduling. Join B3VY Live Hub to discover, interact with, and support your favorite content creators.
-          </p>
-          <div class="project-links">
-            <a href="https://b3vy.com" target="_blank" class="btn btn-primary">Visit B3VY</a>
-            <a href="https://discord.gg/deveco" target="_blank" class="btn btn-secondary">Join Discord</a>
-          </div>
+          <h3>Robert Wolff</h3>
+          <p class="role">Founder & Partner</p>
+          <p class="bio">Developer advocate and community strategist. Former Arm DevRel lead. Built developer programs before "DevRel" was a job title.</p>
+          <a href="https://linktr.ee/robertwolff" target="_blank" class="member-link">Linktree</a>
         </div>
 
-        <!-- LaunchCue CRM -->
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-logo">
-              <img src="/projects/launchcue.png" alt="LaunchCue" />
-            </div>
-            <div class="project-info">
-              <div class="project-title">
-                <h3>LaunchCue</h3>
-                <span class="badge badge-navy">Open Source</span>
-              </div>
-              <p class="project-tagline">Open source DevRel CRM</p>
-            </div>
+        <div class="team-member">
+          <span class="badge badge-pink">Partner</span>
+          <div class="team-photo">
+            <img src="/team/moheeb.jpg" alt="Moheeb Zara" />
           </div>
-          <p class="project-description">
-            Platform for developer relations teams to manage clients, projects, tasks, and campaigns. AI-powered brain dump, team management, and resource organization.
-          </p>
-          <div class="project-links">
-            <a href="https://launchcue.app" target="_blank" class="btn btn-primary">Try LaunchCue</a>
-            <a href="https://github.com/virgilvox/launchcue" target="_blank" class="btn btn-secondary">View GitHub</a>
+          <h3>Moheeb Zara</h3>
+          <p class="role">Partner</p>
+          <p class="bio">Creative technologist. Hardware hacker. HeatSync Labs alum. Founder of LumenCanvas.</p>
+          <a href="https://hack.build" target="_blank" class="member-link">Portfolio</a>
+        </div>
+
+        <div class="team-member">
+          <span class="badge badge-navy">Partner</span>
+          <div class="team-photo">
+            <img src="/team/tory.jpg" alt="Tory Moghadam" />
           </div>
+          <h3>Tory Moghadam</h3>
+          <p class="role">Partner</p>
+          <p class="bio">Embedded systems and AI engineer. Lead AI Engineer at Be Well Health. Founder of OpenMuscle.</p>
         </div>
       </div>
     </div>
@@ -215,11 +165,11 @@
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2>Want to contribute?</h2>
-      <p>All projects are open source or community-driven. Jump in.</p>
+      <h2>Ready to build something real?</h2>
+      <p>No pitch decks. Just a conversation about what you need.</p>
       <div class="cta-buttons">
-        <a href="https://github.com/thedeveco" target="_blank" class="btn btn-primary">View GitHub</a>
-        <a href="https://discord.gg/deveco" target="_blank" class="btn btn-secondary">Join Discord</a>
+        <router-link to="/contact" class="btn btn-primary">Start a Conversation</router-link>
+        <a href="https://discord.gg/deveco" target="_blank" class="btn btn-secondary">Join Our Community</a>
       </div>
     </div>
   </section>
@@ -385,167 +335,79 @@
   max-width: 500px;
 }
 
-/* Projects */
-.projects-section {
-  background: var(--bg-light);
+/* Team */
+.team-section {
+  background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
 }
 
-/* Featured Card - portalNetwork */
-.project-card.featured {
+.team-grid {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-xl);
-  background: white;
-  border: 2px solid var(--border);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-lg);
-  transition: all 0.2s;
 }
 
-.project-card.featured:hover {
-  border-color: var(--teal);
-  box-shadow: 6px 6px 0 var(--teal);
-}
-
-.featured-left {
-  display: flex;
-  align-items: flex-start;
-}
-
-.featured-left .project-logo {
-  width: 80px;
-  height: 80px;
-}
-
-.featured-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.featured-content .project-description {
-  margin-bottom: var(--space-md);
-}
-
-.featured-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-lg);
-  flex-wrap: wrap;
-}
-
-.featured-bottom .project-stats {
-  margin-bottom: 0;
-}
-
-.featured-bottom .project-links {
-  margin-top: 0;
-}
-
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-lg);
-}
-
-.project-card {
-  background: white;
-  border: 2px solid var(--border);
-  padding: var(--space-lg);
-  transition: all 0.2s;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card:hover {
-  border-color: var(--teal);
-  box-shadow: 6px 6px 0 var(--teal);
-}
-
-.project-header {
-  display: flex;
-  gap: var(--space-md);
-  margin-bottom: var(--space-sm);
-}
-
-.project-logo {
-  width: 50px;
-  height: 50px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-logo img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.project-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.project-title {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-xs);
-  flex-wrap: wrap;
-}
-
-.project-title h3 {
-  margin: 0;
-}
-
-.project-tagline {
-  color: var(--teal);
-  font-size: 0.875rem;
-}
-
-.project-description {
-  font-size: 0.9375rem;
-  color: var(--text-mid);
-  margin-bottom: var(--space-md);
-  line-height: 1.6;
-  flex: 1;
-}
-
-.project-stats {
-  display: flex;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-md);
-  padding: var(--space-sm) var(--space-md);
-  background: var(--bg-light);
-  border: 1px solid var(--border);
-}
-
-.stat {
+.team-member {
   text-align: center;
 }
 
-.stat-number {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--teal);
+.team-member > .badge {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+  transform: rotate(-3deg);
 }
 
-.stat-label {
-  font-size: 0.7rem;
-  color: var(--text-mid);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.project-links {
+.team-photo {
+  width: 120px;
+  height: 135px;
+  margin: 0 auto var(--space-md);
+  background: var(--navy);
   display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--teal);
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  overflow: hidden;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.team-member .role {
+  color: var(--teal);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+}
+
+.team-member .bio {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  margin-bottom: var(--space-sm);
+}
+
+.member-link {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--teal);
+  text-decoration: none;
+  border: 1px solid var(--teal);
+  padding: 0.25rem 0.75rem;
+  transition: all 0.2s;
+}
+
+.member-link:hover {
+  background: var(--teal);
+  color: white;
 }
 
 /* CTA */
@@ -604,66 +466,11 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
-  .project-card.featured {
+  .team-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  .featured-left {
-    justify-content: center;
-  }
-
-  .featured-left .project-logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .featured-content {
-    text-align: center;
-  }
-
-  .featured-content .project-title {
-    justify-content: center;
-  }
-
-  .featured-bottom {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .featured-bottom .project-stats {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .featured-bottom .project-links {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .project-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .project-info {
-    text-align: center;
-  }
-
-  .project-title {
-    justify-content: center;
-  }
-
-  .project-links {
-    flex-direction: column;
   }
 
   .cta-buttons {

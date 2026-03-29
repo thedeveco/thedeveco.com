@@ -96,7 +96,7 @@ public/
 | Ecosystem | `/ecosystem` | Directory of partners, clients, supported creators, collaborators |
 | DevXRL | `/devxrl` | DevXRL Audit product page with interactive readiness scale |
 | Community | `/community` | Community values, events, Discord CTA |
-| About | `/about` | portalNetwork, B3VY Live Hub, LaunchCue CRM |
+| About | `/about` | The Collective team section, rocket-portal animation |
 | Contact | `/contact` | Contact options, form, virtual office hours |
 
 ## Design System

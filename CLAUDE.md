@@ -91,7 +91,7 @@ thedeveco.com/
 │   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + Services dropdown + Community dropdown + Explore dropdown
 │   │   │   └── FooterNav.vue # 4-column footer with dynamic year
 │   │   ├── ui/
-│   │   │   ├── ClientLogos.vue        # Partner logo grid (manual entries, NOT auto-detected)
+│   │   │   ├── LogoCarousel.vue        # Auto-scrolling logo carousel (pause-on-hover, CSS animation)
 │   │   │   ├── EcosystemTile.vue      # Clickable tile card for ecosystem listings
 │   │   │   ├── EcosystemModal.vue     # Detail modal for ecosystem listings (Teleport to body)
 │   │   │   └── ProcessVisualization.vue # 4-step process with FA icons (unused on current pages)
@@ -271,11 +271,10 @@ The Community nav item includes a dropdown with external links: Discord, GitHub,
 - Reference in templates as `/clients/filename.ext` (no `public/` prefix)
 
 ### Client Logo Management
-Client logos in `ClientLogos.vue` are **manual entries**, not auto-detected. To add a logo:
+Client logos in `LogoCarousel.vue` are defined as a TypeScript array in the `<script setup>` block. Each entry has `href`, `src`, `alt`, and `darkBg`. To add a logo:
 1. Add image file to `/public/clients/` (lowercase filename)
-2. Add an `<a>` entry in `ClientLogos.vue` inside `.partners-grid`
-3. Follow the existing pattern: `<a href="..." target="_blank" rel="noopener" class="partner-logo"><img src="/clients/filename.ext" alt="Name" /></a>`
-4. For dark backgrounds use class `partner-logo dark-bg`
+2. Add an entry to the `logos` array in `src/components/ui/LogoCarousel.vue`
+3. For logos that need a dark background, set `darkBg: true`
 
 ### Ecosystem Directory
 Ecosystem listings in `EcosystemView.vue` are defined as a TypeScript array of `EcosystemListing` objects. Each listing has:
@@ -341,11 +340,11 @@ npm run lint         # ESLint with auto-fix
 ### HomeView (/)
 - **Hero**: Two-column grid with text left, animated hex grid right
 - **Hex grid animation**: Procedurally generated SVG hexagons with 6 phases (appear → breathe → pulse → explode outward → logo frame expands → logo hexes pop in → color shift → random flash)
+- **Logo Carousel**: `LogoCarousel` component — auto-scrolling partner/client logos between hero and services
 - **Services**: 6-card grid with stamps
 - **Process**: 4-step numbered grid with hexagonal step indicators
-- **Team**: 3-member grid with hexagonal clipped photos
-- **Partners**: `ClientLogos` component
 - **CTA**: Navy background, centered
+- *Note*: The Collective team section was moved to the About page; Partners & Clients grid replaced by LogoCarousel
 
 ### ConsultancyView (/consultancy)
 - **Hero**: Navy background with animated SVG logo (staggered keyframe entrance)
@@ -372,10 +371,9 @@ npm run lint         # ESLint with auto-fix
 - **CTA**: Navy background
 
 ### ProjectsView (/about)
-- **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence)
-- **Featured product**: portalNetwork in wide card layout with stats
-- **Products grid**: B3VY and LaunchCue in 2-column grid
-- **CTA**: Navy background
+- **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence), "About Us" label, "The people behind devEco." heading
+- **Team**: The Collective — 3-member grid with hexagonal clipped photos, badges, roles, bios, and links (moved from HomeView)
+- **CTA**: Navy background, "Ready to build something real?"
 
 ### ContactView (/contact)
 - **Hero**: Teal, centered
