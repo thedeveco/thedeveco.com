@@ -29,13 +29,19 @@
         </svg>
       </router-link>
 
-      <button class="nav-toggle" @click="toggleNav" :class="{ active: mobileMenuOpen }">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+      <button
+        class="nav-toggle"
+        @click="toggleNav"
+        :class="{ active: mobileMenuOpen }"
+        :aria-expanded="mobileMenuOpen"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
       </button>
+
+      <div class="nav-backdrop" :class="{ active: mobileMenuOpen }" @click="closeNav"></div>
 
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
         <li><router-link to="/about" @click="closeNav">About</router-link></li>
@@ -50,7 +56,13 @@
               <path d="M1 1l4 4 4-4" />
             </svg>
           </router-link>
-          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileServicesDropdown">
+          <button
+            class="nav-dropdown__mobile-toggle"
+            :class="{ open: mobileServicesDropdownOpen }"
+            :aria-expanded="mobileServicesDropdownOpen"
+            aria-label="Toggle Services submenu"
+            @click.stop.prevent="toggleMobileServicesDropdown"
+          >
             <svg :class="{ open: mobileServicesDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 1l4 4 4-4" />
             </svg>
@@ -83,7 +95,13 @@
               <path d="M1 1l4 4 4-4" />
             </svg>
           </router-link>
-          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileDropdown">
+          <button
+            class="nav-dropdown__mobile-toggle"
+            :class="{ open: mobileDropdownOpen }"
+            :aria-expanded="mobileDropdownOpen"
+            aria-label="Toggle Community submenu"
+            @click.stop.prevent="toggleMobileDropdown"
+          >
             <svg :class="{ open: mobileDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 1l4 4 4-4" />
             </svg>
@@ -110,13 +128,26 @@
           @mouseenter="openExploreDropdown"
           @mouseleave="closeExploreDropdown"
         >
-          <span class="nav-dropdown__trigger nav-dropdown__trigger--static">
+          <span
+            class="nav-dropdown__trigger nav-dropdown__trigger--static"
+            role="button"
+            tabindex="0"
+            @click="toggleMobileExploreDropdown"
+            @keydown.enter.prevent="toggleMobileExploreDropdown"
+            @keydown.space.prevent="toggleMobileExploreDropdown"
+          >
             Explore
             <svg class="nav-dropdown__chevron" :class="{ open: exploreDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 1l4 4 4-4" />
             </svg>
           </span>
-          <button class="nav-dropdown__mobile-toggle" @click="toggleMobileExploreDropdown">
+          <button
+            class="nav-dropdown__mobile-toggle"
+            :class="{ open: mobileExploreDropdownOpen }"
+            :aria-expanded="mobileExploreDropdownOpen"
+            aria-label="Toggle Explore submenu"
+            @click.stop.prevent="toggleMobileExploreDropdown"
+          >
             <svg :class="{ open: mobileExploreDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 1l4 4 4-4" />
             </svg>
@@ -151,7 +182,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const mobileMenuOpen = ref(false)
 const servicesDropdownOpen = ref(false)
@@ -256,6 +290,26 @@ const closeNav = () => {
   dropdownOpen.value = false
   exploreDropdownOpen.value = false
 }
+
+watch(() => route.fullPath, () => closeNav())
+
+watch(mobileMenuOpen, (open) => {
+  if (typeof document === 'undefined') return
+  document.body.style.overflow = open ? 'hidden' : ''
+})
+
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && mobileMenuOpen.value) closeNav()
+}
+
+onMounted(() => {
+  if (typeof window !== 'undefined') window.addEventListener('keydown', handleKeydown)
+})
+
+onBeforeUnmount(() => {
+  if (typeof window !== 'undefined') window.removeEventListener('keydown', handleKeydown)
+  if (typeof document !== 'undefined') document.body.style.overflow = ''
+})
 </script>
 
 <style scoped>
@@ -333,11 +387,61 @@ const closeNav = () => {
 
 .nav-toggle {
   display: none;
-  background: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-white);
   border: 2px solid var(--navy);
-  padding: var(--space-sm);
+  padding: 0;
   cursor: pointer;
   color: var(--navy);
+  z-index: 110;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-toggle:hover {
+  background: var(--navy);
+  color: var(--bg-white);
+}
+
+.nav-toggle:hover .nav-toggle__bar {
+  background: var(--bg-white);
+}
+
+.nav-toggle__bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.18s ease, background 0.2s ease;
+}
+
+.nav-toggle__bar:nth-child(1) {
+  transform: translate(-50%, -8px);
+}
+.nav-toggle__bar:nth-child(2) {
+  transform: translate(-50%, -50%);
+}
+.nav-toggle__bar:nth-child(3) {
+  transform: translate(-50%, 6px);
+}
+
+.nav-toggle.active .nav-toggle__bar:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.nav-toggle.active .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+  transform: translate(-50%, -50%) scaleX(0);
+}
+.nav-toggle.active .nav-toggle__bar:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.nav-backdrop {
+  display: none;
 }
 
 /* Dropdown */
@@ -422,63 +526,127 @@ const closeNav = () => {
   transform: translateY(-4px);
 }
 
+/* Mobile-only submenu list — hidden on desktop regardless of v-show state */
+.nav-dropdown__mobile-menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .logo-svg {
+    height: 42px;
+  }
+
+  .nav-inner {
+    padding: var(--space-sm) 0;
+  }
+
   .nav-toggle {
     display: block;
   }
 
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(30, 58, 58, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: background 0.28s ease, opacity 0.28s ease;
+    z-index: 90;
+  }
+
+  .nav-backdrop.active {
+    background: rgba(30, 58, 58, 0.55);
+    opacity: 1;
+    pointer-events: auto;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    display: flex;
+    position: fixed;
+    top: 0;
     right: 0;
+    width: min(84vw, 340px);
+    height: 100vh;
+    height: 100dvh;
     background: var(--bg-white);
-    border-bottom: 2px solid var(--border);
+    border-left: 2px solid var(--navy);
+    box-shadow: -12px 0 32px rgba(30, 58, 58, 0.18);
     flex-direction: column;
-    padding: var(--space-md);
+    align-items: stretch;
+    padding: calc(var(--space-lg) + 44px) var(--space-md) var(--space-lg);
     gap: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 100;
   }
 
   .nav-links.active {
-    display: flex;
+    transform: translateX(0);
   }
 
   .nav-links li {
     width: 100%;
+    position: relative;
   }
 
-  .nav-links a {
-    display: block;
-    padding: var(--space-md);
-    border-bottom: 1px solid var(--border);
+  .nav-links > li + li {
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-links a,
+  .nav-dropdown__trigger--static {
+    display: flex;
+    align-items: center;
+    padding: 0.95rem var(--space-md) 0.95rem calc(var(--space-md) + 4px);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-dark);
     width: 100%;
+    border-left: 3px solid transparent;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, padding-left 0.18s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-dropdown__trigger--static:hover {
+    background: var(--bg-light);
+    color: var(--teal-dark);
+    border-left-color: var(--teal-light);
+    padding-left: calc(var(--space-md) + 8px);
+  }
+
+  .nav-links a.router-link-active {
+    color: var(--teal);
+    border-left-color: var(--teal);
+    background: var(--bg-light);
   }
 
   .nav-cta {
     margin-left: 0;
     margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 2px solid var(--border) !important;
   }
 
   .nav-cta .btn {
     width: 100%;
     justify-content: center;
+    padding: 0.9rem 1rem !important;
   }
 
   /* Mobile dropdown */
-  .nav-dropdown {
-    position: relative;
-  }
-
   .nav-dropdown__trigger {
-    display: block;
+    display: flex;
+    padding-right: 56px;
   }
 
   .nav-dropdown__trigger--static {
-    display: block;
-    padding: var(--space-md);
-    border-bottom: 1px solid var(--border);
-    width: 100%;
+    cursor: pointer;
+    padding-right: 56px;
   }
 
   .nav-dropdown__chevron {
@@ -496,46 +664,107 @@ const closeNav = () => {
     position: absolute;
     top: 0;
     right: 0;
-    width: 48px;
-    height: 100%;
-    background: none;
+    width: 52px;
+    height: 52px;
+    background: transparent;
     border: none;
     border-left: 1px solid var(--border);
     cursor: pointer;
     color: var(--text-mid);
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+
+  .nav-dropdown__mobile-toggle:hover {
+    background: var(--bg-light);
+    color: var(--teal);
   }
 
   .nav-dropdown__mobile-toggle svg {
-    transition: transform 0.2s ease;
+    transition: transform 0.28s cubic-bezier(0.7, 0, 0.3, 1);
+    width: 12px;
+    height: 8px;
   }
 
-  .nav-dropdown__mobile-toggle svg.open {
+  .nav-dropdown__mobile-toggle.open svg {
     transform: rotate(180deg);
   }
 
-  .nav-dropdown__mobile-menu {
-    display: none;
-    list-style: none;
-    padding: 0;
+  .nav-dropdown__mobile-toggle.open {
+    color: var(--teal);
   }
 
-  .nav-dropdown__mobile-menu[style*="display: block"],
-  .nav-dropdown__mobile-menu[style*="display:block"] {
-    display: block !important;
+  .nav-dropdown__mobile-menu {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border);
+    animation: navSubmenuFadeIn 0.24s ease;
+  }
+
+  .nav-dropdown__mobile-menu li + li {
+    border-top: 1px solid var(--border);
   }
 
   .nav-dropdown__mobile-menu li a {
-    display: block;
-    padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-xl);
-    font-size: 0.825rem;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem var(--space-md) 0.75rem calc(var(--space-md) + 20px);
+    font-size: 0.85rem;
+    font-weight: 400;
     color: var(--text-mid);
-    border-bottom: 1px solid var(--border);
-    transition: all 0.15s ease;
+    border-left: 3px solid transparent;
+    border-bottom: none;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  }
+
+  .nav-dropdown__mobile-menu li a::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background: var(--text-light);
+    margin-right: 0.6rem;
+    transition: width 0.18s ease, background 0.18s ease;
   }
 
   .nav-dropdown__mobile-menu li a:hover {
+    background: var(--bg-white);
+    color: var(--teal-dark);
+    border-left-color: var(--teal-light);
+  }
+
+  .nav-dropdown__mobile-menu li a:hover::before {
     background: var(--teal);
-    color: white;
+    width: 16px;
+  }
+
+  .nav-dropdown__mobile-menu li a.router-link-active {
+    color: var(--teal);
+    border-left-color: var(--teal);
+  }
+}
+
+@keyframes navSubmenuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links,
+  .nav-backdrop,
+  .nav-toggle__bar,
+  .nav-dropdown__mobile-toggle svg,
+  .nav-dropdown__mobile-menu {
+    transition: none !important;
+    animation: none !important;
   }
 }
 </style>
