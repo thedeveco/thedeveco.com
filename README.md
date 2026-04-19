@@ -21,7 +21,7 @@ Professional website for **devEco Consulting LLC**, a developer relations consul
 
 ```bash
 # Prerequisites: Node.js 20+ or 22+
-git clone https://github.com/thedeveco/thedeveco.com.git
+git clone https://github.com/devEcoConsultingLLC/thedeveco.com.git
 cd thedeveco.com
 npm install
 npm run dev

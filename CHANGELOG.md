@@ -35,6 +35,11 @@
 - TRL section now includes a row of three summary badges (TRL, DevXRL, G2MRL).
 
 ### Changed
+- Repository transferred from `github.com/thedeveco/thedeveco.com` to `github.com/devEcoConsultingLLC/thedeveco.com`. GitHub permanent redirect handles legacy URLs.
+- Updated the GitHub link in the Community dropdown (HeaderNav.vue) and Community footer column (FooterNav.vue) from `github.com/thedeveco` to `github.com/devEcoConsultingLLC`.
+- Updated the repository URL in `CLAUDE.md` Project Identity section.
+- Updated the `git clone` command in `README.md` to reference the new org.
+- Added `rel="noopener noreferrer"` to the Community GitHub link in `FooterNav.vue` for security consistency with other external links in the footer.
 - Renamed `/about` route to `/team`. `ProjectsView.vue` renamed to `TeamView.vue`. Page content unchanged.
 - FooterNav grid changed from 4 columns to 5 columns (Brand, About, Audits, Community, Explore) with tightened gap from `--space-xl` to `--space-lg` to fit the additional column cleanly.
 - Nav top-level order is now: About -> Audits -> Community -> Explore -> Contact Us.
@@ -74,6 +79,12 @@
 - Removed Partners & Clients static grid section from home page
 - Deleted `ClientLogos.vue` component (replaced by `LogoCarousel`)
 - Removed static CTA section from /about page (replaced by Community Engine widget)
+
+### Infrastructure
+- DNS at Namecheap: `www` CNAME updated to `devecoconsultingllc.github.io`.
+- DNS at Namecheap: `consult` subdomain migrated from a CNAME (pointing at old org) to a Permanent (301) URL Redirect Record forwarding to `https://thedeveco.com/consultancy`. The `consult` subdomain is functionally deprecated.
+- GitHub Pages: HTTPS enforcement enabled on the new repo.
+- Claude Code GitHub App reinstalled on the `devEcoConsultingLLC` org.
 
 ---
 

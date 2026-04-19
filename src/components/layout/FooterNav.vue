@@ -30,7 +30,7 @@
           <h4>Community</h4>
           <ul>
             <li><a href="https://discord.gg/deveco" target="_blank">Discord</a></li>
-            <li><a href="https://github.com/thedeveco" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/devEcoConsultingLLC" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.linkedin.com/company/developerecosystem/" target="_blank">LinkedIn</a></li>
             <li><a href="https://www.youtube.com/@thedeveco" target="_blank">YouTube</a></li>
             <li><a href="https://www.instagram.com/thedev.eco" target="_blank">Instagram</a></li>
