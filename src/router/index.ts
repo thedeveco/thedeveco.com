@@ -30,6 +30,11 @@ const router = createRouter({
       component: () => import('../views/SMRL.vue'),
     },
     {
+      path: '/g2mrl',
+      name: 'g2mrl',
+      component: () => import('../views/G2MRL.vue'),
+    },
+    {
       path: '/community',
       name: 'community',
       component: () => import('../views/CommunityView.vue'),

@@ -7,6 +7,9 @@
 ## [Unreleased]
 
 ### Added
+- New `/g2mrl` route and `G2MRL.vue` view for the Go-to-Market Readiness Levels audit one-pager. Full-page scroll-snap with 10 sections: hero, problem (6 cards), pipeline (GTM pipeline with acquisition and revenue funnels), scale (9 level G2MRL scoring table with click-to-expand criteria), Data Foundation (GTM intelligence KB with upstream sources feeding a hexagonal core and fanning to downstream sales AI surfaces), deliverables (7 items), methodology (4 cards), process (4 steps), what-comes-after (DevXRL explainer with mini-table, plus SMRL and TRL intros and a 3-badge row), CTA.
+- G2MRL added to the Services dropdown in `HeaderNav.vue` (desktop and mobile).
+- G2MRL Audit added to the Services column in `FooterNav.vue`.
 - New `/smrl` route and `SMRL.vue` view for the Social Media Readiness Levels audit one-pager. Full-page scroll-snap with 10 sections: hero, problem (6 cards), pipeline (social pipeline with production and relationship funnels), scale (9 level SMRL scoring table with click-to-expand criteria), KB Foundation (upstream sources, knowledge base core, downstream surfaces), deliverables (7 items), methodology (4 cards), process (4 steps), TRL/what-comes-after (DevXRL explainer plus TRL and G2MRL intros), CTA.
 - SMRL added to the Services dropdown in `HeaderNav.vue` (desktop and mobile).
 - SMRL Audit added to the Services column in `FooterNav.vue`.
@@ -25,6 +28,7 @@
 - TRL section now includes a row of three summary badges (TRL, DevXRL, G2MRL).
 
 ### Changed
+- `servicesLinks` array in `HeaderNav.vue` extended from 3 items to 4 (Consultancy, DevXRL, SMRL, G2MRL).
 - `servicesLinks` array in `HeaderNav.vue` extended from 2 items to 3 (Consultancy, DevXRL, SMRL).
 - Rebuilt `DevXRL.vue` from a new one-pager HTML source. Content revised across all sections. Layout, spacing, and typography tightened.
 - Nav dots count is now derived from a `sectionList` array rather than hardcoded to 10.
