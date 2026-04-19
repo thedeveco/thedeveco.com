@@ -100,7 +100,7 @@ thedeveco.com/
 │   │   ├── WelcomeItem.vue   # Vue scaffolding (unused)
 │   │   └── icons/            # Vue scaffolding icon components (unused)
 │   ├── router/
-│   │   └── index.ts          # 10 routes: / /consultancy /ecosystem /devxrl /smrl /g2mrl /community /about /contact /heimdall
+│   │   └── index.ts          # 11 routes: / /consultancy /ecosystem /devxrl /smrl /g2mrl /trl /community /about /contact /heimdall
 │   ├── stores/
 │   │   └── counter.ts        # Pinia boilerplate (unused)
 │   └── views/
@@ -110,6 +110,7 @@ thedeveco.com/
 │       ├── DevXRL.vue         # Full-page scroll-snap DevXRL audit product page
 │       ├── SMRL.vue           # Full-page scroll-snap SMRL (Social Media Readiness Levels) audit product page
 │       ├── G2MRL.vue          # Full-page scroll-snap G2MRL (Go-to-Market Readiness Levels) audit product page
+│       ├── TRL.vue            # Full-page scroll-snap TRL (Technology Readiness Levels) audit product page
 │       ├── CommunityView.vue  # Community page with logo slam animation
 │       ├── ProjectsView.vue   # Products page with rocket-portal SVG animation
 │       ├── ContactView.vue    # Contact form (simulated submission, no backend)
@@ -146,6 +147,7 @@ thedeveco.com/
 | `/devxrl` | DevXRL.vue | Lazy | Services → DevXRL (dropdown) |
 | `/smrl` | SMRL.vue | Lazy | Services → SMRL (dropdown) |
 | `/g2mrl` | G2MRL.vue | Lazy | Services → G2MRL (dropdown) |
+| `/trl` | TRL.vue | Lazy | Services → TRL (dropdown) |
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
 | `/about` | ProjectsView.vue | Lazy | About |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
@@ -153,7 +155,7 @@ thedeveco.com/
 
 **Nav order**: About | Services (dropdown) | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
 
-The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route), SMRL (internal route), G2MRL (internal route).
+The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route), SMRL (internal route), G2MRL (internal route), TRL (internal route).
 
 The Explore nav item includes a dropdown with: Ecosystem (internal route), devEco.io (external), devEco.app (external).
 
@@ -389,6 +391,16 @@ npm run lint         # ESLint with auto-fix
 - **Data Foundation section**: Side-by-side layout. Left column explains how the G2MRL audit surfaces hidden GTM intelligence and how devEco builds the structured knowledge base that feeds sales AI. Right column is a vertical diagram: Upstream Sources (Win Stories, Objections, Competitive Intel, Pricing Signals) flow into a hexagonal GTM INTELLIGENCE core, which fans out to Downstream Surfaces (Sales AI Tools, Rep Onboarding, Forecast Scoring, CS Playbooks). Tag label is "THE DATA FOUNDATION" and core title is "GTM INTELLIGENCE" (differs from SMRL's "KNOWLEDGE BASE").
 - **TRL section**: Side-by-side layout with a DevXRL mini-table on the left and SMRL plus TRL intros on the right, followed by a row of three badges (DevXRL, SMRL, TRL). G2MRL is framed as the top-down counterpart to DevXRL's bottom-up motion.
 - **Completely self-contained**: All class names prefixed `g2mrl-`, styles namespaced within `.g2mrl` scope; adds `g2mrl-page` class to `<html>` on mount and removes on unmount.
+
+### TRL (/trl)
+- **Full-page scroll-snap** with 10 sections (hero, problem, pipeline, scale, kb, deliverables, methodology, process, trl, cta) and navigation dots synced via IntersectionObserver
+- **Own design system**: Parchment background, `--trl-*` CSS variable set scoped on `.trl`, SVG noise overlay scoped to `html.trl-page`. Mirrors the G2MRL and SMRL pattern but with its own namespace.
+- **Interactive elements**: Clickable scale table rows (single-row expand), intersection observer fade-in and stagger animations. No canvas graph.
+- **Pipeline diagram**: Vertical flow with clip-path trapezoids representing the development funnel (gold, LAB PROTOTYPE to FIELD VALIDATION) and deployment funnel (teal, QUALIFIED to LAUNCH to DEPLOYED), plus a branch node for Safety, Regulatory, and Industry certification paths.
+- **Technical Foundation section**: Side-by-side layout. Left column explains how the TRL audit surfaces undocumented engineering decisions and how devEco preserves the institutional asset. Right column is a vertical diagram: Upstream Sources (Engineering Decisions, Test Results, IP Portfolio, Validation Data) flow into a hexagonal TECHNICAL KNOWLEDGE core, which fans out to Downstream Surfaces (Investor Data Rooms, Grant Filings, Engineering Onboarding, Tax Credit Audits). Tag label is "THE TECHNICAL FOUNDATION" and core title is "TECHNICAL KNOWLEDGE" (differs from SMRL's "KNOWLEDGE BASE" and G2MRL's "GTM INTELLIGENCE").
+- **What-comes-after section**: Uses `.trl-next-*` class prefix instead of the `.{prefix}-trl-*` pattern used on the other audit pages (renamed to avoid the awkward `.trl-trl-*` double-trl that would result from the shared naming scheme). Side-by-side layout with a G2MRL mini-table on the left and DevXRL plus SMRL intros on the right, followed by a row of three badges (G2MRL, DevXRL, SMRL). TRL is framed as the technical foundation that G2MRL converts into revenue.
+- **Scale table**: Canonical NASA TRL 1-9 with devEco's commercial translation layer. The fourth column "Commercial Translation" differs from the "Product Status", "Presence Status", "GTM Status" columns on the other audit pages and explicitly ties each level to a funding or commercial milestone (e.g., TRL 5 = Series A Readiness, TRL 7 = Pilot Customers Live).
+- **Completely self-contained**: All class names prefixed `trl-`, styles namespaced within `.trl` scope; adds `trl-page` class to `<html>` on mount and removes on unmount.
 
 ### CommunityView (/community)
 - **Hero**: Teal background with logo slam animation (frame slam → hex pop → glitch → particles → text slide → color shift)

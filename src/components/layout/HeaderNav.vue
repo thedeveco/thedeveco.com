@@ -203,6 +203,7 @@ const servicesLinks = [
   { label: 'DevXRL', route: '/devxrl' },
   { label: 'SMRL', route: '/smrl' },
   { label: 'G2MRL', route: '/g2mrl' },
+  { label: 'TRL', route: '/trl' },
 ]
 
 const exploreLinks: { label: string; route?: string; url?: string }[] = [
