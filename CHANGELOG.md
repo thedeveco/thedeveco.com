@@ -16,8 +16,15 @@
 - Interactive devEco Community Engine explorer widget on /about page with clickable node grid, expandable detail panels, and pulse dot animations
 - Easter egg: Heimdall portal accessible by hovering the top-left logo hexagon and scrolling forward
 - Hidden /heimdall placeholder page
+- Pipeline section vertical diagram with activation funnel (gold clip-path trapezoid) and conversion funnel (teal clip-path trapezoid), plus a branch node for Social, Discord, etc.
+- Hero scroll-hint indicator at the bottom with a nudge animation.
+- TRL section now includes a row of three summary badges (TRL, DevXRL, G2MRL).
 
 ### Changed
+- Rebuilt `DevXRL.vue` from a new one-pager HTML source. Content revised across all sections. Layout, spacing, and typography tightened.
+- Nav dots count is now derived from a `sectionList` array rather than hardcoded to 10.
+- CSS variables for the DevXRL page consolidated under a `--dxrl-*` prefix scoped on `.devxrl` (moved from `:root`). All class names in the DevXRL scope are now prefixed with `devxrl-` to prevent any leakage.
+- Noise overlay scoped to `html.devxrl-page` so it only shows on the DevXRL page.
 - Moved Ecosystem from standalone nav link into new Explore dropdown in HeaderNav
 - Added Explore dropdown with Ecosystem (internal route), devEco.io, and devEco.app (external links)
 - Reordered navigation: Services, Products, Community, Explore, Contact Us
@@ -96,4 +103,4 @@
 
 *Changelog format: Each session that modifies the codebase adds entries under `[Unreleased]`. When a batch of changes is deployed and considered a release, the Unreleased section is renamed with a date header and a new Unreleased section is created.*
 
-*Last updated: 2026-03-28*
+*Last updated: 2026-04-19*

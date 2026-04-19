@@ -361,10 +361,12 @@ npm run lint         # ESLint with auto-fix
 - **Modal**: Click tile → `EcosystemModal` with full details (Teleport to body, ESC to close, body scroll lock)
 
 ### DevXRL (/devxrl)
-- **Full-page scroll-snap** with 10 sections and navigation dots
-- **Own design system**: Parchment background, own CSS variables, SVG noise overlay
-- **Interactive elements**: Clickable scale table rows, canvas-drawn journey graph with toggle controls, intersection observer animations
-- **Completely self-contained**: Resets all parent styles within `.devxrl` scope
+- **Full-page scroll-snap** with 10 sections (hero, problem, pipeline, scale, journey, deliverables, methodology, process, trl, cta) and navigation dots synced via IntersectionObserver
+- **Own design system**: Parchment background, `--dxrl-*` CSS variable set scoped on `.devxrl`, SVG noise overlay scoped to `html.devxrl-page`
+- **Interactive elements**: Clickable scale table rows (single-row expand), canvas-drawn journey graph with three-way toggle (BOTH, CURRENT STATE, AFTER AUDIT), intersection observer animations
+- **Pipeline diagram**: Vertical flow with clip-path trapezoids representing the activation funnel (gold) and conversion funnel (teal), plus a branch node for Social and Discord channels
+- **TRL section**: Side-by-side explainer for Technology Readiness Levels and Go-to-Market Readiness (G2MRL), with a 3-badge summary row
+- **Completely self-contained**: All class names prefixed `devxrl-`, styles namespaced within `.devxrl` scope; adds `devxrl-page` class to `<html>` on mount and removes on unmount
 
 ### CommunityView (/community)
 - **Hero**: Teal background with logo slam animation (frame slam → hex pop → glitch → particles → text slide → color shift)
@@ -439,5 +441,5 @@ When ending a session that made changes:
 
 ---
 
-*Last updated: 2026-03-29*
+*Last updated: 2026-04-19*
 *Bible file version: 1.0*
