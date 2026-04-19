@@ -7,6 +7,10 @@
 ## [Unreleased]
 
 ### Added
+- New `/smrl` route and `SMRL.vue` view for the Social Media Readiness Levels audit one-pager. Full-page scroll-snap with 10 sections: hero, problem (6 cards), pipeline (social pipeline with production and relationship funnels), scale (9 level SMRL scoring table with click-to-expand criteria), KB Foundation (upstream sources, knowledge base core, downstream surfaces), deliverables (7 items), methodology (4 cards), process (4 steps), TRL/what-comes-after (DevXRL explainer plus TRL and G2MRL intros), CTA.
+- SMRL added to the Services dropdown in `HeaderNav.vue` (desktop and mobile).
+- SMRL Audit added to the Services column in `FooterNav.vue`.
+- New KB Foundation section pattern: side-by-side text plus a vertical diagram showing upstream sources flowing into a hexagonal knowledge base core, then fanning out to downstream surfaces (AI Assistants, Content Gen, Sales & Support, White-Label Tools).
 - `CLAUDE.md` — Primary session bible file for Claude Chat and Claude Code onboarding
 - `README.md` — Rewritten project README reflecting actual architecture and deployment (replaces outdated version)
 - `ROADMAP.md` — Project roadmap with technical debt, planned features, and future vision
@@ -21,6 +25,7 @@
 - TRL section now includes a row of three summary badges (TRL, DevXRL, G2MRL).
 
 ### Changed
+- `servicesLinks` array in `HeaderNav.vue` extended from 2 items to 3 (Consultancy, DevXRL, SMRL).
 - Rebuilt `DevXRL.vue` from a new one-pager HTML source. Content revised across all sections. Layout, spacing, and typography tightened.
 - Nav dots count is now derived from a `sectionList` array rather than hardcoded to 10.
 - CSS variables for the DevXRL page consolidated under a `--dxrl-*` prefix scoped on `.devxrl` (moved from `:root`). All class names in the DevXRL scope are now prefixed with `devxrl-` to prevent any leakage.
