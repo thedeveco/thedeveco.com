@@ -273,7 +273,7 @@ const exploreLinks: { label: string; route?: string; url?: string }[] = [
 
 const communityLinks = [
   { label: 'Discord', url: 'https://discord.gg/deveco' },
-  { label: 'GitHub', url: 'https://github.com/thedeveco' },
+  { label: 'GitHub', url: 'https://github.com/devEcoConsultingLLC' },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/company/developerecosystem/' },
   { label: 'YouTube', url: 'https://www.youtube.com/@thedeveco' },
   { label: 'Instagram', url: 'https://www.instagram.com/thedev.eco' },

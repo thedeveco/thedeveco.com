@@ -6,7 +6,7 @@
 
 ## Project Identity
 
-**Repository**: `github.com/thedeveco/thedeveco.com`
+**Repository**: `github.com/devEcoConsultingLLC/thedeveco.com`
 **Live URL**: `https://thedeveco.com`
 **Owner**: devEco Consulting LLC (Robert Wolff, Founder)
 **Purpose**: Professional website for devEco Consulting — a developer relations consultancy and community platform
@@ -344,6 +344,7 @@ npm run lint         # ESLint with auto-fix
 6. **DevXRL page overrides global styles** — Has its own complete reset and design system within `.devxrl` scope; adds `devxrl-page` class to `<html>` for scroll-snap
 7. **Some animation styles are unscoped** — HomeView, CommunityView, ConsultancyView, and TeamView use unscoped `<style>` blocks for SVG animations. Be careful not to create class name collisions
 8. **CommunityView has a mislabeled button** — A "View Products" button on /community routes to /team. The destination is correct after the nav restructure, but the label is stale and should be updated to something like "Meet the Team" in a follow-up.
+9. **Org migration note**: In April 2026, the repository was transferred from `thedeveco` (legacy org) to `devEcoConsultingLLC` (current org, public repo). GitHub's permanent redirect means old links to `github.com/thedeveco/thedeveco.com` continue to work. The `thedeveco` org may or may not still exist depending on subsequent decisions, but the canonical home for this codebase is `devEcoConsultingLLC`. The repo is currently public; there is an open consideration to flip it to private later, which would require the org to be on GitHub Team plan or higher.
 
 ---
 
