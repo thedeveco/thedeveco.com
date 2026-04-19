@@ -1,6 +1,6 @@
 # thedeveco.com
 
-Professional website for **devEco Consulting LLC** — a developer relations consultancy helping organizations build thriving developer communities.
+Professional website for **devEco Consulting LLC**, a developer relations consultancy helping organizations build thriving developer communities.
 
 **Live site**: [thedeveco.com](https://thedeveco.com)
 

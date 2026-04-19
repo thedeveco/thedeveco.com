@@ -286,7 +286,7 @@ onUnmounted(() => {
             DevRel practitioners who've been building communities since before it was a job title. <span class="highlight">Let's build yours.</span>
           </p>
           <div class="hero-buttons">
-            <router-link to="/consultancy" class="btn btn-primary">Our Services</router-link>
+            <router-link to="/consultancy" class="btn btn-primary">Services</router-link>
             <router-link to="/contact" class="btn btn-secondary">Get Started</router-link>
           </div>
         </div>
