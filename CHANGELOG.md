@@ -7,6 +7,9 @@
 ## [Unreleased]
 
 ### Added
+- New `/trl` route and `TRL.vue` view for the Technology Readiness Levels audit one-pager. Full-page scroll-snap with 10 sections: hero, problem (6 cards on overclaim and evidence failure modes), pipeline (maturation flow with development and deployment funnels), scale (9 level canonical NASA TRL table with devEco commercial translation layer and click-to-expand criteria), Technical Foundation (engineering decisions and IP preservation KB with upstream sources feeding a hexagonal TECHNICAL KNOWLEDGE core and fanning to downstream surfaces including investor data rooms and tax credit audits), deliverables (7 items), methodology (4 cards), process (4 steps), what-comes-after (G2MRL explainer with mini-table, plus DevXRL and SMRL intros and a 3-badge row), CTA.
+- TRL added to the Services dropdown in `HeaderNav.vue` (desktop and mobile).
+- TRL Audit added to the Services column in `FooterNav.vue`.
 - New `/g2mrl` route and `G2MRL.vue` view for the Go-to-Market Readiness Levels audit one-pager. Full-page scroll-snap with 10 sections: hero, problem (6 cards), pipeline (GTM pipeline with acquisition and revenue funnels), scale (9 level G2MRL scoring table with click-to-expand criteria), Data Foundation (GTM intelligence KB with upstream sources feeding a hexagonal core and fanning to downstream sales AI surfaces), deliverables (7 items), methodology (4 cards), process (4 steps), what-comes-after (DevXRL explainer with mini-table, plus SMRL and TRL intros and a 3-badge row), CTA.
 - G2MRL added to the Services dropdown in `HeaderNav.vue` (desktop and mobile).
 - G2MRL Audit added to the Services column in `FooterNav.vue`.
@@ -28,6 +31,7 @@
 - TRL section now includes a row of three summary badges (TRL, DevXRL, G2MRL).
 
 ### Changed
+- `servicesLinks` array in `HeaderNav.vue` extended from 4 items to 5 (Consultancy, DevXRL, SMRL, G2MRL, TRL). All four readiness audits now live under the Services dropdown.
 - `servicesLinks` array in `HeaderNav.vue` extended from 3 items to 4 (Consultancy, DevXRL, SMRL, G2MRL).
 - `servicesLinks` array in `HeaderNav.vue` extended from 2 items to 3 (Consultancy, DevXRL, SMRL).
 - Rebuilt `DevXRL.vue` from a new one-pager HTML source. Content revised across all sections. Layout, spacing, and typography tightened.

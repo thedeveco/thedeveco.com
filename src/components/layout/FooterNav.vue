@@ -14,6 +14,7 @@
             <li><router-link to="/devxrl">DevXRL Audit</router-link></li>
             <li><router-link to="/smrl">SMRL Audit</router-link></li>
             <li><router-link to="/g2mrl">G2MRL Audit</router-link></li>
+            <li><router-link to="/trl">TRL Audit</router-link></li>
           </ul>
         </div>
 
