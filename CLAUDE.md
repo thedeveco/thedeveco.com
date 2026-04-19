@@ -100,7 +100,7 @@ thedeveco.com/
 │   │   ├── WelcomeItem.vue   # Vue scaffolding (unused)
 │   │   └── icons/            # Vue scaffolding icon components (unused)
 │   ├── router/
-│   │   └── index.ts          # 9 routes: / /consultancy /ecosystem /devxrl /smrl /community /about /contact /heimdall
+│   │   └── index.ts          # 10 routes: / /consultancy /ecosystem /devxrl /smrl /g2mrl /community /about /contact /heimdall
 │   ├── stores/
 │   │   └── counter.ts        # Pinia boilerplate (unused)
 │   └── views/
@@ -109,6 +109,7 @@ thedeveco.com/
 │       ├── EcosystemView.vue  # Data-driven ecosystem directory (20+ listings, tile+modal)
 │       ├── DevXRL.vue         # Full-page scroll-snap DevXRL audit product page
 │       ├── SMRL.vue           # Full-page scroll-snap SMRL (Social Media Readiness Levels) audit product page
+│       ├── G2MRL.vue          # Full-page scroll-snap G2MRL (Go-to-Market Readiness Levels) audit product page
 │       ├── CommunityView.vue  # Community page with logo slam animation
 │       ├── ProjectsView.vue   # Products page with rocket-portal SVG animation
 │       ├── ContactView.vue    # Contact form (simulated submission, no backend)
@@ -144,6 +145,7 @@ thedeveco.com/
 | `/ecosystem` | EcosystemView.vue | Lazy | Explore → Ecosystem (dropdown) |
 | `/devxrl` | DevXRL.vue | Lazy | Services → DevXRL (dropdown) |
 | `/smrl` | SMRL.vue | Lazy | Services → SMRL (dropdown) |
+| `/g2mrl` | G2MRL.vue | Lazy | Services → G2MRL (dropdown) |
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
 | `/about` | ProjectsView.vue | Lazy | About |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
@@ -151,7 +153,7 @@ thedeveco.com/
 
 **Nav order**: About | Services (dropdown) | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
 
-The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route), SMRL (internal route).
+The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route), SMRL (internal route), G2MRL (internal route).
 
 The Explore nav item includes a dropdown with: Ecosystem (internal route), devEco.io (external), devEco.app (external).
 
@@ -378,6 +380,15 @@ npm run lint         # ESLint with auto-fix
 - **KB Foundation section**: Side-by-side layout. Left column explains how the SMRL audit plants the source-of-truth knowledge base that devEco builds and maintains. Right column is a vertical diagram: Upstream Sources (Social Content, Brand Voice, Positioning, Customer Stories) flow into a hexagonal KNOWLEDGE BASE core, which fans out to Downstream Surfaces (AI Assistants, Content Gen, Sales & Support, White-Label Tools).
 - **TRL section**: Side-by-side layout with a DevXRL mini-table on the left and TRL plus G2MRL intro on the right, followed by a row of three badges (DevXRL, TRL, G2MRL).
 - **Completely self-contained**: All class names prefixed `smrl-`, styles namespaced within `.smrl` scope; adds `smrl-page` class to `<html>` on mount and removes on unmount.
+
+### G2MRL (/g2mrl)
+- **Full-page scroll-snap** with 10 sections (hero, problem, pipeline, scale, kb, deliverables, methodology, process, trl, cta) and navigation dots synced via IntersectionObserver
+- **Own design system**: Parchment background, `--g2mrl-*` CSS variable set scoped on `.g2mrl`, SVG noise overlay scoped to `html.g2mrl-page`. Mirrors the SMRL pattern but with its own namespace.
+- **Interactive elements**: Clickable scale table rows (single-row expand), intersection observer fade-in and stagger animations. No canvas graph.
+- **Pipeline diagram**: Vertical flow with clip-path trapezoids representing the acquisition funnel (gold, DEMAND GENERATION to QUALIFICATION) and revenue funnel (teal, COMMIT/CLOSE to EXPAND to ADVOCATE), plus a branch node for Direct, Channel, and Ecosystem paths.
+- **Data Foundation section**: Side-by-side layout. Left column explains how the G2MRL audit surfaces hidden GTM intelligence and how devEco builds the structured knowledge base that feeds sales AI. Right column is a vertical diagram: Upstream Sources (Win Stories, Objections, Competitive Intel, Pricing Signals) flow into a hexagonal GTM INTELLIGENCE core, which fans out to Downstream Surfaces (Sales AI Tools, Rep Onboarding, Forecast Scoring, CS Playbooks). Tag label is "THE DATA FOUNDATION" and core title is "GTM INTELLIGENCE" (differs from SMRL's "KNOWLEDGE BASE").
+- **TRL section**: Side-by-side layout with a DevXRL mini-table on the left and SMRL plus TRL intros on the right, followed by a row of three badges (DevXRL, SMRL, TRL). G2MRL is framed as the top-down counterpart to DevXRL's bottom-up motion.
+- **Completely self-contained**: All class names prefixed `g2mrl-`, styles namespaced within `.g2mrl` scope; adds `g2mrl-page` class to `<html>` on mount and removes on unmount.
 
 ### CommunityView (/community)
 - **Hero**: Teal background with logo slam animation (frame slam → hex pop → glitch → particles → text slide → color shift)

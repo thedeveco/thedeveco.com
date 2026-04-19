@@ -202,6 +202,7 @@ const servicesLinks = [
   { label: 'Consultancy', route: '/consultancy' },
   { label: 'DevXRL', route: '/devxrl' },
   { label: 'SMRL', route: '/smrl' },
+  { label: 'G2MRL', route: '/g2mrl' },
 ]
 
 const exploreLinks: { label: string; route?: string; url?: string }[] = [
