@@ -25,6 +25,11 @@ const router = createRouter({
       component: () => import('../views/DevXRL.vue'),
     },
     {
+      path: '/smrl',
+      name: 'smrl',
+      component: () => import('../views/SMRL.vue'),
+    },
+    {
       path: '/community',
       name: 'community',
       component: () => import('../views/CommunityView.vue'),

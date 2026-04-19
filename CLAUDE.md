@@ -100,7 +100,7 @@ thedeveco.com/
 │   │   ├── WelcomeItem.vue   # Vue scaffolding (unused)
 │   │   └── icons/            # Vue scaffolding icon components (unused)
 │   ├── router/
-│   │   └── index.ts          # 8 routes: / /consultancy /ecosystem /devxrl /community /about /contact /heimdall
+│   │   └── index.ts          # 9 routes: / /consultancy /ecosystem /devxrl /smrl /community /about /contact /heimdall
 │   ├── stores/
 │   │   └── counter.ts        # Pinia boilerplate (unused)
 │   └── views/
@@ -108,6 +108,7 @@ thedeveco.com/
 │       ├── ConsultancyView.vue # Services page with animated logo, services grid, process, team bios
 │       ├── EcosystemView.vue  # Data-driven ecosystem directory (20+ listings, tile+modal)
 │       ├── DevXRL.vue         # Full-page scroll-snap DevXRL audit product page
+│       ├── SMRL.vue           # Full-page scroll-snap SMRL (Social Media Readiness Levels) audit product page
 │       ├── CommunityView.vue  # Community page with logo slam animation
 │       ├── ProjectsView.vue   # Products page with rocket-portal SVG animation
 │       ├── ContactView.vue    # Contact form (simulated submission, no backend)
@@ -142,6 +143,7 @@ thedeveco.com/
 | `/consultancy` | ConsultancyView.vue | Lazy | Services (dropdown trigger, clickable) |
 | `/ecosystem` | EcosystemView.vue | Lazy | Explore → Ecosystem (dropdown) |
 | `/devxrl` | DevXRL.vue | Lazy | Services → DevXRL (dropdown) |
+| `/smrl` | SMRL.vue | Lazy | Services → SMRL (dropdown) |
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
 | `/about` | ProjectsView.vue | Lazy | About |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
@@ -149,7 +151,7 @@ thedeveco.com/
 
 **Nav order**: About | Services (dropdown) | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
 
-The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route).
+The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route), SMRL (internal route).
 
 The Explore nav item includes a dropdown with: Ecosystem (internal route), devEco.io (external), devEco.app (external).
 
@@ -367,6 +369,15 @@ npm run lint         # ESLint with auto-fix
 - **Pipeline diagram**: Vertical flow with clip-path trapezoids representing the activation funnel (gold) and conversion funnel (teal), plus a branch node for Social and Discord channels
 - **TRL section**: Side-by-side explainer for Technology Readiness Levels and Go-to-Market Readiness (G2MRL), with a 3-badge summary row
 - **Completely self-contained**: All class names prefixed `devxrl-`, styles namespaced within `.devxrl` scope; adds `devxrl-page` class to `<html>` on mount and removes on unmount
+
+### SMRL (/smrl)
+- **Full-page scroll-snap** with 10 sections (hero, problem, pipeline, scale, kb, deliverables, methodology, process, trl, cta) and navigation dots synced via IntersectionObserver
+- **Own design system**: Parchment background, `--smrl-*` CSS variable set scoped on `.smrl`, SVG noise overlay scoped to `html.smrl-page`. Mirrors the DevXRL pattern but with its own namespace.
+- **Interactive elements**: Clickable scale table rows (single-row expand), intersection observer fade-in and stagger animations. No canvas graph (this is the main structural difference from DevXRL).
+- **Pipeline diagram**: Vertical flow with clip-path trapezoids representing the production funnel (gold, CONTENT ENGINE to DISTRIBUTION) and relationship funnel (teal, LISTEN/RESPOND/BUILD to RELATIONSHIP to PIPELINE), plus a branch node for LinkedIn and YouTube channels.
+- **KB Foundation section**: Side-by-side layout. Left column explains how the SMRL audit plants the source-of-truth knowledge base that devEco builds and maintains. Right column is a vertical diagram: Upstream Sources (Social Content, Brand Voice, Positioning, Customer Stories) flow into a hexagonal KNOWLEDGE BASE core, which fans out to Downstream Surfaces (AI Assistants, Content Gen, Sales & Support, White-Label Tools).
+- **TRL section**: Side-by-side layout with a DevXRL mini-table on the left and TRL plus G2MRL intro on the right, followed by a row of three badges (DevXRL, TRL, G2MRL).
+- **Completely self-contained**: All class names prefixed `smrl-`, styles namespaced within `.smrl` scope; adds `smrl-page` class to `<html>` on mount and removes on unmount.
 
 ### CommunityView (/community)
 - **Hero**: Teal background with logo slam animation (frame slam → hex pop → glitch → particles → text slide → color shift)

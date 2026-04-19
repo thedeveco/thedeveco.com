@@ -201,6 +201,7 @@ let exploreCloseTimer: ReturnType<typeof setTimeout> | null = null
 const servicesLinks = [
   { label: 'Consultancy', route: '/consultancy' },
   { label: 'DevXRL', route: '/devxrl' },
+  { label: 'SMRL', route: '/smrl' },
 ]
 
 const exploreLinks: { label: string; route?: string; url?: string }[] = [
