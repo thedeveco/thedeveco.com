@@ -44,43 +44,95 @@
       <div class="nav-backdrop" :class="{ active: mobileMenuOpen }" @click="closeNav"></div>
 
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
-        <li><router-link to="/about" @click="closeNav">About</router-link></li>
         <li
           class="nav-dropdown"
-          @mouseenter="openServicesDropdown"
-          @mouseleave="closeServicesDropdown"
+          @mouseenter="openAboutDropdown"
+          @mouseleave="closeAboutDropdown"
         >
-          <router-link to="/consultancy" @click="closeNav" class="nav-dropdown__trigger">
-            Services
-            <svg class="nav-dropdown__chevron" :class="{ open: servicesDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <span
+            class="nav-dropdown__trigger nav-dropdown__trigger--static"
+            role="button"
+            tabindex="0"
+            @click="toggleMobileAboutDropdown"
+            @keydown.enter.prevent="toggleMobileAboutDropdown"
+            @keydown.space.prevent="toggleMobileAboutDropdown"
+          >
+            About
+            <svg class="nav-dropdown__chevron" :class="{ open: aboutDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 1l4 4 4-4" />
             </svg>
-          </router-link>
+          </span>
           <button
             class="nav-dropdown__mobile-toggle"
-            :class="{ open: mobileServicesDropdownOpen }"
-            :aria-expanded="mobileServicesDropdownOpen"
-            aria-label="Toggle Services submenu"
-            @click.stop.prevent="toggleMobileServicesDropdown"
+            :class="{ open: mobileAboutDropdownOpen }"
+            :aria-expanded="mobileAboutDropdownOpen"
+            aria-label="Toggle About submenu"
+            @click.stop.prevent="toggleMobileAboutDropdown"
           >
-            <svg :class="{ open: mobileServicesDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg :class="{ open: mobileAboutDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M1 1l4 4 4-4" />
             </svg>
           </button>
           <Transition name="dropdown">
-            <ul v-show="servicesDropdownOpen" class="nav-dropdown__menu">
-              <li v-for="link in servicesLinks" :key="link.label">
+            <ul v-show="aboutDropdownOpen" class="nav-dropdown__menu">
+              <li v-for="link in aboutLinks" :key="link.label">
                 <router-link :to="link.route" @click="closeNav">
                   {{ link.label }}
                 </router-link>
               </li>
             </ul>
           </Transition>
-          <ul v-show="mobileServicesDropdownOpen" class="nav-dropdown__mobile-menu">
-            <li v-for="link in servicesLinks" :key="link.label">
+          <ul v-show="mobileAboutDropdownOpen" class="nav-dropdown__mobile-menu">
+            <li v-for="link in aboutLinks" :key="link.label">
               <router-link :to="link.route" @click="closeNav">
                 {{ link.label }}
               </router-link>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="nav-dropdown"
+          @mouseenter="openAuditsDropdown"
+          @mouseleave="closeAuditsDropdown"
+        >
+          <span
+            class="nav-dropdown__trigger nav-dropdown__trigger--static"
+            role="button"
+            tabindex="0"
+            @click="toggleMobileAuditsDropdown"
+            @keydown.enter.prevent="toggleMobileAuditsDropdown"
+            @keydown.space.prevent="toggleMobileAuditsDropdown"
+          >
+            Audits
+            <svg class="nav-dropdown__chevron" :class="{ open: auditsDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </span>
+          <button
+            class="nav-dropdown__mobile-toggle"
+            :class="{ open: mobileAuditsDropdownOpen }"
+            :aria-expanded="mobileAuditsDropdownOpen"
+            aria-label="Toggle Audits submenu"
+            @click.stop.prevent="toggleMobileAuditsDropdown"
+          >
+            <svg :class="{ open: mobileAuditsDropdownOpen }" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 1l4 4 4-4" />
+            </svg>
+          </button>
+          <Transition name="dropdown">
+            <ul v-show="auditsDropdownOpen" class="nav-dropdown__menu">
+              <li v-for="link in auditsLinks" :key="link.label">
+                <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                  {{ link.label }}
+                </a>
+              </li>
+            </ul>
+          </Transition>
+          <ul v-show="mobileAuditsDropdownOpen" class="nav-dropdown__mobile-menu">
+            <li v-for="link in auditsLinks" :key="link.label">
+              <a :href="link.url" target="_blank" rel="noopener noreferrer" @click="closeNav">
+                {{ link.label }}
+              </a>
             </li>
           </ul>
         </li>
@@ -188,26 +240,33 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const mobileMenuOpen = ref(false)
-const servicesDropdownOpen = ref(false)
-const mobileServicesDropdownOpen = ref(false)
+const aboutDropdownOpen = ref(false)
+const mobileAboutDropdownOpen = ref(false)
+const auditsDropdownOpen = ref(false)
+const mobileAuditsDropdownOpen = ref(false)
 const dropdownOpen = ref(false)
 const mobileDropdownOpen = ref(false)
 const exploreDropdownOpen = ref(false)
 const mobileExploreDropdownOpen = ref(false)
-let servicesCloseTimer: ReturnType<typeof setTimeout> | null = null
+let aboutCloseTimer: ReturnType<typeof setTimeout> | null = null
+let auditsCloseTimer: ReturnType<typeof setTimeout> | null = null
 let closeTimer: ReturnType<typeof setTimeout> | null = null
 let exploreCloseTimer: ReturnType<typeof setTimeout> | null = null
 
-const servicesLinks = [
+const aboutLinks = [
+  { label: 'Team', route: '/team' },
   { label: 'Consultancy', route: '/consultancy' },
-  { label: 'DevXRL', route: '/devxrl' },
-  { label: 'SMRL', route: '/smrl' },
-  { label: 'G2MRL', route: '/g2mrl' },
-  { label: 'TRL', route: '/trl' },
+  { label: 'Ecosystem', route: '/ecosystem' },
+]
+
+const auditsLinks = [
+  { label: 'DevXRL', url: '/devxrl' },
+  { label: 'SMRL', url: '/smrl' },
+  { label: 'G2MRL', url: '/g2mrl' },
+  { label: 'TRL', url: '/trl' },
 ]
 
 const exploreLinks: { label: string; route?: string; url?: string }[] = [
-  { label: 'Ecosystem', route: '/ecosystem' },
   { label: 'devEco.io', url: 'https://deveco.io/' },
   { label: 'devEco.app', url: 'https://deveco.app/' },
 ]
@@ -221,22 +280,40 @@ const communityLinks = [
   { label: 'Twitch', url: 'https://www.twitch.tv/thedeveco' },
 ]
 
-const openServicesDropdown = () => {
-  if (servicesCloseTimer) {
-    clearTimeout(servicesCloseTimer)
-    servicesCloseTimer = null
+const openAboutDropdown = () => {
+  if (aboutCloseTimer) {
+    clearTimeout(aboutCloseTimer)
+    aboutCloseTimer = null
   }
-  servicesDropdownOpen.value = true
+  aboutDropdownOpen.value = true
 }
 
-const closeServicesDropdown = () => {
-  servicesCloseTimer = setTimeout(() => {
-    servicesDropdownOpen.value = false
+const closeAboutDropdown = () => {
+  aboutCloseTimer = setTimeout(() => {
+    aboutDropdownOpen.value = false
   }, 150)
 }
 
-const toggleMobileServicesDropdown = () => {
-  mobileServicesDropdownOpen.value = !mobileServicesDropdownOpen.value
+const toggleMobileAboutDropdown = () => {
+  mobileAboutDropdownOpen.value = !mobileAboutDropdownOpen.value
+}
+
+const openAuditsDropdown = () => {
+  if (auditsCloseTimer) {
+    clearTimeout(auditsCloseTimer)
+    auditsCloseTimer = null
+  }
+  auditsDropdownOpen.value = true
+}
+
+const closeAuditsDropdown = () => {
+  auditsCloseTimer = setTimeout(() => {
+    auditsDropdownOpen.value = false
+  }, 150)
+}
+
+const toggleMobileAuditsDropdown = () => {
+  mobileAuditsDropdownOpen.value = !mobileAuditsDropdownOpen.value
 }
 
 const openExploreDropdown = () => {
@@ -278,7 +355,8 @@ const toggleMobileDropdown = () => {
 const toggleNav = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
   if (!mobileMenuOpen.value) {
-    mobileServicesDropdownOpen.value = false
+    mobileAboutDropdownOpen.value = false
+    mobileAuditsDropdownOpen.value = false
     mobileDropdownOpen.value = false
     mobileExploreDropdownOpen.value = false
   }
@@ -286,10 +364,12 @@ const toggleNav = () => {
 
 const closeNav = () => {
   mobileMenuOpen.value = false
-  mobileServicesDropdownOpen.value = false
+  mobileAboutDropdownOpen.value = false
+  mobileAuditsDropdownOpen.value = false
   mobileDropdownOpen.value = false
   mobileExploreDropdownOpen.value = false
-  servicesDropdownOpen.value = false
+  aboutDropdownOpen.value = false
+  auditsDropdownOpen.value = false
   dropdownOpen.value = false
   exploreDropdownOpen.value = false
 }

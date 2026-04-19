@@ -88,8 +88,8 @@ thedeveco.com/
 │   │   └── logo.svg          # Unused Vue default logo
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + Services dropdown + Community dropdown + Explore dropdown
-│   │   │   └── FooterNav.vue # 4-column footer: brand + Services, Community, Explore columns
+│   │   │   ├── HeaderNav.vue # Sticky nav with mobile hamburger + About dropdown + Audits dropdown + Community dropdown + Explore dropdown
+│   │   │   └── FooterNav.vue # 5-column footer: brand + About, Audits, Community, Explore columns
 │   │   ├── ui/
 │   │   │   ├── LogoCarousel.vue        # Auto-scrolling logo carousel (pause-on-hover, CSS animation)
 │   │   │   ├── EcosystemTile.vue      # Clickable tile card for ecosystem listings
@@ -100,7 +100,7 @@ thedeveco.com/
 │   │   ├── WelcomeItem.vue   # Vue scaffolding (unused)
 │   │   └── icons/            # Vue scaffolding icon components (unused)
 │   ├── router/
-│   │   └── index.ts          # 11 routes: / /consultancy /ecosystem /devxrl /smrl /g2mrl /trl /community /about /contact /heimdall
+│   │   └── index.ts          # 12 routes: / /consultancy /ecosystem /devxrl /smrl /g2mrl /trl /community /team /about (redirect) /contact /heimdall
 │   ├── stores/
 │   │   └── counter.ts        # Pinia boilerplate (unused)
 │   └── views/
@@ -112,7 +112,7 @@ thedeveco.com/
 │       ├── G2MRL.vue          # Full-page scroll-snap G2MRL (Go-to-Market Readiness Levels) audit product page
 │       ├── TRL.vue            # Full-page scroll-snap TRL (Technology Readiness Levels) audit product page
 │       ├── CommunityView.vue  # Community page with logo slam animation
-│       ├── ProjectsView.vue   # Products page with rocket-portal SVG animation
+│       ├── TeamView.vue       # Team/About page with rocket-portal SVG animation and Community Engine widget
 │       ├── ContactView.vue    # Contact form (simulated submission, no backend)
 │       ├── HeimdallView.vue   # Hidden easter egg page (not in nav)
 │       └── AboutView.vue      # Boilerplate placeholder (not in router)
@@ -142,24 +142,27 @@ thedeveco.com/
 | Path | View Component | Load | Nav Label |
 |------|---------------|------|-----------|
 | `/` | HomeView.vue | Eager | (logo click) |
-| `/consultancy` | ConsultancyView.vue | Lazy | Services (dropdown trigger, clickable) |
-| `/ecosystem` | EcosystemView.vue | Lazy | Explore → Ecosystem (dropdown) |
-| `/devxrl` | DevXRL.vue | Lazy | Services → DevXRL (dropdown) |
-| `/smrl` | SMRL.vue | Lazy | Services → SMRL (dropdown) |
-| `/g2mrl` | G2MRL.vue | Lazy | Services → G2MRL (dropdown) |
-| `/trl` | TRL.vue | Lazy | Services → TRL (dropdown) |
+| `/consultancy` | ConsultancyView.vue | Lazy | About → Consultancy (dropdown) |
+| `/ecosystem` | EcosystemView.vue | Lazy | About → Ecosystem (dropdown) |
+| `/devxrl` | DevXRL.vue | Lazy | Audits → DevXRL (dropdown, new tab) |
+| `/smrl` | SMRL.vue | Lazy | Audits → SMRL (dropdown, new tab) |
+| `/g2mrl` | G2MRL.vue | Lazy | Audits → G2MRL (dropdown, new tab) |
+| `/trl` | TRL.vue | Lazy | Audits → TRL (dropdown, new tab) |
 | `/community` | CommunityView.vue | Lazy | Community (has dropdown) |
-| `/about` | ProjectsView.vue | Lazy | About |
+| `/team` | TeamView.vue | Lazy | About → Team (dropdown) |
+| `/about` | (redirect) | — | (redirects to /team) |
 | `/contact` | ContactView.vue | Lazy | Contact Us (CTA button) |
 | `/heimdall` | HeimdallView.vue | Lazy | (hidden — easter egg, not in nav) |
 
-**Nav order**: About | Services (dropdown) | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
+**Nav order**: About (dropdown) | Audits (dropdown) | Community (dropdown) | Explore (dropdown) | Contact Us (CTA)
 
-The Services nav item is a clickable `<router-link to="/consultancy">` with a hover dropdown containing: Consultancy (internal route), DevXRL (internal route), SMRL (internal route), G2MRL (internal route), TRL (internal route).
+The About nav item is a non-clickable dropdown trigger containing: Team (/team), Consultancy (/consultancy), Ecosystem (/ecosystem). Same-tab navigation via `router-link`.
 
-The Explore nav item includes a dropdown with: Ecosystem (internal route), devEco.io (external), devEco.app (external).
+The Audits nav item is a non-clickable dropdown trigger containing the four readiness audits: DevXRL (/devxrl), SMRL (/smrl), G2MRL (/g2mrl), TRL (/trl). These render as anchor tags with `target="_blank"` so each audit opens in a new tab.
 
-The Community nav item includes a dropdown with external links: Discord, GitHub, LinkedIn, YouTube, Instagram, Twitch.
+The Community nav item is a clickable `router-link` to /community with a hover dropdown containing external social links: Discord, GitHub, LinkedIn, YouTube, Instagram, Twitch.
+
+The Explore nav item is a non-clickable dropdown trigger containing external links only: devEco.io, devEco.app.
 
 ---
 
@@ -339,7 +342,8 @@ npm run lint         # ESLint with auto-fix
 4. **Contact form has no backend** — `submitForm()` in `ContactView.vue` simulates a 2-second delay, no actual email/API integration
 5. **ProcessVisualization.vue component exists but is unused** — The home page and consultancy page have their own inline process sections
 6. **DevXRL page overrides global styles** — Has its own complete reset and design system within `.devxrl` scope; adds `devxrl-page` class to `<html>` for scroll-snap
-7. **Some animation styles are unscoped** — HomeView, CommunityView, ConsultancyView, and ProjectsView use unscoped `<style>` blocks for SVG animations. Be careful not to create class name collisions
+7. **Some animation styles are unscoped** — HomeView, CommunityView, ConsultancyView, and TeamView use unscoped `<style>` blocks for SVG animations. Be careful not to create class name collisions
+8. **CommunityView has a mislabeled button** — A "View Products" button on /community routes to /team. The destination is correct after the nav restructure, but the label is stale and should be updated to something like "Meet the Team" in a follow-up.
 
 ---
 
@@ -408,10 +412,11 @@ npm run lint         # ESLint with auto-fix
 - **Events**: 4-card grid
 - **CTA**: Navy background
 
-### ProjectsView (/about)
+### TeamView (/team)
 - **Hero**: Navy with rocket-through-portal SVG animation (6s loop with gear emergence), "About Us" label, "The people behind devEco." heading
 - **Team**: The Collective — 3-member grid with hexagonal clipped photos, badges, roles, bios, and links (moved from HomeView)
 - **Community Engine Explorer**: Interactive widget with 6-cell node grid (5 clickable nodes + 1 hub), expandable detail panel, pulse dot animations, and CTA buttons
+- *Note*: `/about` redirects to `/team` to preserve backward compatibility with older external links.
 
 ### ContactView (/contact)
 - **Hero**: Teal, centered

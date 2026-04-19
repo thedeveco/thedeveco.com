@@ -8,13 +8,21 @@
         </div>
 
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>About</h4>
           <ul>
+            <li><router-link to="/team">Team</router-link></li>
             <li><router-link to="/consultancy">Consultancy</router-link></li>
-            <li><router-link to="/devxrl">DevXRL Audit</router-link></li>
-            <li><router-link to="/smrl">SMRL Audit</router-link></li>
-            <li><router-link to="/g2mrl">G2MRL Audit</router-link></li>
-            <li><router-link to="/trl">TRL Audit</router-link></li>
+            <li><router-link to="/ecosystem">Ecosystem</router-link></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Audits</h4>
+          <ul>
+            <li><a href="/devxrl" target="_blank" rel="noopener noreferrer">DevXRL Audit</a></li>
+            <li><a href="/smrl" target="_blank" rel="noopener noreferrer">SMRL Audit</a></li>
+            <li><a href="/g2mrl" target="_blank" rel="noopener noreferrer">G2MRL Audit</a></li>
+            <li><a href="/trl" target="_blank" rel="noopener noreferrer">TRL Audit</a></li>
           </ul>
         </div>
 
@@ -33,7 +41,6 @@
         <div class="footer-col">
           <h4>Explore</h4>
           <ul>
-            <li><router-link to="/ecosystem">Ecosystem</router-link></li>
             <li><a href="https://deveco.io/" target="_blank">devEco.io</a></li>
             <li><a href="https://deveco.app/" target="_blank">devEco.app</a></li>
           </ul>
@@ -63,8 +70,8 @@ const currentYear = computed(() => new Date().getFullYear())
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  gap: var(--space-xl);
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: var(--space-lg);
   margin-bottom: var(--space-xl);
 }
 

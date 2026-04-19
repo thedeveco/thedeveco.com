@@ -45,9 +45,13 @@ const router = createRouter({
       component: () => import('../views/CommunityView.vue'),
     },
     {
+      path: '/team',
+      name: 'team',
+      component: () => import('../views/TeamView.vue'),
+    },
+    {
       path: '/about',
-      name: 'about',
-      component: () => import('../views/ProjectsView.vue'),
+      redirect: '/team',
     },
     {
       path: '/contact',

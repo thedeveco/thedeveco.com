@@ -7,6 +7,10 @@
 ## [Unreleased]
 
 ### Added
+- New About dropdown in HeaderNav, non-clickable parent, containing Team (/team), Consultancy (/consultancy), and Ecosystem (/ecosystem).
+- New Audits dropdown in HeaderNav, non-clickable parent, containing DevXRL, SMRL, G2MRL, and TRL. All four audit links open in new tabs via `target="_blank"` anchors.
+- `/about` route now redirects to `/team` to preserve backward compatibility for external or indexed links.
+- New About and Audits columns in FooterNav, matching the nav structure.
 - New `/trl` route and `TRL.vue` view for the Technology Readiness Levels audit one-pager. Full-page scroll-snap with 10 sections: hero, problem (6 cards on overclaim and evidence failure modes), pipeline (maturation flow with development and deployment funnels), scale (9 level canonical NASA TRL table with devEco commercial translation layer and click-to-expand criteria), Technical Foundation (engineering decisions and IP preservation KB with upstream sources feeding a hexagonal TECHNICAL KNOWLEDGE core and fanning to downstream surfaces including investor data rooms and tax credit audits), deliverables (7 items), methodology (4 cards), process (4 steps), what-comes-after (G2MRL explainer with mini-table, plus DevXRL and SMRL intros and a 3-badge row), CTA.
 - TRL added to the Services dropdown in `HeaderNav.vue` (desktop and mobile).
 - TRL Audit added to the Services column in `FooterNav.vue`.
@@ -31,6 +35,11 @@
 - TRL section now includes a row of three summary badges (TRL, DevXRL, G2MRL).
 
 ### Changed
+- Renamed `/about` route to `/team`. `ProjectsView.vue` renamed to `TeamView.vue`. Page content unchanged.
+- FooterNav grid changed from 4 columns to 5 columns (Brand, About, Audits, Community, Explore) with tightened gap from `--space-xl` to `--space-lg` to fit the additional column cleanly.
+- Nav top-level order is now: About -> Audits -> Community -> Explore -> Contact Us.
+- Community dropdown and Contact Us CTA unchanged.
+- Consultancy, DevXRL, SMRL, G2MRL, TRL, and Ecosystem are no longer direct nav items; they now live under the About or Audits dropdowns.
 - `servicesLinks` array in `HeaderNav.vue` extended from 4 items to 5 (Consultancy, DevXRL, SMRL, G2MRL, TRL). All four readiness audits now live under the Services dropdown.
 - `servicesLinks` array in `HeaderNav.vue` extended from 3 items to 4 (Consultancy, DevXRL, SMRL, G2MRL).
 - `servicesLinks` array in `HeaderNav.vue` extended from 2 items to 3 (Consultancy, DevXRL, SMRL).
@@ -56,6 +65,10 @@
 - *(none yet)*
 
 ### Removed
+- Removed the Services dropdown from HeaderNav entirely. Its contents were redistributed: Consultancy moved to the About dropdown, and the four audits moved to the new Audits dropdown.
+- Removed Ecosystem from the Explore dropdown (moved to the About dropdown).
+- Removed the Services column from FooterNav (replaced by About and Audits columns).
+- Removed the old direct "About" top-level link (replaced by the About dropdown).
 - Removed portalNetwork, B3VY, and LaunchCue product cards from /about page
 - Removed The Collective team section from home page
 - Removed Partners & Clients static grid section from home page
