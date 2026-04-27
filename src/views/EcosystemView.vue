@@ -308,7 +308,7 @@ const listings: EcosystemListing[] = [
   },
   {
     id: 'source-network',
-    name: 'Source Network',
+    name: 'Source',
     logo: '/clients/source.png',
     category: 'client',
     shortDescription: 'Decentralized data management infrastructure providing peer-to-peer databases and trust layer protocols for Web3 applications.',
